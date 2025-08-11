@@ -10,7 +10,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'PURL Specs',
+  title: 'packageurl.org',
   tagline: 'Standardizing software package identification for enhanced security and streamlined vulnerability management',
   favicon: 'img/favicon.ico',
 
