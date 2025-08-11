@@ -1,0 +1,553 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-PURL_SPECIFICATION" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.8.1">
+<title data-rh="true">PURL Specification | PURL Specs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://your-docusaurus-site.example.com/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://your-docusaurus-site.example.com/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://your-docusaurus-site.example.com/docs/PURL_SPECIFICATION"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="PURL Specification | PURL Specs"><meta data-rh="true" name="description" content="The Package URL core specification defines a versioned and formalized"><meta data-rh="true" property="og:description" content="The Package URL core specification defines a versioned and formalized"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://your-docusaurus-site.example.com/docs/PURL_SPECIFICATION"><link data-rh="true" rel="alternate" href="https://your-docusaurus-site.example.com/docs/PURL_SPECIFICATION" hreflang="en"><link data-rh="true" rel="alternate" href="https://your-docusaurus-site.example.com/docs/PURL_SPECIFICATION" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"PURL Specification","item":"https://your-docusaurus-site.example.com/docs/PURL_SPECIFICATION"}]}</script><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="PURL Specs RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="PURL Specs Atom Feed"><link rel="stylesheet" href="/assets/css/styles.7c20e602.css">
+<script src="/assets/js/runtime~main.3b226157.js" defer="defer"></script>
+<script src="/assets/js/main.60b3ba07.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t="light";var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",e||t),document.documentElement.setAttribute("data-theme-choice",e||t)}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/img/logo.png"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top navbar--dark"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/logo.png" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/logo.png" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">PURL</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/PURL_SPECIFICATION">Docs</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/PURL_SPECIFICATION">PURL Specs</a><a class="navbar__item navbar__link" href="/docs/PURL_TYPES">PURL Types</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/package-url" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><a href="https://cyclonedx.slack.com/archives/C06KTE3BWEB" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">Slack<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS darkNavbarColorModeToggle_X3D1" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/docs/PURL_SPECIFICATION">PURL Specification</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/PURL_TYPES">PURL Types</a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">PURL Specification</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Package URL specification v1.0.X</h1></header>
+<p>The Package URL core specification defines a versioned and formalized
+format, syntax, and rules used to represent and validate <code>purl</code>.</p>
+<p>A <code>purl</code> or package URL is an attempt to standardize existing approaches
+to reliably identify and locate software packages.</p>
+<p>A <code>purl</code> is a URL string used to identify and locate a software package
+in a mostly universal and uniform way across programming languages,
+package managers, packaging conventions, tools, APIs and databases.</p>
+<p>Such a package URL is useful to reliably reference the same software
+package using a simple and expressive syntax and conventions based on
+familiar URLs.</p>
+<p>See <a href="/docs/PURL_TYPES">PURL_TYPES.md</a> for known type definitions.</p>
+<p>Check also this short <code>purl</code> presentation (with video) at FOSDEM 2018
+<a href="https://fosdem.org/2018/schedule/event/purl/" target="_blank" rel="noopener noreferrer">https://fosdem.org/2018/schedule/event/purl/</a> for an overview.</p>
+<p><code>purl</code> stands for <strong>package URL</strong>.</p>
+<p>A <code>purl</code> is a URL composed of seven components:</p>
+<p>scheme<!-- -->:type<!-- -->/namespace/name@version?qualifiers#subpath</p>
+<p>Components are separated by a specific character for unambiguous
+parsing.</p>
+<p>The definition for each components is:</p>
+<ul>
+<li><strong>scheme</strong>: this is the URL scheme with the constant value of &quot;pkg&quot;.
+One of the primary reason for this single scheme is to facilitate the
+future official registration of the &quot;pkg&quot; scheme for package URLs.
+Required.</li>
+<li><strong>type</strong>: the package &quot;type&quot; or package &quot;protocol&quot; such as maven,
+npm, nuget, gem, pypi, etc. Required.</li>
+<li><strong>namespace</strong>: some name prefix such as a Maven groupid, a Docker
+image owner, a GitHub user or organization. Optional and
+type-specific.</li>
+<li><strong>name</strong>: the name of the package. Required.</li>
+<li><strong>version</strong>: the version of the package. Optional.</li>
+<li><strong>qualifiers</strong>: extra qualifying data for a package such as an OS,
+architecture, a distro, etc. Optional and type-specific.</li>
+<li><strong>subpath</strong>: extra subpath within a package, relative to the package
+root. Optional.</li>
+</ul>
+<p>Components are designed such that they form a hierarchy from the most
+significant on the left to the least significant components on the
+right.</p>
+<p>A <code>purl</code> must NOT contain a URL Authority i.e. there is no support for
+<code>username</code>, <code>password</code>, <code>host</code> and <code>port</code> components. A <code>namespace</code>
+segment may sometimes look like a <code>host</code> but its interpretation is
+specific to a <code>type</code>.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="some-purl-examples">Some <code>purl</code> examples<a href="#some-purl-examples" class="hash-link" aria-label="Direct link to some-purl-examples" title="Direct link to some-purl-examples">​</a></h2>
+<p>pkg<!-- -->:bitbucket<!-- -->/birkenfeld/pygments-main@244fd47e07d1014f0aed9c
+pkg<!-- -->:deb<!-- -->/debian/curl@7.50.3-1?arch=i386&amp;distro=jessie
+pkg<!-- -->:gem<!-- -->/ruby-advisory-db-check@0.12.4
+pkg<!-- -->:github<!-- -->/package-url/purl-spec@244fd47e07d1004f0aed9c
+pkg<!-- -->:golang<!-- -->/google.golang.org/genproto#googleapis/api/annotations
+pkg<!-- -->:maven<!-- -->/org.apache.xmlgraphics/batik-anim@1.9.1?packaging=sources
+pkg<!-- -->:npm<!-- -->/foobar@12.3.1
+pkg<!-- -->:nuget<!-- -->/EnterpriseLibrary.Common@6.0.1304
+pkg<!-- -->:pypi<!-- -->/django@1.11.1
+pkg<!-- -->:rpm<!-- -->/fedora/curl@7.50.3-1.fc25?arch=i386&amp;distro=fedora-25</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="a-purl-is-a-url">A <code>purl</code> is a URL<a href="#a-purl-is-a-url" class="hash-link" aria-label="Direct link to a-purl-is-a-url" title="Direct link to a-purl-is-a-url">​</a></h2>
+<ul>
+<li>A <code>purl</code> is a valid URL and URI that conforms to the URL definitions
+or specifications at:<!-- -->
+<ul>
+<li><a href="https://tools.ietf.org/html/rfc3986" target="_blank" rel="noopener noreferrer">https://tools.ietf.org/html/rfc3986</a></li>
+<li><a href="https://en.wikipedia.org/wiki/URL#Syntax" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/URL#Syntax</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier#Syntax" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Uniform_Resource_Identifier#Syntax</a></li>
+<li><a href="https://url.spec.whatwg.org/" target="_blank" rel="noopener noreferrer">https://url.spec.whatwg.org/</a></li>
+</ul>
+</li>
+<li>This is a valid URL because it is a locator even though it has no
+Authority URL component: each <code>type</code> has a default repository location
+when defined.</li>
+<li>The <code>purl</code> components are mapped to these URL components:<!-- -->
+<ul>
+<li><code>purl</code> <code>scheme</code>: this is a URL <code>scheme</code> with a constant value: <code>pkg</code></li>
+<li><code>purl</code> <code>type</code>, <code>namespace</code>, <code>name</code> and <code>version</code> components: these
+are collectively mapped to a URL <code>path</code></li>
+<li><code>purl</code> <code>qualifiers</code>: this maps to a URL <code>query</code></li>
+<li><code>purl</code> <code>subpath</code>: this is a URL <code>fragment</code></li>
+<li>In a <code>purl</code> there is no support for a URL Authority (e.g. NO
+<code>username</code>, <code>password</code>, <code>host</code> and <code>port</code> components).</li>
+</ul>
+</li>
+<li>Special URL schemes as defined in <a href="https://url.spec.whatwg.org/" target="_blank" rel="noopener noreferrer">https://url.spec.whatwg.org/</a> such
+as <code>file://</code>, <code>https://</code>, <code>http://</code> and <code>ftp://</code> are NOT valid <code>purl</code>
+types. They are valid URL or URI schemes but they are not <code>purl</code>. They
+may be used to reference URLs in separate attributes outside of a
+<code>purl</code> or in a <code>purl</code> qualifier.</li>
+<li>Version control system (VCS) URLs such <code>git://</code>, <code>svn://</code>, <code>hg://</code> or
+as defined in Python pip or SPDX download locations are NOT valid
+<code>purl</code> types. They are valid URL or URI schemes but they are not
+<code>purl</code>. They are a closely related, compact and uniform way to
+reference VCS URLs. They may be used as references in separate
+attributes outside of a <code>purl</code> or in a <code>purl</code> qualifier.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="rules-for-each-purl-component">Rules for each <code>purl</code> component<a href="#rules-for-each-purl-component" class="hash-link" aria-label="Direct link to rules-for-each-purl-component" title="Direct link to rules-for-each-purl-component">​</a></h2>
+<p>A <code>purl</code> string is an ASCII URL string composed of seven components.</p>
+<p>Except as expressly stated otherwise in this section, each component:</p>
+<ul>
+<li>MAY be composed of any of the characters defined in the &quot;Permitted
+characters&quot; section</li>
+<li>MUST be encoded as defined in the &quot;Character encoding&quot; section</li>
+</ul>
+<p>The rules for each component are:</p>
+<ul>
+<li><strong>scheme</strong>:<!-- -->
+<ul>
+<li>The <code>scheme</code> is a constant with the value &quot;pkg&quot;.</li>
+<li>The <code>scheme</code> MUST be followed by an unencoded colon &#x27;:&#x27;.</li>
+<li><code>purl</code> parsers MUST accept URLs where the <code>scheme</code> and colon &#x27;:&#x27;
+are followed by one or more slash &#x27;/&#x27; characters, such as
+&#x27;pkg://&#x27;, and MUST ignore and remove all such &#x27;/&#x27; characters.</li>
+</ul>
+</li>
+<li><strong>type</strong>:<!-- -->
+<ul>
+<li>The package <code>type</code> MUST be composed only of ASCII letters and
+numbers, period &#x27;.&#x27;, and dash &#x27;-&#x27;.</li>
+<li>The <code>type</code> MUST start with an ASCII letter.</li>
+<li>The <code>type</code> MUST NOT be percent-encoded.</li>
+<li>The <code>type</code> is case insensitive. The canonical form is lowercase.</li>
+</ul>
+</li>
+<li><strong>namespace</strong>:<!-- -->
+<ul>
+<li>The <code>namespace</code> is optional, unless required by the package&#x27;s
+<code>type</code> definition.</li>
+<li>If present, the <code>namespace</code> MAY contain one or more segments,
+separated by a single unencoded slash &#x27;/&#x27; character.</li>
+<li>All leading and trailing slashes &#x27;/&#x27; are not significant and
+SHOULD be stripped in the canonical form. They are not part of the
+<code>namespace</code>.</li>
+<li>Each <code>namespace</code> segment MUST be a percent-encoded string.</li>
+<li>When percent-decoded, a segment:<!-- -->
+<ul>
+<li>MUST NOT contain any slash &#x27;/&#x27; characters</li>
+<li>MUST NOT be empty</li>
+<li>MAY contain any Unicode character other than &#x27;/&#x27; unless the
+package&#x27;s <code>type</code> definition provides otherwise.</li>
+</ul>
+</li>
+<li>A URL host or Authority MUST NOT be used as a <code>namespace</code>. Use
+instead a <code>repository_url</code> qualifier. Note however that for some
+types, the <code>namespace</code> may look like a host.</li>
+</ul>
+</li>
+<li><strong>name</strong>:<!-- -->
+<ul>
+<li>The <code>name</code> is prefixed by a single slash &#x27;/&#x27; separator when the
+<code>namespace</code> is not empty.</li>
+<li>All leading and trailing slashes &#x27;/&#x27; are not significant and
+SHOULD be stripped in the canonical form. They are not part of the
+<code>name</code>.</li>
+<li>A <code>name</code> MUST be a percent-encoded string.</li>
+<li>When percent-decoded, a <code>name</code> MAY contain any Unicode character
+unless the package&#x27;s <code>type</code> definition provides otherwise.</li>
+</ul>
+</li>
+<li><strong>version</strong>:<!-- -->
+<ul>
+<li>The <code>version</code> is prefixed by a &#x27;@&#x27; separator when not empty.</li>
+<li>This &#x27;@&#x27; is not part of the <code>version</code>.</li>
+<li>A <code>version</code> MUST be a percent-encoded string.</li>
+<li>When percent-decoded, a <code>version</code> MAY contain any Unicode character
+unless the package&#x27;s <code>type</code> definition provides otherwise.</li>
+<li>A <code>version</code> is a plain and opaque string.</li>
+</ul>
+</li>
+<li><strong>qualifiers</strong>:<!-- -->
+<ul>
+<li>The <code>qualifiers</code> component MUST be prefixed by an unencoded question
+mark &#x27;?&#x27; separator when not empty. This &#x27;?&#x27; separator is not
+part of the <code>qualifiers</code> component.</li>
+<li>The <code>qualifiers</code> component is composed of one or more <code>key=value</code>
+pairs. Multiple <code>key=value</code> pairs MUST be separated by an unencoded
+ampersand &#x27;&amp;&#x27;. This &#x27;&amp;&#x27; separator is not part of an individual
+<code>qualifier</code>.</li>
+<li>A <code>key</code> and <code>value</code> MUST be separated by the unencoded equal sign
+&#x27;=&#x27; character. This &#x27;=&#x27; separator is not part of the <code>key</code> or
+<code>value</code>.</li>
+<li>A <code>value</code> MUST NOT be an empty string: a <code>key=value</code> pair with an
+empty <code>value</code> is the same as if no <code>key=value</code> pair exists for this
+<code>key</code>.</li>
+<li>For each <code>key=value</code> pair:<!-- -->
+<ul>
+<li>The <code>key</code> MUST be composed only of lowercase ASCII letters and
+numbers, period &#x27;.&#x27;, dash &#x27;-&#x27; and underscore &#x27;_&#x27;.</li>
+<li>A <code>key</code> MUST start with an ASCII letter.</li>
+<li>A <code>key</code> MUST NOT be percent-encoded.</li>
+<li>Each <code>key</code> MUST be unique among all the keys of the <code>qualifiers</code>
+component.</li>
+<li>A <code>value</code> MAY contain any Unicode character and all characters
+MUST be encoded as described in the &quot;Character encoding&quot;
+section.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>subpath</strong>:<!-- -->
+<ul>
+<li>The <code>subpath</code> string is prefixed by a &#x27;#&#x27; separator when not empty</li>
+<li>This &#x27;#&#x27; is not part of the <code>subpath</code></li>
+<li>The <code>subpath</code> contains zero or more segments, separated by slash
+&#x27;/&#x27;</li>
+<li>Leading and trailing slashes &#x27;/&#x27; are not significant and SHOULD be
+stripped in the canonical form</li>
+<li>Each <code>subpath</code> segment MUST be a percent-encoded string</li>
+<li>When percent-decoded, a segment:<!-- -->
+<ul>
+<li>MUST NOT contain any slash &#x27;/&#x27; characters</li>
+<li>MUST NOT be empty</li>
+<li>MUST NOT be any of &#x27;..&#x27; or &#x27;.&#x27;</li>
+<li>MAY contain any Unicode character other than &#x27;/&#x27; unless the
+package&#x27;s <code>type</code> definition provides otherwise.</li>
+</ul>
+</li>
+<li>The <code>subpath</code> MUST be interpreted as relative to the root of the
+package</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="permitted-characters">Permitted characters<a href="#permitted-characters" class="hash-link" aria-label="Direct link to Permitted characters" title="Direct link to Permitted characters">​</a></h2>
+<p>A canonical <code>purl</code> is composed of these permitted ASCII characters:</p>
+<ul>
+<li>the Alphanumeric Characters: <code>A to Z</code>, <code>a to z</code>, <code>0 to 9</code>,</li>
+<li>the Punctuation Characters: <code>.-_~</code> (period &#x27;.&#x27;, dash &#x27;-&#x27;,
+underscore &#x27;_&#x27; and tilde &#x27;~&#x27;),</li>
+<li>the Percent Character: <code>%</code> (percent sign &#x27;%&#x27;), and</li>
+<li>the Separator Characters <code>:/@?=&amp;#</code> (colon &#x27;:&#x27;, slash &#x27;/&#x27;, at sign
+&#x27;@&#x27;, question mark &#x27;?&#x27;, equal sign &#x27;=&#x27;, ampersand &#x27;&amp;&#x27; and
+pound sign &#x27;#&#x27;).</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="purl-separators"><code>purl</code> separators<a href="#purl-separators" class="hash-link" aria-label="Direct link to purl-separators" title="Direct link to purl-separators">​</a></h2>
+<p>This is how each of the Separator Characters is used:</p>
+<ul>
+<li>&#x27;:&#x27; (colon) is the separator between <code>scheme</code> and <code>type</code></li>
+<li>&#x27;/&#x27; (slash) is the separator between <code>type</code>, <code>namespace</code> and <code>name</code></li>
+<li>&#x27;/&#x27; (slash) is the separator between <code>subpath</code> segments</li>
+<li>&#x27;@&#x27; (at sign) is the separator between <code>name</code> and <code>version</code></li>
+<li>&#x27;?&#x27; (question mark) is the separator before <code>qualifiers</code></li>
+<li>&#x27;=&#x27; (equals) is the separator between a <code>key</code> and a <code>value</code> of a
+<code>qualifier</code></li>
+<li>&#x27;&amp;&#x27; (ampersand) is the separator between <code>qualifiers</code> (each being a
+<code>key=value</code> pair)</li>
+<li>&#x27;#&#x27; (number sign) is the separator before <code>subpath</code></li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="character-encoding">Character encoding<a href="#character-encoding" class="hash-link" aria-label="Direct link to Character encoding" title="Direct link to Character encoding">​</a></h2>
+<ul>
+<li>In the &quot;Rules for each <code>purl</code> component&quot; section, each component
+defines when and how to apply percent-encoding and decoding to its
+content.</li>
+<li>When percent-encoding is required by a component definition, the
+component string MUST first be encoded as UTF-8.</li>
+<li>In the component string, each &quot;data octet&quot; MUST be replaced by the
+percent-encoded &quot;character triplet&quot; applying the percent-encoding
+mechanism defined in RFC 3986 section 2.1
+(<a href="https://datatracker.ietf.org/doc/html/rfc3986#section-2.1" target="_blank" rel="noopener noreferrer">https://datatracker.ietf.org/doc/html/rfc3986#section-2.1</a>),
+including the RFC definition of &quot;data octet&quot; and &quot;character
+triplet&quot;, and using these definitions for RFC&#x27;s &quot;allowed set&quot; and
+&quot;delimiters&quot;:<!-- -->
+<ul>
+<li>&quot;allowed set&quot; is composed of the Alphanumeric Characters and the
+Punctuation Characters</li>
+<li>&quot;delimiters&quot; is composed of the Separator Characters</li>
+</ul>
+</li>
+<li>The following characters MUST NOT be percent-encoded:<!-- -->
+<ul>
+<li>the Alphanumeric Characters,</li>
+<li>the Punctuation Characters,</li>
+<li>the Separator Characters when being used as <code>purl</code> separators,</li>
+<li>the colon &#x27;:&#x27;, whether used as a Separator Character or otherwise,
+and</li>
+<li>the percent sign &#x27;%&#x27; when used to represent a percent-encoded
+character.</li>
+</ul>
+</li>
+<li>Where the space &#x27; &#x27; is permitted, it MUST be percent-encoded as
+&#x27;%20&#x27;.</li>
+<li>With the exception of the percent-encoding mechanism, the rules
+regarding percent-encoding are defined by this specification alone.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="how-to-build-purl-string-from-its-components">How to build <code>purl</code> string from its components<a href="#how-to-build-purl-string-from-its-components" class="hash-link" aria-label="Direct link to how-to-build-purl-string-from-its-components" title="Direct link to how-to-build-purl-string-from-its-components">​</a></h2>
+<p>Building a <code>purl</code> ASCII string works from left to right, from <code>type</code> to
+<code>subpath</code>.</p>
+<p>Note: some extra type-specific normalizations are required. See the
+&quot;Known types section&quot; for details.</p>
+<p>To build a <code>purl</code> string from its components:</p>
+<ul>
+<li>Start a <code>purl</code> string with the &quot;pkg:&quot; <code>scheme</code> as a lowercase ASCII
+string</li>
+<li>Append the <code>type</code> string to the <code>purl</code> as an unencoded lowercase ASCII
+string<!-- -->
+<ul>
+<li>Append &#x27;/&#x27; to the <code>purl</code></li>
+</ul>
+</li>
+<li>If the <code>namespace</code> is not empty:<!-- -->
+<ul>
+<li>Strip the <code>namespace</code> from leading and trailing &#x27;/&#x27;</li>
+<li>Split on &#x27;/&#x27; as segments</li>
+<li>Apply type-specific normalization to each segment if needed</li>
+<li>UTF-8-encode each segment if needed in your programming language</li>
+<li>Percent-encode each segment</li>
+<li>Join the segments with &#x27;/&#x27;</li>
+<li>Append this to the <code>purl</code></li>
+<li>Append &#x27;/&#x27; to the <code>purl</code></li>
+<li>Strip the <code>name</code> from leading and trailing &#x27;/&#x27;</li>
+<li>Apply type-specific normalization to the <code>name</code> if needed</li>
+<li>UTF-8-encode the <code>name</code> if needed in your programming language</li>
+<li>Append the percent-encoded <code>name</code> to the <code>purl</code></li>
+</ul>
+</li>
+<li>If the <code>namespace</code> is empty:<!-- -->
+<ul>
+<li>Apply type-specific normalization to the <code>name</code> if needed</li>
+<li>UTF-8-encode the <code>name</code> if needed in your programming language</li>
+<li>Append the percent-encoded <code>name</code> to the <code>purl</code></li>
+</ul>
+</li>
+<li>If the <code>version</code> is not empty:<!-- -->
+<ul>
+<li>Append &#x27;@&#x27; to the <code>purl</code></li>
+<li>UTF-8-encode the <code>version</code> if needed in your programming language</li>
+<li>Append the percent-encoded version to the <code>purl</code></li>
+</ul>
+</li>
+<li>If the <code>qualifiers</code> are not empty and not composed only of key/value
+pairs where the <code>value</code> is empty:<!-- -->
+<ul>
+<li>Append &#x27;?&#x27; to the <code>purl</code></li>
+<li>Build a list from all key/value pair:<!-- -->
+<ul>
+<li>Discard any pair where the <code>value</code> is empty.</li>
+<li>UTF-8-encode each <code>value</code> if needed in your programming language</li>
+<li>If the <code>key</code> is <code>checksum</code> and this is a list of checksums join
+this list with a &#x27;,&#x27; to create this qualifier <code>value</code></li>
+<li>Create a string by joining the lowercased <code>key</code>, the equal &#x27;=&#x27;
+sign and the percent-encoded <code>value</code> to create a qualifier</li>
+</ul>
+</li>
+<li>Sort this list of qualifier strings lexicographically</li>
+<li>Join this list of qualifier strings with a &#x27;&amp;&#x27; ampersand</li>
+<li>Append this string to the <code>purl</code></li>
+</ul>
+</li>
+<li>If the <code>subpath</code> is not empty and not composed only of empty, &#x27;.&#x27;
+and &#x27;..&#x27; segments:<!-- -->
+<ul>
+<li>Append &#x27;#&#x27; to the <code>purl</code></li>
+<li>Strip the <code>subpath</code> from leading and trailing &#x27;/&#x27;</li>
+<li>Split this on &#x27;/&#x27; as segments</li>
+<li>Discard empty, &#x27;.&#x27; and &#x27;..&#x27; segments</li>
+<li>Percent-encode each segment</li>
+<li>UTF-8-encode each segment if needed in your programming language</li>
+<li>Join the segments with &#x27;/&#x27;</li>
+<li>Append this to the <code>purl</code></li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="how-to-parse-a-purl-string-in-its-components">How to parse a <code>purl</code> string in its components<a href="#how-to-parse-a-purl-string-in-its-components" class="hash-link" aria-label="Direct link to how-to-parse-a-purl-string-in-its-components" title="Direct link to how-to-parse-a-purl-string-in-its-components">​</a></h2>
+<p>Parsing a <code>purl</code> ASCII string into its components works from right to
+left, from <code>subpath</code> to <code>type</code>.</p>
+<p>Note: some extra type-specific normalizations are required. See the
+&quot;Known types section&quot; for details.</p>
+<p>To parse a <code>purl</code> string in its components:</p>
+<ul>
+<li>Split the <code>purl</code> string once from right on &#x27;#&#x27;<!-- -->
+<ul>
+<li>The left side is the <code>remainder</code></li>
+<li>Strip the right side from leading and trailing &#x27;/&#x27;</li>
+<li>Split this on &#x27;/&#x27;</li>
+<li>Discard any empty string segment from that split</li>
+<li>Percent-decode each segment</li>
+<li>Discard any &#x27;.&#x27; or &#x27;..&#x27; segment from that split</li>
+<li>UTF-8-decode each segment if needed in your programming language</li>
+<li>Join segments back with a &#x27;/&#x27;</li>
+<li>This is the <code>subpath</code></li>
+</ul>
+</li>
+<li>Split the <code>remainder</code> once from right on &#x27;?&#x27;<!-- -->
+<ul>
+<li>The left side is the <code>remainder</code></li>
+<li>The right side is the <code>qualifiers</code> string</li>
+<li>Split the <code>qualifiers</code> on &#x27;&amp;&#x27;. Each part is a <code>key=value</code> pair</li>
+<li>For each pair, split the <code>key=value</code> once from left on &#x27;=&#x27;:<!-- -->
+<ul>
+<li>The <code>key</code> is the lowercase left side</li>
+<li>The <code>value</code> is the percent-decoded right side</li>
+<li>UTF-8-decode the <code>value</code> if needed in your programming language</li>
+<li>Discard any key/value pairs where the value is empty</li>
+<li>If the <code>key</code> is <code>checksum</code>, split the <code>value</code> on &#x27;,&#x27; to create a
+list of checksums</li>
+</ul>
+</li>
+<li>This list of key/value is the <code>qualifiers</code> object</li>
+</ul>
+</li>
+<li>Split the <code>remainder</code> once from left on &#x27;:&#x27;<!-- -->
+<ul>
+<li>The left side lowercased is the <code>scheme</code></li>
+<li>The right side is the <code>remainder</code></li>
+</ul>
+</li>
+<li>Strip all leading and trailing &#x27;/&#x27; characters (e.g., &#x27;/&#x27;, &#x27;//&#x27;,
+&#x27;///&#x27; and so on) from the <code>remainder</code>
+<ul>
+<li>Split this once from left on &#x27;/&#x27;</li>
+<li>The left side lowercased is the <code>type</code></li>
+<li>The right side is the <code>remainder</code></li>
+</ul>
+</li>
+<li>Split the <code>remainder</code> once from right on &#x27;@&#x27;<!-- -->
+<ul>
+<li>The left side is the <code>remainder</code></li>
+<li>Percent-decode the right side. This is the <code>version</code>.</li>
+<li>UTF-8-decode the <code>version</code> if needed in your programming language</li>
+<li>This is the <code>version</code></li>
+</ul>
+</li>
+<li>Split the <code>remainder</code> once from right on &#x27;/&#x27;<!-- -->
+<ul>
+<li>The left side is the <code>remainder</code></li>
+<li>Strip all leading characters (e.g., &#x27;/&#x27;, &#x27;//&#x27; and so on) from
+the right side</li>
+<li>Percent-decode the right side. This is the <code>name</code></li>
+<li>UTF-8-decode this <code>name</code> if needed in your programming language</li>
+<li>Apply type-specific normalization to the <code>name</code> if needed</li>
+<li>This is the <code>name</code></li>
+</ul>
+</li>
+<li>Split the <code>remainder</code> on &#x27;/&#x27;<!-- -->
+<ul>
+<li>Strip all leading &#x27;/&#x27; characters (e.g., &#x27;/&#x27;, &#x27;//&#x27; and so on)
+from that split</li>
+<li>Discard any empty segment from that split</li>
+<li>Percent-decode each segment</li>
+<li>UTF-8-decode each segment if needed in your programming language</li>
+<li>Apply type-specific normalization to each segment if needed</li>
+<li>Join segments back with a &#x27;/&#x27;</li>
+<li>This is the <code>namespace</code></li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="known-purl-types">Known <code>purl</code> types<a href="#known-purl-types" class="hash-link" aria-label="Direct link to known-purl-types" title="Direct link to known-purl-types">​</a></h2>
+<p>There are several known <code>purl</code> package type definitions tracked in the
+separate <a href="/docs/PURL_TYPES">PURL_TYPES.md</a> document.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="known-qualifiers-keyvalue-pairs">Known <code>qualifiers</code> key/value pairs<a href="#known-qualifiers-keyvalue-pairs" class="hash-link" aria-label="Direct link to known-qualifiers-keyvalue-pairs" title="Direct link to known-qualifiers-keyvalue-pairs">​</a></h2>
+<p>Note: Do not abuse <code>qualifiers</code>: it can be tempting to use many
+qualifier keys but their usage should be limited to the bare minimum for
+proper package identification to ensure that a <code>purl</code> stays compact and
+readable in most cases.</p>
+<p>Additional, separate external attributes stored outside of a <code>purl</code> are
+the preferred mechanism to convey extra long and optional information
+such as a download URL, VCS URL or checksums in an API, database or web
+form.</p>
+<p>With this warning, the known <code>key</code> and <code>value</code> defined here are valid
+for use in all package types:</p>
+<ul>
+<li>
+<p><code>vers</code> allows the specification of a version range. The value MUST
+adhere to the Version Range Specification.
+This qualifier is mutually exclusive with the <code>version</code> component. For
+example:</p>
+<p>pkg<!-- -->:pypi<!-- -->/django?vers=vers<!-- -->:pypi<!-- -->%2F%3E%3D1.11.0%7C%21%3D1.11.1%7C%3C2.0.0</p>
+</li>
+<li>
+<p><code>repository_url</code> is an extra URL for an alternative, non-default
+package repository or registry. When a package does not come from the
+default public package repository for its <code>type</code> a <code>purl</code> may be
+qualified with this extra URL. The default repository or registry of a
+<code>type</code> is documented in the &quot;Known <code>purl</code> types&quot; section.</p>
+</li>
+<li>
+<p><code>download_url</code> is an extra URL for a direct package web download URL
+to optionally qualify a <code>purl</code>.</p>
+</li>
+<li>
+<p><code>vcs_url</code> is an extra URL for a package version control system URL to
+optionally qualify a <code>purl</code>. The syntax for this URL should be as
+defined in Python pip or the SPDX specification. See
+<a href="https://github.com/spdx/spdx-spec/blob/cfa1b9d08903/chapters/3-package-information.md#37-package-download-location" target="_blank" rel="noopener noreferrer">https://github.com/spdx/spdx-spec/blob/cfa1b9d08903/chapters/3-package-information.md#37-package-download-location</a></p>
+<ul>
+<li>TODO: incorporate the details from SPDX here.</li>
+</ul>
+</li>
+<li>
+<p><code>file_name</code> is an extra file name of a package archive.</p>
+</li>
+<li>
+<p><code>checksum</code> is a qualifier for one or more checksums stored as a
+comma-separated list. Each item in the <code>value</code> is in form of
+<code>lowercase_algorithm:hex_encoded_lowercase_value</code> such as
+<code>sha1:ad9503c3e994a4f611a4892f2e67ac82df727086</code>. For example (with
+checksums truncated for brevity) :</p>
+<p>checksum=sha1<!-- -->:ad9503c3e994a4f<!-- -->,sha256:41bf9088b3a1e6c1ef1d</p>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="tests">Tests<a href="#tests" class="hash-link" aria-label="Direct link to Tests" title="Direct link to Tests">​</a></h2>
+<p>To support the language-neutral testing of <code>purl</code> implementations, a
+test suite is provided as JSON document named <code>test-suite-data.json</code>.
+This JSON document contains an array of objects. Each object represents
+a test with these key/value pairs some of which may not be normalized:</p>
+<ul>
+<li><strong>purl</strong>: a <code>purl</code> string.</li>
+<li><strong>canonical</strong>: the same <code>purl</code> string in canonical, normalized form</li>
+<li><strong>type</strong>: the <code>type</code> corresponding to this <code>purl</code>.</li>
+<li><strong>namespace</strong>: the <code>namespace</code> corresponding to this <code>purl</code>.</li>
+<li><strong>name</strong>: the <code>name</code> corresponding to this <code>purl</code>.</li>
+<li><strong>version</strong>: the <code>version</code> corresponding to this <code>purl</code>.</li>
+<li><strong>qualifiers</strong>: the <code>qualifiers</code> corresponding to this <code>purl</code> as an
+object of <code>{key: value}</code> qualifier pairs.</li>
+<li><strong>subpath</strong>: the <code>subpath</code> corresponding to this <code>purl</code>.</li>
+<li><strong>is_invalid</strong>: a boolean flag set to true if the test should report
+an error</li>
+</ul>
+<p>To test <code>purl</code> parsing and building, a tool can use this test suite and
+for every listed test object, run these tests:</p>
+<ul>
+<li>parsing the test canonical <code>purl</code> then re-building a <code>purl</code> from these
+parsed components should return the test canonical <code>purl</code></li>
+<li>parsing the test <code>purl</code> should return the components parsed from the
+test canonical <code>purl</code></li>
+<li>parsing the test <code>purl</code> then re-building a <code>purl</code> from these parsed
+components should return the test canonical <code>purl</code></li>
+<li>building a <code>purl</code> from the test components should return the test
+canonical <code>purl</code></li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="license">License<a href="#license" class="hash-link" aria-label="Direct link to License" title="Direct link to License">​</a></h2>
+<p>This document is licensed under the MIT license</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="definitions">Definitions<a href="#definitions" class="hash-link" aria-label="Direct link to Definitions" title="Direct link to Definitions">​</a></h2>
+<p>[ASCII] See, e.g.,</p>
+<blockquote>
+<ul>
+<li>American National Standards Institute, &quot;Coded Character Set --
+7-bit American Standard Code for Information Interchange&quot;, ANSI
+X3.4, 1986.</li>
+<li><a href="https://en.wikipedia.org/wiki/ASCII" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/ASCII</a>.</li>
+</ul>
+</blockquote></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/package-url/docs/PURL_SPECIFICATION.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--next" href="/docs/PURL_TYPES"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">PURL Types</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#some-purl-examples" class="table-of-contents__link toc-highlight">Some <code>purl</code> examples</a></li><li><a href="#a-purl-is-a-url" class="table-of-contents__link toc-highlight">A <code>purl</code> is a URL</a></li><li><a href="#rules-for-each-purl-component" class="table-of-contents__link toc-highlight">Rules for each <code>purl</code> component</a></li><li><a href="#permitted-characters" class="table-of-contents__link toc-highlight">Permitted characters</a></li><li><a href="#purl-separators" class="table-of-contents__link toc-highlight"><code>purl</code> separators</a></li><li><a href="#character-encoding" class="table-of-contents__link toc-highlight">Character encoding</a></li><li><a href="#how-to-build-purl-string-from-its-components" class="table-of-contents__link toc-highlight">How to build <code>purl</code> string from its components</a></li><li><a href="#how-to-parse-a-purl-string-in-its-components" class="table-of-contents__link toc-highlight">How to parse a <code>purl</code> string in its components</a></li><li><a href="#known-purl-types" class="table-of-contents__link toc-highlight">Known <code>purl</code> types</a></li><li><a href="#known-qualifiers-keyvalue-pairs" class="table-of-contents__link toc-highlight">Known <code>qualifiers</code> key/value pairs</a></li><li><a href="#tests" class="table-of-contents__link toc-highlight">Tests</a></li><li><a href="#license" class="table-of-contents__link toc-highlight">License</a></li><li><a href="#definitions" class="table-of-contents__link toc-highlight">Definitions</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">News and Events</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/docs/PURL_SPECIFICATION">Newsletter</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/PURL_SPECIFICATION">Meetings</a></li><li class="footer__item"><a class="footer__link-item" href="/blog">Blog</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Social</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://app.gitter.im/#/room/#package-url_Lobby:gitter.im" target="_blank" rel="noopener noreferrer" class="footer__link-item">Gitter<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://cyclonedx.slack.com/archives/C06KTE3BWEB" target="_blank" rel="noopener noreferrer" class="footer__link-item">Slack<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://github.com/package-url" target="_blank" rel="noopener noreferrer" class="footer__link-item">Github<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Standardisation</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://ecma-international.org" target="_blank" rel="noopener noreferrer" class="footer__link-item">ECMA<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://tc54.org/purl/" target="_blank" rel="noopener noreferrer" class="footer__link-item">TC-54 PURL<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://tc54.org/cyclonedx/" target="_blank" rel="noopener noreferrer" class="footer__link-item">TC-54 CycloneDX<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://tc54.org/tea/" target="_blank" rel="noopener noreferrer" class="footer__link-item">TC-54 Transparency Exchange API<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://www.iso.org/home.html" target="_blank" rel="noopener noreferrer" class="footer__link-item">ISO<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Related Specs</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://cyclonedx.org/" target="_blank" rel="noopener noreferrer" class="footer__link-item">CycloneDX<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://spdx.dev/" target="_blank" rel="noopener noreferrer" class="footer__link-item">SPDX<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://www.csaf.io/" target="_blank" rel="noopener noreferrer" class="footer__link-item">CSAF<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://github.com/openvex/" target="_blank" rel="noopener noreferrer" class="footer__link-item">OpenVEX<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://github.com/ossf/osv-schema" target="_blank" rel="noopener noreferrer" class="footer__link-item">OSV Schema<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 PURL, Inc. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>

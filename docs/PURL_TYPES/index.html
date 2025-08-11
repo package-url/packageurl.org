@@ -1,0 +1,929 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-PURL_TYPES" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.8.1">
+<title data-rh="true">PURL Types | PURL Specs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://your-docusaurus-site.example.com/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://your-docusaurus-site.example.com/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://your-docusaurus-site.example.com/docs/PURL_TYPES"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="PURL Types | PURL Specs"><meta data-rh="true" name="description" content="Each package manager, platform, type, or ecosystem has its own"><meta data-rh="true" property="og:description" content="Each package manager, platform, type, or ecosystem has its own"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://your-docusaurus-site.example.com/docs/PURL_TYPES"><link data-rh="true" rel="alternate" href="https://your-docusaurus-site.example.com/docs/PURL_TYPES" hreflang="en"><link data-rh="true" rel="alternate" href="https://your-docusaurus-site.example.com/docs/PURL_TYPES" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"PURL Types","item":"https://your-docusaurus-site.example.com/docs/PURL_TYPES"}]}</script><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="PURL Specs RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="PURL Specs Atom Feed"><link rel="stylesheet" href="/assets/css/styles.7c20e602.css">
+<script src="/assets/js/runtime~main.3b226157.js" defer="defer"></script>
+<script src="/assets/js/main.60b3ba07.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t="light";var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",e||t),document.documentElement.setAttribute("data-theme-choice",e||t)}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/img/logo.png"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top navbar--dark"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/logo.png" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/logo.png" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">PURL</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/PURL_SPECIFICATION">Docs</a><a class="navbar__item navbar__link" href="/docs/PURL_SPECIFICATION">PURL Specs</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/PURL_TYPES">PURL Types</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/package-url" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><a href="https://cyclonedx.slack.com/archives/C06KTE3BWEB" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">Slack<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS darkNavbarColorModeToggle_X3D1" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/PURL_SPECIFICATION">PURL Specification</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/docs/PURL_TYPES">PURL Types</a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">PURL Types</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Package URL Type definitions</h1></header>
+<p>Each package manager, platform, type, or ecosystem has its own
+conventions and protocols to identify, locate, and provision software
+packages.</p>
+<p>The package <strong>type</strong> is the component of a package URL that is used to
+capture this information with a short string such as <code>maven</code>, <code>npm</code>,
+<code>nuget</code>, <code>gem</code>, <code>pypi</code>, etc.</p>
+<p>These are known <code>purl</code> package type definitions.</p>
+<p>Known <code>purl</code> type definitions are formalized here independent of the
+core Package URL specification. See also a candidate list further down.</p>
+<p>Definitions can also include types reserved for future use.</p>
+<p>See also <a href="https://github.com/package-url/purl-spec" target="_blank" rel="noopener noreferrer">https://github.com/package-url/purl-spec</a> and
+<a href="/docs/PURL_SPECIFICATION">PURL_SPECIFICATION.md</a> for the Package URL
+specification.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="known-purl-types">Known <code>purl</code> types<a href="#known-purl-types" class="hash-link" aria-label="Direct link to known-purl-types" title="Direct link to known-purl-types">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="alpm">alpm<a href="#alpm" class="hash-link" aria-label="Direct link to alpm" title="Direct link to alpm">​</a></h3>
+<p><code>alpm</code> for Arch Linux and other users of the libalpm/pacman package
+manager.</p>
+<ul>
+<li>
+<p>There is no default package repository: this should be implied either
+from the <code>distro</code> qualifiers key or using a repository base url as
+<code>repository_url</code> qualifiers key.</p>
+</li>
+<li>
+<p>The <code>namespace</code> is the vendor such as <code>arch</code>, <code>arch32</code>, <code>archarm</code>,
+<code>manjaro</code> or <code>msys</code>. It is not case sensitive and must be lowercased.</p>
+</li>
+<li>
+<p>The <code>name</code> is the package name. It is not case sensitive and must be
+lowercased.</p>
+</li>
+<li>
+<p>The <code>version</code> is the version of the package as specified in
+[[vercmp(8)]<code>{.title-ref}</code>](<a href="https://man.archlinux.org/man/vercmp.8#DESCRIPTION" target="_blank" rel="noopener noreferrer">https://man.archlinux.org/man/vercmp.8#DESCRIPTION</a>)
+as part of alpm.</p>
+</li>
+<li>
+<p>The <code>arch</code> is the qualifiers key for a package architecture.</p>
+</li>
+<li>
+<p>Examples:</p>
+<p>pkg<!-- -->:alpm<!-- -->/arch/pacman@6.0.1-1?arch=x86_64
+pkg<!-- -->:alpm<!-- -->/arch/python-pip@21.0-1?arch=any
+pkg<!-- -->:alpm<!-- -->/arch/containers-common@1:0.47.4-4?arch=x86_64</p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="apk">apk<a href="#apk" class="hash-link" aria-label="Direct link to apk" title="Direct link to apk">​</a></h3>
+<p><code>apk</code> for APK-based packages:</p>
+<ul>
+<li>
+<p>There is no default package repository: this should be implied either
+from the <code>distro</code> qualifiers key or using a repository base url as
+<code>repository_url</code> qualifiers key.</p>
+</li>
+<li>
+<p>The <code>namespace</code> is the vendor such as <code>alpine</code> or <code>openwrt</code>. It is not
+case sensitive and must be lowercased.</p>
+</li>
+<li>
+<p>The <code>name</code> is the package name. It is not case sensitive and must be
+lowercased.</p>
+</li>
+<li>
+<p>The <code>version</code> is a package version as expected by apk.</p>
+</li>
+<li>
+<p>The <code>arch</code> is the qualifiers key for a package architecture.</p>
+</li>
+<li>
+<p>Examples:</p>
+<p>pkg<!-- -->:apk<!-- -->/alpine/curl@7.83.0-r0?arch=x86
+pkg<!-- -->:apk<!-- -->/alpine/apk@2.12.9-r3?arch=x86</p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="bitbucket">bitbucket<a href="#bitbucket" class="hash-link" aria-label="Direct link to bitbucket" title="Direct link to bitbucket">​</a></h3>
+<p><code>bitbucket</code> for Bitbucket-based packages:</p>
+<ul>
+<li>
+<p>The default repository is <code>https://bitbucket.org</code>.</p>
+</li>
+<li>
+<p>The <code>namespace</code> is the user or organization. It is not case sensitive
+and must be lowercased.</p>
+</li>
+<li>
+<p>The <code>name</code> is the repository name. It is not case sensitive and must
+be lowercased.</p>
+</li>
+<li>
+<p>The <code>version</code> is a commit or tag.</p>
+</li>
+<li>
+<p>Examples:</p>
+<p>pkg<!-- -->:bitbucket<!-- -->/birkenfeld/pygments-main@244fd47e07d1014f0aed9c</p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="bitnami">bitnami<a href="#bitnami" class="hash-link" aria-label="Direct link to bitnami" title="Direct link to bitnami">​</a></h3>
+<p><code>bitnami</code> for Bitnami-based packages:</p>
+<ul>
+<li>
+<p>The default repository is
+<code>https://downloads.bitnami.com/files/stacksmith</code>.</p>
+</li>
+<li>
+<p>The <code>name</code> is the component name. It must be lowercased.</p>
+</li>
+<li>
+<p>The <code>version</code> is the full Bitnami package version, including version
+and revision.</p>
+</li>
+<li>
+<p>The <code>arch</code> is the qualifiers key for a package architecture. Available
+values: <code>amd64</code> (default) and <code>arm64</code>.</p>
+</li>
+<li>
+<p>The <code>distro</code> is the qualifiers key for the distribution associated to
+the package.</p>
+</li>
+<li>
+<p>Examples:</p>
+<p>pkg<!-- -->:bitnami<!-- -->/wordpress?distro=debian-12
+pkg<!-- -->:bitnami<!-- -->/wordpress@6.2.0?distro=debian-12
+pkg<!-- -->:bitnami<!-- -->/wordpress@6.2.0?arch=arm64&amp;distro=debian-12
+pkg<!-- -->:bitnami<!-- -->/wordpress@6.2.0?arch=arm64&amp;distro=photon-4</p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="cargo">cargo<a href="#cargo" class="hash-link" aria-label="Direct link to cargo" title="Direct link to cargo">​</a></h3>
+<p><code>cargo</code> for Rust:</p>
+<ul>
+<li>
+<p>The default repository is <code>https://crates.io/</code>.</p>
+</li>
+<li>
+<p>The <code>name</code> is the repository name.</p>
+</li>
+<li>
+<p>The <code>version</code> is the package version.</p>
+</li>
+<li>
+<p>Examples:</p>
+<p>pkg<!-- -->:cargo<!-- -->/rand@0.7.2
+pkg<!-- -->:cargo<!-- -->/clap@2.33.0
+pkg<!-- -->:cargo<!-- -->/structopt@0.3.11</p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="cocoapods">cocoapods<a href="#cocoapods" class="hash-link" aria-label="Direct link to cocoapods" title="Direct link to cocoapods">​</a></h3>
+<p><code>cocoapods</code> for CocoaPods:</p>
+<ul>
+<li>
+<p>The default repository is <code>https://cdn.cocoapods.org/</code>.</p>
+</li>
+<li>
+<p>The <code>name</code> is the pod name and is case sensitive, cannot contain
+whitespace, a plus ([+]<code>{.title-ref}</code>) character, or begin with a period
+([.]<code>{.title-ref}</code>).</p>
+</li>
+<li>
+<p>The <code>version</code> is the package version.</p>
+</li>
+<li>
+<p>The purl subpath is used to represent a pods subspec (if present).</p>
+</li>
+<li>
+<p>Examples:</p>
+<p>pkg<!-- -->:cocoapods<!-- -->/AFNetworking@4.0.1
+pkg<!-- -->:cocoapods<!-- -->/MapsIndoors@3.24.0
+pkg<!-- -->:cocoapods<!-- -->/ShareKit@2.0#Twitter
+pkg<!-- -->:cocoapods<!-- -->/GoogleUtilities@7.5.2#NSData+zlib</p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="composer">composer<a href="#composer" class="hash-link" aria-label="Direct link to composer" title="Direct link to composer">​</a></h3>
+<p><code>composer</code> for Composer PHP packages:</p>
+<ul>
+<li>
+<p>The default repository is <code>https://packagist.org</code>.</p>
+</li>
+<li>
+<p>The <code>namespace</code> is the vendor.</p>
+</li>
+<li>
+<p>The <code>namespace</code> and <code>name</code> are not case sensitive and must be
+lowercased.</p>
+</li>
+<li>
+<p>Note: private, local packages may have no name. In this case you
+cannot create a <code>purl</code> for these.</p>
+</li>
+<li>
+<p>Examples:</p>
+<p>pkg<!-- -->:composer<!-- -->/laravel/laravel@5.5.0</p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="conan">conan<a href="#conan" class="hash-link" aria-label="Direct link to conan" title="Direct link to conan">​</a></h3>
+<p><code>conan</code> for Conan C/C++ packages. The purl is designed to closely
+resemble the Conan-native
+[&lt;package-name&gt;/&lt;package-version&gt;@&lt;user&gt;/&lt;channel&gt;]<code>{.title-ref}</code>
+<a href="https://docs.conan.io/en/1.46/cheatsheet.html#package-terminology" target="_blank" rel="noopener noreferrer">syntax for package
+references</a>.</p>
+<ul>
+<li><code>name</code>: The Conan <code>&lt;package-name&gt;</code>.</li>
+<li><code>version</code>: The Conan <code>&lt;package-version&gt;</code>.</li>
+<li><code>namespace</code>: The vendor of the package.</li>
+<li>Qualifier <code>user</code>: The Conan <code>&lt;user&gt;</code>. Only required if the Conan
+package was published with <code>&lt;user&gt;</code>.</li>
+<li>Qualifier <code>channel</code>: The Conan <code>&lt;channel&gt;</code>. Only required if the Conan
+package was published with Conan <code>&lt;channel&gt;</code>.</li>
+<li>Qualifier <code>rrev</code>: The Conan recipe revision (optional). If omitted,
+the purl refers to the latest recipe revision available for the given
+version.</li>
+<li>Qualifier <code>prev</code>: The Conan package revision (optional). If omitted,
+the purl refers to the latest package revision available for the given
+version and recipe revision.</li>
+<li>Qualifier <code>repository_url</code>: The Conan repository where the package is
+available (optional). If omitted, <code>https://center.conan.io</code> as default
+repository is assumed.</li>
+</ul>
+<p>Additional qualifiers can be used to distinguish Conan packages with
+different settings or options, e.g. <code>os=Linux</code>, <code>build_type=Debug</code> or
+<code>shared=True</code>.</p>
+<p>If no additional qualifiers are used to distinguish Conan packages build
+with different settings or options, then the purl is ambiguous and it is
+up to the user to work out which package is being referred to (e.g. with
+context information).</p>
+<p>Examples:</p>
+<p>pkg<!-- -->:conan<!-- -->/openssl@3.0.3
+pkg<!-- -->:conan<!-- -->/openssl.org/openssl@3.0.3?user=bincrafters&amp;channel=stable
+pkg<!-- -->:conan<!-- -->/openssl.org/openssl@3.0.3?arch=x86_64&amp;build_type=Debug&amp;compiler=Visual%20Studio&amp;compiler.runtime=MDd&amp;compiler.version=16&amp;os=Windows&amp;shared=True&amp;rrev=93a82349c31917d2d674d22065c7a9ef9f380c8e&amp;prev=b429db8a0e324114c25ec387bfd8281f330d7c5c</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="conda">conda<a href="#conda" class="hash-link" aria-label="Direct link to conda" title="Direct link to conda">​</a></h3>
+<p><code>conda</code> for Conda packages:</p>
+<ul>
+<li>
+<p>The default repository is <code>https://repo.anaconda.com</code>.</p>
+</li>
+<li>
+<p>The <code>name</code> is the package name.</p>
+</li>
+<li>
+<p>The <code>version</code> is the package version.</p>
+</li>
+<li>
+<p>The qualifiers: <code>build</code> is the build string. <code>channel</code> is the package
+stored location. <code>subdir</code> is the associated platform. <code>type</code> is the
+package type.</p>
+</li>
+<li>
+<p>Examples:</p>
+<p>pkg<!-- -->:conda<!-- -->/absl-py@0.4.1?build=py36h06a4308_0&amp;channel=main&amp;subdir=linux-64&amp;type=tar.bz2</p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="cpan">cpan<a href="#cpan" class="hash-link" aria-label="Direct link to cpan" title="Direct link to cpan">​</a></h3>
+<p><code>cpan</code> for CPAN Perl packages:</p>
+<ul>
+<li>
+<p>The default repository is <code>https://www.cpan.org/</code>.</p>
+</li>
+<li>
+<p>The <code>namespace</code>:</p>
+<ul>
+<li>To refer to a CPAN distribution name, the <code>namespace</code> MUST be
+present. In this case, the namespace is the CPAN id of the
+author/publisher. It MUST be written uppercase, followed by the
+distribution name in the <code>name</code> component. A distribution name MUST
+NOT contain the string <code>::</code>.</li>
+<li>To refer to a CPAN module, the <code>namespace</code> MUST be absent. The
+module name MAY contain zero or more <code>::</code> strings, and the module
+name MUST NOT contain a <code>-</code></li>
+</ul>
+</li>
+<li>
+<p>The <code>name</code> is the module or distribution name and is case sensitive.</p>
+</li>
+<li>
+<p>The <code>version</code> is the module or distribution version.</p>
+</li>
+<li>
+<p>Optional qualifiers may include:</p>
+<ul>
+<li><code>repository_url</code>: CPAN/MetaCPAN/BackPAN/DarkPAN repository base URL
+(default is <code>https://www.cpan.org</code>)</li>
+<li><code>download_url</code>: URL of package or distribution</li>
+<li><code>vcs_url</code>: extra URL for a package version control system</li>
+<li><code>ext</code>: file extension (default is <code>tar.gz</code>)</li>
+</ul>
+</li>
+<li>
+<p>Examples:</p>
+<p>pkg<!-- -->:cpan<!-- -->/Perl::Version@1.013
+pkg<!-- -->:cpan<!-- -->/DROLSKY/DateTime@1.55
+pkg<!-- -->:cpan<!-- -->/DateTime@1.55
+pkg<!-- -->:cpan<!-- -->/GDT/URI-PackageURL
+pkg<!-- -->:cpan<!-- -->/LWP::UserAgent
+pkg<!-- -->:cpan<!-- -->/OALDERS/libwww-perl@6.76
+pkg<!-- -->:cpan<!-- -->/URI</p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="cran">cran<a href="#cran" class="hash-link" aria-label="Direct link to cran" title="Direct link to cran">​</a></h3>
+<p><code>cran</code> for CRAN R packages:</p>
+<ul>
+<li>
+<p>The default repository is <code>https://cran.r-project.org</code>.</p>
+</li>
+<li>
+<p>The <code>name</code> is the package name and is case sensitive, but there cannot
+be two packages on CRAN with the same name ignoring case.</p>
+</li>
+<li>
+<p>The <code>version</code> is the package version.</p>
+</li>
+<li>
+<p>Examples:</p>
+<p>pkg<!-- -->:cran<!-- -->/A3@1.0.0
+pkg<!-- -->:cran<!-- -->/rJava@1.0-4
+pkg<!-- -->:cran<!-- -->/caret@6.0-88</p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="deb">deb<a href="#deb" class="hash-link" aria-label="Direct link to deb" title="Direct link to deb">​</a></h3>
+<p><code>deb</code> for Debian, Debian derivatives, and Ubuntu packages:</p>
+<ul>
+<li>
+<p>There is no default package repository: this should be implied either
+from the <code>distro</code> qualifiers key or using a base url as a
+<code>repository_url</code> qualifiers key.</p>
+</li>
+<li>
+<p>The <code>namespace</code> is the &quot;vendor&quot; name such as &quot;debian&quot; or
+&quot;ubuntu&quot;. It is not case sensitive and must be lowercased.</p>
+</li>
+<li>
+<p>The <code>name</code> is not case sensitive and must be lowercased.</p>
+</li>
+<li>
+<p>The <code>version</code> is the version of the binary (or source) package.</p>
+</li>
+<li>
+<p><code>arch</code> is the qualifiers key for a package architecture. The special
+value <code>arch=source</code> identifies a Debian source package that usually
+consists of a Debian Source control file (.dsc) and corresponding
+upstream and Debian sources. The <code>dpkg-query</code> command can print the
+<code>name</code> and <code>version</code> of the corresponding source package of a binary
+package:</p>
+<p>dpkg-query -f &#x27;$<code>{source:Package}</code> $<code>{source:Version}</code>&#x27; -W <code>&lt;binary package name&gt;</code></p>
+</li>
+<li>
+<p>Examples:</p>
+<p>pkg<!-- -->:deb<!-- -->/debian/curl@7.50.3-1?arch=i386&amp;distro=jessie
+pkg<!-- -->:deb<!-- -->/debian/dpkg@1.19.0.4?arch=amd64&amp;distro=stretch
+pkg<!-- -->:deb<!-- -->/ubuntu/dpkg@1.19.0.4?arch=amd64
+pkg<!-- -->:deb<!-- -->/debian/attr@1:2.4.47-2?arch=source
+pkg<!-- -->:deb<!-- -->/debian/attr@1:2.4.47-2%2Bb1?arch=amd64</p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="docker">docker<a href="#docker" class="hash-link" aria-label="Direct link to docker" title="Direct link to docker">​</a></h3>
+<p><code>docker</code> for Docker images:</p>
+<ul>
+<li>
+<p>The default repository is <code>https://hub.docker.com</code>.</p>
+</li>
+<li>
+<p>The <code>namespace</code> is the registry/user/organization if present.</p>
+</li>
+<li>
+<p>The version should be the image id sha256 or a tag. Since tags can be
+moved, a sha256 image id is preferred.</p>
+</li>
+<li>
+<p>Examples:</p>
+<p>pkg<!-- -->:docker<!-- -->/cassandra@latest
+pkg<!-- -->:docker<!-- -->/smartentry/debian@dc437cc87d10
+pkg<!-- -->:docker<!-- -->/customer/dockerimage@sha256%3A244fd47e07d10?repository_url=gcr.io</p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="gem">gem<a href="#gem" class="hash-link" aria-label="Direct link to gem" title="Direct link to gem">​</a></h3>
+<p><code>gem</code> for RubyGems:</p>
+<ul>
+<li>
+<p>The default repository is <code>https://rubygems.org</code>.</p>
+</li>
+<li>
+<p>The <code>platform</code> qualifiers key is used to specify an alternative
+platform. such as <code>java</code> for JRuby. The implied default is <code>ruby</code> for
+Ruby MRI.</p>
+</li>
+<li>
+<p>Examples:</p>
+<p>pkg<!-- -->:gem<!-- -->/ruby-advisory-db-check@0.12.4
+pkg<!-- -->:gem<!-- -->/jruby-launcher@1.1.2?platform=java</p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="generic">generic<a href="#generic" class="hash-link" aria-label="Direct link to generic" title="Direct link to generic">​</a></h3>
+<p><code>generic</code> for plain, generic packages that do not fit anywhere else such
+as for &quot;upstream-from-distro&quot; packages. In particular this is handy
+for a plain version control repository such as a bare git repo.</p>
+<ul>
+<li>
+<p>There is no default repository. A <code>download_url</code> and <code>checksum</code> may be
+provided in [qualifiers]<code>{.title-ref}</code> or as separate attributes outside
+of a <code>purl</code> for proper identification and location.</p>
+</li>
+<li>
+<p>When possible another or a new purl <code>type</code> should be used instead of
+using the <code>generic</code> type and eventually contributed back to this
+specification.</p>
+</li>
+<li>
+<p>as for other <code>type</code>, the <code>name</code> component is mandatory. In the worst
+case it can be a file or directory name.</p>
+</li>
+<li>
+<p>Examples (truncated for brevity):</p>
+<p>pkg<!-- -->:generic<!-- -->/openssl@1.1.10g
+pkg<!-- -->:generic<!-- -->/openssl@1.1.10g?download_url=<a href="https://openssl.org/source/openssl-1.1.0g.tar.gz&amp;checksum=sha256:de4d501267da" target="_blank" rel="noopener noreferrer">https://openssl.org/source/openssl-1.1.0g.tar.gz&amp;checksum=sha256:de4d501267da</a>
+pkg<!-- -->:generic<!-- -->/bitwarderl?vcs_url=git%2Bhttps://git.fsfe.org/dxtr/bitwarderl%40cc55108da32</p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="github">github<a href="#github" class="hash-link" aria-label="Direct link to github" title="Direct link to github">​</a></h3>
+<p><code>github</code> for GitHub-based packages:</p>
+<ul>
+<li>
+<p>The default repository is <code>https://github.com</code>.</p>
+</li>
+<li>
+<p>The <code>namespace</code> is the user or organization. It is not case sensitive
+and must be lowercased.</p>
+</li>
+<li>
+<p>The <code>name</code> is the repository name. It is not case sensitive and must
+be lowercased.</p>
+</li>
+<li>
+<p>The <code>version</code> is a commit or tag.</p>
+</li>
+<li>
+<p>Examples:</p>
+<p>pkg<!-- -->:github<!-- -->/package-url/purl-spec@244fd47e07d1004
+pkg<!-- -->:github<!-- -->/package-url/purl-spec@244fd47e07d1004#everybody/loves/dogs</p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="golang">golang<a href="#golang" class="hash-link" aria-label="Direct link to golang" title="Direct link to golang">​</a></h3>
+<p><code>golang</code> for Go packages:</p>
+<ul>
+<li>
+<p>There is no default package repository: this is implied in the
+namespace using the <code>go get</code> command conventions.</p>
+</li>
+<li>
+<p>The <code>namespace</code> and [name]<code>{.title-ref}</code> must be lowercased.</p>
+</li>
+<li>
+<p>The <code>subpath</code> is used to point to a subpath inside a package.</p>
+</li>
+<li>
+<p>The <code>version</code> is often empty when a commit is not specified and should
+be the commit in most cases when available.</p>
+</li>
+<li>
+<p>Examples:</p>
+<p>pkg<!-- -->:golang<!-- -->/github.com/gorilla/context@234fd47e07d1004f0aed9c
+pkg<!-- -->:golang<!-- -->/google.golang.org/genproto#googleapis/api/annotations
+pkg<!-- -->:golang<!-- -->/github.com/gorilla/context@234fd47e07d1004f0aed9c#api</p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="hackage">hackage<a href="#hackage" class="hash-link" aria-label="Direct link to hackage" title="Direct link to hackage">​</a></h3>
+<p><code>hackage</code> for Haskell packages:</p>
+<ul>
+<li>
+<p>The default repository is [<a href="https://hackage.haskell.org" target="_blank" rel="noopener noreferrer">https://hackage.haskell.org</a>]<code>{.title-ref}</code>.</p>
+</li>
+<li>
+<p>The [version]<code>{.title-ref}</code> is package version.</p>
+</li>
+<li>
+<p>The [name]<code>{.title-ref}</code> is case sensitive and use kebab-case.</p>
+</li>
+<li>
+<p>Examples:</p>
+<p>pkg<!-- -->:hackage<!-- -->/a50@0.5
+pkg<!-- -->:hackage<!-- -->/AC-HalfInteger@1.2.1
+pkg<!-- -->:hackage<!-- -->/3d-graphics-examples@0.0.0.2</p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="hex">hex<a href="#hex" class="hash-link" aria-label="Direct link to hex" title="Direct link to hex">​</a></h3>
+<p><code>hex</code> for Hex packages:</p>
+<ul>
+<li>
+<p>The default repository is <code>https://repo.hex.pm</code>.</p>
+</li>
+<li>
+<p>The <code>namespace</code> is optional; it may be used to specify the
+organization for private packages on hex.pm. It is not case sensitive
+and must be lowercased.</p>
+</li>
+<li>
+<p>The <code>name</code> is not case sensitive and must be lowercased.</p>
+</li>
+<li>
+<p>Examples:</p>
+<p>pkg<!-- -->:hex<!-- -->/jason@1.1.2
+pkg<!-- -->:hex<!-- -->/acme/foo@2.3.
+pkg<!-- -->:hex<!-- -->/phoenix_html@2.13.3#priv/static/phoenix_html.js
+pkg<!-- -->:hex<!-- -->/bar@1.2.3?repository_url=<a href="https://myrepo.example.com" target="_blank" rel="noopener noreferrer">https://myrepo.example.com</a></p>
+</li>
+</ul>
+<p>huggingface ------<code>huggingface</code> for Hugging Face ML models</p>
+<ul>
+<li>
+<p>The default repository is <code>https://huggingface.co</code>.</p>
+</li>
+<li>
+<p>The <code>namespace</code> is the model repository username or organization, if
+present. It is case sensitive.</p>
+</li>
+<li>
+<p>The <code>name</code> is the model repository name. It is case sensitive.</p>
+</li>
+<li>
+<p>The <code>version</code> is the model revision Git commit hash. It is case
+insensitive and must be lowercased in the package URL.</p>
+</li>
+<li>
+<p>Examples:</p>
+<p>pkg<!-- -->:huggingface<!-- -->/distilbert-base-uncased@043235d6088ecd3dd5fb5ca3592b6913fd516027
+pkg<!-- -->:huggingface<!-- -->/microsoft/deberta-v3-base@559062ad13d311b87b2c455e67dcd5f1c8f65111?repository_url=<a href="https://hub-ci.huggingface.co" target="_blank" rel="noopener noreferrer">https://hub-ci.huggingface.co</a></p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="luarocks">luarocks<a href="#luarocks" class="hash-link" aria-label="Direct link to luarocks" title="Direct link to luarocks">​</a></h3>
+<p><code>luarocks</code> for Lua packages installed with LuaRocks:</p>
+<ul>
+<li><code>namespace</code>: The user manifest under which the package is registered.
+If not given, the root manifest is assumed. It is case insensitive,
+but lowercase is encouraged since namespaces are normalized to ASCII
+lowercase.</li>
+<li><code>name</code>: The LuaRocks package name. It is case insensitive, but
+lowercase is encouraged since package names are normalized to ASCII
+lowercase.</li>
+<li><code>version</code>: The full LuaRocks package version, including module version
+and rockspec revision. It is case sensitive, and lowercase must be
+used to avoid compatibility issues with older LuaRocks versions. The
+full version number is required to uniquely identify a version.</li>
+<li>Qualifier <code>repository_url</code>: The LuaRocks rocks server to be used;
+useful in case a private server is used (optional). If omitted,
+<code>https://luarocks.org</code> as default server is assumed.</li>
+</ul>
+<p>Examples:</p>
+<p>pkg<!-- -->:luarocks<!-- -->/luasocket@3.1.0-1
+pkg<!-- -->:luarocks<!-- -->/hisham/luafilesystem@1.8.0-1
+pkg<!-- -->:luarocks<!-- -->/username/packagename@0.1.0-1?repository_url=<a href="https://example.com/private_rocks_server/" target="_blank" rel="noopener noreferrer">https://example.com/private_rocks_server/</a></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="maven">maven<a href="#maven" class="hash-link" aria-label="Direct link to maven" title="Direct link to maven">​</a></h3>
+<p><code>maven</code> for Maven JARs and related artifacts:</p>
+<ul>
+<li>
+<p>The default <code>repository_url</code> is
+<code>https://repo.maven.apache.org/maven2</code>.</p>
+</li>
+<li>
+<p>The group id is the <code>namespace</code> and the artifact id is the <code>name</code>.</p>
+</li>
+<li>
+<p>Known qualifiers keys are: <code>classifier</code> and <code>type</code> as defined in the
+POM documentation. Note that Maven uses a concept / coordinate called
+packaging which does not map directly 1:1 to a file extension. In this
+use case, we need to construct a link to one of many possible
+artifacts. Maven itself uses type in a dependency declaration when
+needed to disambiguate between them.</p>
+</li>
+<li>
+<p>Examples:</p>
+<p>pkg<!-- -->:maven<!-- -->/org.apache.xmlgraphics/batik-anim@1.9.1
+pkg<!-- -->:maven<!-- -->/org.apache.xmlgraphics/batik-anim@1.9.1?type=pom
+pkg<!-- -->:maven<!-- -->/org.apache.xmlgraphics/batik-anim@1.9.1?classifier=sources
+pkg<!-- -->:maven<!-- -->/org.apache.xmlgraphics/batik-anim@1.9.1?type=zip&amp;classifier=dist
+pkg<!-- -->:maven<!-- -->/net.sf.jacob-projec/jacob@1.14.3?classifier=x86&amp;type=dll
+pkg<!-- -->:maven<!-- -->/net.sf.jacob-projec/jacob@1.14.3?classifier=x64&amp;type=dll
+pkg<!-- -->:maven<!-- -->/groovy/groovy@1.0?repository_url=<a href="https://maven.google.com" target="_blank" rel="noopener noreferrer">https://maven.google.com</a></p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="mlflow">mlflow<a href="#mlflow" class="hash-link" aria-label="Direct link to mlflow" title="Direct link to mlflow">​</a></h3>
+<p><code>mlflow</code> for MLflow ML models (Azure ML, Databricks, etc.)</p>
+<ul>
+<li>
+<p>The repository is the MLflow tracking URI. There is no default.
+Examples:</p>
+<ul>
+<li>Azure ML:
+<code>https://&lt;region&gt;.api.azureml.ms/mlflow/v1.0/subscriptions/&lt;subscription-id&gt;/resourceGroups/&lt;resource-group-name&gt;/providers/Microsoft.MachineLearningServices/workspaces/&lt;workspace-name&gt;</code></li>
+<li>Azure Databricks:
+<code>https://adb-&lt;numbers&gt;.&lt;number&gt;.azuredatabricks.net/api/2.0/mlflow</code></li>
+<li>AWS Databricks:
+<code>https://dbc-&lt;alphanumeric&gt;-&lt;alphanumeric&gt;.cloud.databricks.com/api/2.0/mlflow</code></li>
+<li>GCP Databricks:
+<code>https://&lt;numbers&gt;.&lt;number&gt;.gcp.databricks.com/api/2.0/mlflow</code></li>
+</ul>
+</li>
+<li>
+<p>The <code>namespace</code> is empty.</p>
+</li>
+<li>
+<p>The <code>name</code> is the model name. Case sensitivity depends on the server
+implementation:</p>
+<ul>
+<li>Azure ML: it is case sensitive and must be kept as-is in the package
+URL.</li>
+<li>Databricks: it is case insensitive and must be lowercased in the
+package URL.</li>
+</ul>
+</li>
+<li>
+<p>The <code>version</code> is the model version.</p>
+</li>
+<li>
+<p>Known qualifiers keys are: <code>model_uuid</code> and <code>run_id</code> as defined in the
+MLflow documentation.</p>
+</li>
+<li>
+<p>Examples:</p>
+<p>pkg<!-- -->:mlflow<!-- -->/creditfraud@3?repository_url=<a href="https://westus2.api.azureml.ms/mlflow/v1.0/subscriptions/a50f2011-fab8-4164-af23-c62881ef8c95/resourceGroups/TestResourceGroup/providers/Microsoft.MachineLearningServices/workspaces/TestWorkspace" target="_blank" rel="noopener noreferrer">https://westus2.api.azureml.ms/mlflow/v1.0/subscriptions/a50f2011-fab8-4164-af23-c62881ef8c95/resourceGroups/TestResourceGroup/providers/Microsoft.MachineLearningServices/workspaces/TestWorkspace</a>
+pkg<!-- -->:mlflow<!-- -->/trafficsigns@10?model_uuid=36233173b22f4c89b451f1228d700d49&amp;run_id=410a3121-2709-4f88-98dd-dba0ef056b0a&amp;repository_url=<a href="https://adb-5245952564735461.0.azuredatabricks.net/api/2.0/mlflow" target="_blank" rel="noopener noreferrer">https://adb-5245952564735461.0.azuredatabricks.net/api/2.0/mlflow</a></p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="npm">npm<a href="#npm" class="hash-link" aria-label="Direct link to npm" title="Direct link to npm">​</a></h3>
+<p><code>npm</code> for Node NPM packages:</p>
+<ul>
+<li>
+<p>The default repository is <code>https://registry.npmjs.org</code>.</p>
+</li>
+<li>
+<p>The <code>namespace</code> is used for the scope of a scoped NPM package.</p>
+</li>
+<li>
+<p>Per the package.json specification, new package &quot;must not have
+uppercase letters in the name&quot;, therefore they must be lowercased.</p>
+</li>
+<li>
+<p>Examples:</p>
+<p>pkg<!-- -->:npm<!-- -->/foobar@12.3.1
+pkg<!-- -->:npm<!-- -->/%40angular/animation@12.3.1
+pkg<!-- -->:npm<!-- -->/mypackage@12.4.5?vcs_url=git://host.com/path/to/repo.git%404345abcd34343</p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="nuget">nuget<a href="#nuget" class="hash-link" aria-label="Direct link to nuget" title="Direct link to nuget">​</a></h3>
+<p><code>nuget</code> for NuGet .NET packages:</p>
+<ul>
+<li>
+<p>The default repository is <code>https://www.nuget.org</code>.</p>
+</li>
+<li>
+<p>There is no <code>namespace</code> per se even if the common convention is to use
+dot-separated package names where the first segment is
+<code>namespace</code>-like.</p>
+</li>
+<li>
+<p>Examples:</p>
+<p>pkg<!-- -->:nuget<!-- -->/EnterpriseLibrary.Common@6.0.1304</p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="oci">oci<a href="#oci" class="hash-link" aria-label="Direct link to oci" title="Direct link to oci">​</a></h3>
+<p><code>oci</code> for all artifacts stored in registries that conform to the <a href="https://github.com/opencontainers/distribution-spec" target="_blank" rel="noopener noreferrer">OCI
+Distribution
+Specification</a>,
+including container images built by Docker and others:</p>
+<ul>
+<li>
+<p>There is no canonical package repository for OCI artifacts. Therefore
+<code>oci</code> purls must be registry agnostic by default. To specify the
+repository, provide a <code>repository_url</code> value.</p>
+</li>
+<li>
+<p>OCI purls do not contain a <code>namespace</code>, although, <code>repository_url</code> may
+contain a namespace as part of the physical location of the package.</p>
+</li>
+<li>
+<p>The <code>name</code> is not case sensitive and must be lowercased. The name is
+the last fragment of the repository name. For example if the
+repository name is <code>library/debian</code> then the <code>name</code> is <code>debian</code>.</p>
+</li>
+<li>
+<p>The <code>version</code> is the <code>sha256:hex_encoded_lowercase_digest</code> of the
+artifact and is used to uniquely identify the artifact.</p>
+</li>
+<li>
+<p>Optional qualifiers may include:</p>
+<ul>
+<li><code>arch</code>: key for a package architecture, when relevant.</li>
+<li><code>repository_url</code>: A repository URL where the artifact may be found,
+but not intended as the only location. This value is encouraged to
+identify a location the content may be fetched.</li>
+<li><code>tag</code>: artifact tag that may have been associated with the digest at
+the time.</li>
+</ul>
+</li>
+<li>
+<p>Examples:</p>
+<p>pkg<!-- -->:oci<!-- -->/debian@sha256%3A244fd47e07d10?repository_url=docker.io/library/debian&amp;arch=amd64&amp;tag=latest
+pkg<!-- -->:oci<!-- -->/debian@sha256%3A244fd47e07d10?repository_url=ghcr.io/debian&amp;tag=bullseye
+pkg<!-- -->:oci<!-- -->/static@sha256%3A244fd47e07d10?repository_url=gcr.io/distroless/static&amp;tag=latest
+pkg<!-- -->:oci<!-- -->/hello-wasm@sha256%3A244fd47e07d10?tag=v1</p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="pub">pub<a href="#pub" class="hash-link" aria-label="Direct link to pub" title="Direct link to pub">​</a></h3>
+<p><code>pub</code> for Dart and Flutter packages:</p>
+<ul>
+<li>
+<p>The default repository is <code>https://pub.dartlang.org</code>.</p>
+</li>
+<li>
+<p>Pub normalizes all package names to be lowercase and using
+underscores. The only allowed characters are
+[[a-z0-9_]]<code>{.title-ref}</code>.</p>
+</li>
+<li>
+<p>More information on pub naming and versioning is available in the
+[pubspec documentation](<a href="https://dart.dev/tools/pub/pubspec" target="_blank" rel="noopener noreferrer">https://dart.dev/tools/pub/pubspec</a>)</p>
+</li>
+<li>
+<p>Examples:</p>
+<p>pkg<!-- -->:pub<!-- -->/characters@1.2.0
+pkg<!-- -->:pub<!-- -->/flutter@0.0.0</p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="pypi">pypi<a href="#pypi" class="hash-link" aria-label="Direct link to pypi" title="Direct link to pypi">​</a></h3>
+<p><code>pypi</code> for Python packages:</p>
+<ul>
+<li>
+<p>The default repository is <code>https://pypi.org</code>. (Previously
+<code>https://pypi.python.org</code>.)</p>
+</li>
+<li>
+<p>PyPI treats <code>-</code> and <code>_</code> as the same character and is not case
+sensitive. Therefore a PyPI package <code>name</code> must be lowercased and
+underscore <code>_</code> replaced with a dash <code>-</code>.</p>
+</li>
+<li>
+<p>The <code>file_name</code> qualifier selects a particular distribution file
+(case-sensitive). For naming convention, see the Python Packaging User
+Guide on <a href="https://packaging.python.org/en/latest/specifications/source-distribution-format/#source-distribution-file-name" target="_blank" rel="noopener noreferrer">source
+distributions</a>,
+<a href="https://packaging.python.org/en/latest/specifications/binary-distribution-format/#file-name-convention" target="_blank" rel="noopener noreferrer">binary
+distributions</a>,
+and <a href="https://packaging.python.org/en/latest/specifications/platform-compatibility-tags/" target="_blank" rel="noopener noreferrer">platform compatibility
+tags</a>.</p>
+</li>
+<li>
+<p>Examples:</p>
+<p>pkg<!-- -->:pypi<!-- -->/django@1.11.1
+pkg<!-- -->:pypi<!-- -->/django@1.11.1?file_name=Django-1.11.1.tar.gz
+pkg<!-- -->:pypi<!-- -->/django@1.11.1?file_name=Django-1.11.1-py2.py3-none-any.whl
+pkg<!-- -->:pypi<!-- -->/django-allauth@12.23</p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="qpkg">qpkg<a href="#qpkg" class="hash-link" aria-label="Direct link to qpkg" title="Direct link to qpkg">​</a></h3>
+<p><code>qpkg</code> for QNX packages:</p>
+<ul>
+<li>
+<p>There is no default package repository: this should be implied either
+from the <code>namespace</code> or using a repository base URL as
+<code>repository_url</code> qualifiers key.</p>
+</li>
+<li>
+<p>The <code>namespace</code> is the vendor of the package. It is not case sensitive
+and must be lowercased.</p>
+</li>
+<li>
+<p>Examples:</p>
+<p>pkg<!-- -->:qpkg<!-- -->/blackberry/com.qnx.sdp@7.0.0.SGA201702151847
+pkg<!-- -->:qpkg<!-- -->/blackberry/com.<a href="mailto:qnx.qnx710.foo.bar.qux@0.0.4.01449T202205040833L" target="_blank" rel="noopener noreferrer">qnx.qnx710.foo.bar.qux@0.0.4.01449T202205040833L</a></p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="rpm">rpm<a href="#rpm" class="hash-link" aria-label="Direct link to rpm" title="Direct link to rpm">​</a></h3>
+<p><code>rpm</code> for RPMs:</p>
+<ul>
+<li>
+<p>There is no default package repository: this should be implied either
+from the <code>distro</code> qualifiers key or using a repository base URL as
+<code>repository_url</code> qualifiers key.</p>
+</li>
+<li>
+<p>The <code>namespace</code> is the vendor such as Fedora or OpenSUSE. It is not
+case sensitive and must be lowercased.</p>
+</li>
+<li>
+<p>The <code>name</code> is the RPM name and is case sensitive.</p>
+</li>
+<li>
+<p>The <code>version</code> is the combined version and release of an RPM.</p>
+</li>
+<li>
+<p><code>epoch</code> (optional for RPMs) is a qualifier as it&#x27;s not required for
+unique identification, but when the epoch exists we strongly encourage
+using it.</p>
+</li>
+<li>
+<p><code>arch</code> is the qualifiers key for a package architecture.</p>
+</li>
+<li>
+<p>Examples:</p>
+<p>pkg<!-- -->:rpm<!-- -->/fedora/curl@7.50.3-1.fc25?arch=i386&amp;distro=fedora-25
+pkg<!-- -->:rpm<!-- -->/centerim@4.22.10-1.el6?arch=i686&amp;epoch=1&amp;distro=fedora-25</p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="swid">swid<a href="#swid" class="hash-link" aria-label="Direct link to swid" title="Direct link to swid">​</a></h3>
+<p><code>swid</code> for ISO-IEC 19770-2 Software Identification (SWID) tags:</p>
+<ul>
+<li>There is no default package repository.</li>
+<li>The <code>namespace</code> is the optional name and regid of the entity with a
+role of softwareCreator. If specified, name is required and is the
+first segment in the namespace. If regid is known, it must be
+specified as the second segment in the namespace. A maximum of two
+segments are supported.</li>
+<li>The <code>name</code> is the name as defined in the SWID SoftwareIdentity
+element.</li>
+<li>The <code>version</code> is the version as defined in the SWID SoftwareIdentity
+element.</li>
+<li>The qualifier <code>tag_id</code> must not be empty and corresponds to the tagId
+as defined in the SWID SoftwareIdentity element. Per the SWID
+specification, GUIDs are recommended. If a GUID is used, it must be
+lowercase. If a GUID is not used, the tag_id qualifier is case aware
+but not case sensitive.</li>
+<li>The qualifier <code>tag_version</code> is an optional integer and corresponds to
+the tagVersion as defined in the SWID SoftwareIdentity element. If not
+specified, defaults to 0.</li>
+<li>The qualifier <code>patch</code> is optional and corresponds to the patch as
+defined in the SWID SoftwareIdentity element. If not specified,
+defaults to false.</li>
+<li>The qualifier <code>tag_creator_name</code> is optional. If the tag creator is
+different from the software creator, the tag_creator_name qualifier
+should be specified.</li>
+<li>The qualifier <code>tag_creator_regid</code> is optional. If the tag creator is
+different from the software creator, the tag_creator_regid qualifier
+should be specified.</li>
+</ul>
+<p>Use of known qualifiers key/value pairs such as <code>download_url</code> can be
+used to specify where the package was retrieved from.</p>
+<ul>
+<li>
+<p>Examples:</p>
+<p>pkg<!-- -->:swid<!-- -->/Acme/example.com/Enterprise+Server@1.0.0?tag_id=75b8c285-fa7b-485b-b199-4745e3004d0d
+pkg<!-- -->:swid<!-- -->/Fedora@29?tag_id=org.fedoraproject.Fedora-29
+pkg<!-- -->:swid<!-- -->/Adobe+Systems+Incorporated/Adobe+InDesign@CC?tag_id=CreativeCloud-CS6-Win-GM-MUL</p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="swift">swift<a href="#swift" class="hash-link" aria-label="Direct link to swift" title="Direct link to swift">​</a></h3>
+<p><code>swift</code> for Swift packages:</p>
+<ul>
+<li>
+<p>There is no default package repository: this should be implied from
+<code>namespace</code>.</p>
+</li>
+<li>
+<p>The <code>namespace</code> is source host and user/organization and is required.</p>
+</li>
+<li>
+<p>The <code>name</code> is the repository name.</p>
+</li>
+<li>
+<p>The <code>version</code> is the package version and is required.</p>
+</li>
+<li>
+<p>Examples:</p>
+<p>pkg<!-- -->:swift<!-- -->/github.com/Alamofire/Alamofire@5.4.3
+pkg<!-- -->:swift<!-- -->/github.com/RxSwiftCommunity/RxFlow@2.12.4</p>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="other-candidate-types-to-define">Other candidate types to define:<a href="#other-candidate-types-to-define" class="hash-link" aria-label="Direct link to Other candidate types to define:" title="Direct link to Other candidate types to define:">​</a></h2>
+<ul>
+<li><code>android</code> for Android apk packages:</li>
+<li><code>apache</code> for Apache projects packages:</li>
+<li><code>atom</code> for Atom packages:</li>
+<li><code>bower</code> for Bower JavaScript packages:</li>
+<li><code>brew</code> for Homebrew packages:</li>
+<li><code>buildroot</code> for Buildroot packages</li>
+<li><code>carthage</code> for Cocoapods Cocoa packages:</li>
+<li><code>chef</code> for Chef packages:</li>
+<li><code>chocolatey</code> for Chocolatey packages</li>
+<li><code>clojars</code> for Clojure packages:</li>
+<li><code>coreos</code> for CoreOS packages:</li>
+<li><code>crystal</code> for Crystal Shards packages:</li>
+<li><code>ctan</code> for CTAN TeX packages:</li>
+<li><code>drupal</code> for Drupal packages:</li>
+<li><code>dtype</code> for DefinitelyTyped TypeScript type definitions:</li>
+<li><code>dub</code> for D packages:</li>
+<li><code>ebuild</code> for Gentoo Linux portage packages:</li>
+<li><code>eclipse</code> for Eclipse projects packages:</li>
+<li><code>elm</code> for Elm packages:</li>
+<li><code>gitea</code> for Gitea-based packages:</li>
+<li><code>gitlab</code> for GitLab-based packages:</li>
+<li><code>gradle</code> for Gradle plugins</li>
+<li><code>guix</code> for Guix packages:</li>
+<li><code>haxe</code> for Haxe packages:</li>
+<li><code>helm</code> for Kubernetes packages</li>
+<li><code>julia</code> for Julia packages:</li>
+<li><code>melpa</code> for Emacs packages</li>
+<li><code>meteor</code> for Meteor JavaScript packages:</li>
+<li><code>nim</code> for Nim packages:</li>
+<li><code>nix</code> for Nixos packages:</li>
+<li><code>opam</code> for OCaml packages:</li>
+<li><code>openwrt</code> for OpenWRT packages:</li>
+<li><code>osgi</code> for OSGi bundle packages:</li>
+<li><code>p2</code> for Eclipse p2 packages:</li>
+<li><code>pear</code> for Pear PHP packages:</li>
+<li><code>pecl</code> for PECL PHP packages:</li>
+<li><code>perl6</code> for Perl 6 module packages:</li>
+<li><code>platformio</code> for PlatformIO packages:</li>
+<li><code>puppet</code> for Puppet Forge packages:</li>
+<li><code>sourceforge</code> for Sourceforge-based packages:</li>
+<li><code>sublime</code> for Sublime packages:</li>
+<li><code>terraform</code> for Terraform modules</li>
+<li><code>vagrant</code> for Vagrant boxes</li>
+<li><code>vim</code> for Vim scripts packages:</li>
+<li><code>wordpress</code> for Wordpress packages:</li>
+<li><code>yocto</code> for Yocto recipe packages:</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="license">License<a href="#license" class="hash-link" aria-label="Direct link to License" title="Direct link to License">​</a></h2>
+<p>This document is licensed under the MIT license.</p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/package-url/docs/PURL_TYPES.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/PURL_SPECIFICATION"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">PURL Specification</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#known-purl-types" class="table-of-contents__link toc-highlight">Known <code>purl</code> types</a><ul><li><a href="#alpm" class="table-of-contents__link toc-highlight">alpm</a></li><li><a href="#apk" class="table-of-contents__link toc-highlight">apk</a></li><li><a href="#bitbucket" class="table-of-contents__link toc-highlight">bitbucket</a></li><li><a href="#bitnami" class="table-of-contents__link toc-highlight">bitnami</a></li><li><a href="#cargo" class="table-of-contents__link toc-highlight">cargo</a></li><li><a href="#cocoapods" class="table-of-contents__link toc-highlight">cocoapods</a></li><li><a href="#composer" class="table-of-contents__link toc-highlight">composer</a></li><li><a href="#conan" class="table-of-contents__link toc-highlight">conan</a></li><li><a href="#conda" class="table-of-contents__link toc-highlight">conda</a></li><li><a href="#cpan" class="table-of-contents__link toc-highlight">cpan</a></li><li><a href="#cran" class="table-of-contents__link toc-highlight">cran</a></li><li><a href="#deb" class="table-of-contents__link toc-highlight">deb</a></li><li><a href="#docker" class="table-of-contents__link toc-highlight">docker</a></li><li><a href="#gem" class="table-of-contents__link toc-highlight">gem</a></li><li><a href="#generic" class="table-of-contents__link toc-highlight">generic</a></li><li><a href="#github" class="table-of-contents__link toc-highlight">github</a></li><li><a href="#golang" class="table-of-contents__link toc-highlight">golang</a></li><li><a href="#hackage" class="table-of-contents__link toc-highlight">hackage</a></li><li><a href="#hex" class="table-of-contents__link toc-highlight">hex</a></li><li><a href="#luarocks" class="table-of-contents__link toc-highlight">luarocks</a></li><li><a href="#maven" class="table-of-contents__link toc-highlight">maven</a></li><li><a href="#mlflow" class="table-of-contents__link toc-highlight">mlflow</a></li><li><a href="#npm" class="table-of-contents__link toc-highlight">npm</a></li><li><a href="#nuget" class="table-of-contents__link toc-highlight">nuget</a></li><li><a href="#oci" class="table-of-contents__link toc-highlight">oci</a></li><li><a href="#pub" class="table-of-contents__link toc-highlight">pub</a></li><li><a href="#pypi" class="table-of-contents__link toc-highlight">pypi</a></li><li><a href="#qpkg" class="table-of-contents__link toc-highlight">qpkg</a></li><li><a href="#rpm" class="table-of-contents__link toc-highlight">rpm</a></li><li><a href="#swid" class="table-of-contents__link toc-highlight">swid</a></li><li><a href="#swift" class="table-of-contents__link toc-highlight">swift</a></li></ul></li><li><a href="#other-candidate-types-to-define" class="table-of-contents__link toc-highlight">Other candidate types to define:</a></li><li><a href="#license" class="table-of-contents__link toc-highlight">License</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">News and Events</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/docs/PURL_SPECIFICATION">Newsletter</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/PURL_SPECIFICATION">Meetings</a></li><li class="footer__item"><a class="footer__link-item" href="/blog">Blog</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Social</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://app.gitter.im/#/room/#package-url_Lobby:gitter.im" target="_blank" rel="noopener noreferrer" class="footer__link-item">Gitter<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://cyclonedx.slack.com/archives/C06KTE3BWEB" target="_blank" rel="noopener noreferrer" class="footer__link-item">Slack<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://github.com/package-url" target="_blank" rel="noopener noreferrer" class="footer__link-item">Github<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Standardisation</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://ecma-international.org" target="_blank" rel="noopener noreferrer" class="footer__link-item">ECMA<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://tc54.org/purl/" target="_blank" rel="noopener noreferrer" class="footer__link-item">TC-54 PURL<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://tc54.org/cyclonedx/" target="_blank" rel="noopener noreferrer" class="footer__link-item">TC-54 CycloneDX<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://tc54.org/tea/" target="_blank" rel="noopener noreferrer" class="footer__link-item">TC-54 Transparency Exchange API<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://www.iso.org/home.html" target="_blank" rel="noopener noreferrer" class="footer__link-item">ISO<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Related Specs</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://cyclonedx.org/" target="_blank" rel="noopener noreferrer" class="footer__link-item">CycloneDX<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://spdx.dev/" target="_blank" rel="noopener noreferrer" class="footer__link-item">SPDX<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://www.csaf.io/" target="_blank" rel="noopener noreferrer" class="footer__link-item">CSAF<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://github.com/openvex/" target="_blank" rel="noopener noreferrer" class="footer__link-item">OpenVEX<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://github.com/ossf/osv-schema" target="_blank" rel="noopener noreferrer" class="footer__link-item">OSV Schema<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 PURL, Inc. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>
