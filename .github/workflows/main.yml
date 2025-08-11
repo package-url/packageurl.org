@@ -1,25 +1,53 @@
-name: Github Pages Deployment Workflow
+name: Deploy Website to GitHub Pages
 
 on:
   push:
     branches:
-      - gh-pages
+      - main
+
+permissions:
+  contents: write
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout source
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Set up Node.js
+      - name: Clear gh-pages branch
+        run: |
+          git worktree add ../gh-pages-worktree gh-pages
+          rm -rf ../gh-pages-worktree/*
+
+      - name: setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '23.9'
 
       - name: Install dependencies
-        run: npm install && apt get install -y git
+        run: |
+          cd ./website
+          npm ci
 
-      - name: Run custom deployment script
-        run: deploy.js
+      - name: Build website
+        run: |
+          cd ./website
+          npm run build
+
+      - name: Copy build files to gh-pages
+        run: |
+          cp -r ./website/build/* ../gh-pages-worktree/
+
+      - name: Push changes to gh-pages
+        run: |
+          cd ../gh-pages-worktree
+          git add .
+          git commit -m "Deploy website to GitHub Pages"
+          git push origin gh-pages
