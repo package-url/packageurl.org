@@ -37,6 +37,7 @@ export default function Home() {
       <HomepageHeader />
       <main>
         <HomepageContent />
+        Test Content!
       </main>
     </Layout>
   );
