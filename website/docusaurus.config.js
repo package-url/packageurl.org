@@ -10,7 +10,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'PURL Specs',
+  title: 'packageurl.org',
   tagline: 'Standardizing software package identification for enhanced security and streamlined vulnerability management',
   favicon: 'img/favicon.ico',
 
@@ -20,15 +20,15 @@ const config = {
   },
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://package-url.github.io/',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/packageurl.org/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'Package URL', // Usually your GitHub org/user name.
-  projectName: 'Purl specs', // Usually your repo name.
+  organizationName: 'Package-URL', // Usually your GitHub org/user name.
+  projectName: 'packageurl.org', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
