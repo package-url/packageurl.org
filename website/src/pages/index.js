@@ -20,7 +20,7 @@ function HomepageHeader() {
           <Link
             className="button button--secondary button--lg"
             to="/docs/PURL_SPECIFICATION">
-            View PURL Specification 📘
+            View PURL Specification 📘!!!
           </Link>
         </div>
       </div>
