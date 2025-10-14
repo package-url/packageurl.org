@@ -5,20 +5,20 @@
  */
 
 /* Override Infima primary colors with CycloneDX palette */
-:root {
-  --ifm-color-primary: #5c3db7;       /* Deep Purple */
-  --ifm-color-primary-dark: #4a2f8f;  /* Slightly darker Deep Purple */
-  --ifm-color-primary-darker: #3a2370;/* Even darker */
-  --ifm-color-primary-darkest: #2a1750;/* Darkest shade */
-  --ifm-color-primary-light: #7f63d9; /* Light Purple */
-  --ifm-color-primary-lighter: #9a86e5; /* Lighter purple */
-  --ifm-color-primary-lightest: #b3a9f0; /* Lightest purple */
+/* :root {
+  --ifm-color-primary: #5c3db7;
+  --ifm-color-primary-dark: #4a2f8f;
+  --ifm-color-primary-darker: #3a2370;
+  --ifm-color-primary-darkest: #2a1750;
+  --ifm-color-primary-light: #7f63d9;
+  --ifm-color-primary-lighter: #9a86e5;
+  --ifm-color-primary-lightest: #b3a9f0;
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(84, 56, 168, 0.1); /* subtle purple highlight */
-}
+  --docusaurus-highlighted-code-line-bg: rgba(84, 56, 168, 0.1);
+} */
 
 /* Dark mode CycloneDX colors */
-[data-theme='dark'] {
+/* [data-theme='dark'] {
   --ifm-color-primary: #7f63d9;
   --ifm-color-primary-dark: #6a52c8;
   --ifm-color-primary-darker: #563fad;
@@ -27,5 +27,68 @@
   --ifm-color-primary-lighter: #b3a9f0;
   --ifm-color-primary-lightest: #c9bef8;
   --docusaurus-highlighted-code-line-bg: rgba(127, 99, 217, 0.3);
+} */
+
+.navbar__brand {
+    margin-right: 0px;
 }
 
+/* 2025-09-05 Friday 12:48:20.  */
+.navbar__logo {
+    margin-right: 0;
+}
+
+
+/* Consolidate navbar and sidebar CSS. */
+.navbar--dark {
+    --ifm-navbar-background-color: #375298;
+}
+/* NAVBAR (full width) */
+.navbar {
+  background-color: #375298;
+}
+.navbar .navbar__link {
+  color: #ffffff;
+  font-weight: 400;
+}
+.navbar .navbar__link:hover,
+.navbar .navbar__link--active {
+  color: #ffffff !important;
+  text-decoration: underline;
+}
+
+
+/* DOCS SIDEBAR (desktop view) */
+.theme-doc-sidebar-menu .menu__link {
+  color: #000000;
+}
+.theme-doc-sidebar-menu .menu__link:hover,
+.theme-doc-sidebar-menu .menu__link--active {
+  color: #3366cc;
+}
+
+
+/* MOBILE NAV MENU */
+@media (max-width: 996px) {
+  .menu__link {
+    color: #ffffff;
+    background-color: #375298;
+    font-weight: 400;
+  }
+  .menu__link:hover,
+  .menu__link--active {
+    color: #ffffff;
+    text-decoration: underline;
+    background-color: #000000;
+    background-color: #375298;
+  }
+
+  /* sidebar */
+  .theme-doc-sidebar-menu .menu__link {
+    color: #ffffff;
+  }
+  .theme-doc-sidebar-menu .menu__link:hover,
+  .theme-doc-sidebar-menu .menu__link--active {
+    color: #ffffff;
+  }
+}
