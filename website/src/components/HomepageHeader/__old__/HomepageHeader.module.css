@@ -1,0 +1,140 @@
+/* 2025-10-10 Friday 18:05:59.  The url('/img/...') path assumes your image is under static/img/ — Docusaurus automatically serves that as /img/.... */
+/* .fullHero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  background-image: url('/img/cube-background.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.heroInner {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.heroTitle {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.heroSubtitle {
+  font-size: 1.5rem;
+  line-height: 1.4;
+} */
+
+/* 2025-10-10 Friday 18:33:25.  From /home/jmh/dev/jmh2025/docusaurus.2025.10.04.01/fresh-preview/src/pages/index.module.css */
+/* Hero full-width */
+.fullHero {
+    width: 100%;
+    /* background: linear-gradient(135deg, #007BFF, #00C6FF); */
+    /* blue gradient */
+    /* background: linear-gradient(135deg, #0056b3, #0077cc); */
+    /* darker blue gradient */
+    /* background: linear-gradient(135deg, #003380, #0066ff); */
+    /* darker blue gradient */
+    /* background: linear-gradient(135deg, #003380, #cc0000); */
+    /* darker blue gradient */
+    /* 2025-08-30 Saturday 23:42:31.  I like this one: */
+    /* background: linear-gradient(135deg, #003399, #3377ff); */
+    /* darker blue gradient */
+
+    /* background: #1a427a; */
+    color: white;
+    text-align: center;
+    padding: 4rem 2rem;
+    padding: 2rem 2rem 1rem 2rem;
+    padding: 2rem 2rem 2rem 2rem;
+
+    /* CycloneDX primary background */
+    /* background-image:
+        linear-gradient(to right, #08090cff, #6A1B9A, #ff0055ff),
+        url('/img/background-image.png'); */
+    /* linear-gradient(to right, #08090cff, #003399, #3377ff),
+        url('/img/background-image.png'); */
+    /* linear-gradient(to right, #000000, #006666, #003399),
+        url('/img/background-image.png'); */
+
+    /* background-image:
+        linear-gradient(to right, #08090cff, #6A1B9A, #ff0055ff),
+        url('/img/background-image.png'); */
+
+    background-size: cover;
+    background-blend-mode: overlay;
+
+    /* background: linear-gradient(135deg, #5c3db7 0%, #7f63d9 100%); */
+    /* color: var(--ifm-color-primary-lightest); */
+    /* color: #000000; */
+
+    /* background-image:
+        linear-gradient(135deg, #5c3db7 0%, #7f63d9 100%),
+        url('/img/background-image.png'); */
+
+    /* background-image:
+        linear-gradient(135deg, #3d2a7d 0%, #5c3db7 100%),
+        url('/img/background-image.png'); */
+
+    /* background-image:
+        linear-gradient(135deg, #000099 100%, #330000 100%),
+        url('/img/background-image.png'); */
+
+    /* background-image:
+        linear-gradient(to right, #08090cff),
+        url('/img/BackgroundPattern99.svg'); */
+
+    /* background-image:
+        linear-gradient(135deg, #66ccff),
+        url('/img/Seamless-Geometric-Line-Art-Pattern.svg'); */
+
+    /* background-image:
+        linear-gradient(to right, #009999, #000099),
+        url('/img/Seamless-Hexagonalism-Pattern.svg'); */
+
+    /* background-image:
+        linear-gradient(to right, #006666, #0022cc, #0099cc),
+        url('/img/Seamless-Tessellation-Pattern.svg'); */
+
+    /* background-image:
+        linear-gradient(to right, #006666, #0022cc, #0099cc),
+        url('/img/6171317.jpg'); */
+
+    /* background-image:
+        linear-gradient(135deg, #0066ff 0%, #0066cc 100%),
+        url('/img/6171317.jpg'); */
+
+    /* background-image: linear-gradient(135deg, #666666 0%, #999999 100%),
+        url("/img/6171317.jpg"); */
+
+    /* 2025-10-10 Friday 18:12:40.  name change from 6171317.jpg to cube-background.jpg */
+    background-image: linear-gradient(135deg, #666666 0%, #999999 100%),
+        url("/img/cube-background.jpg");
+
+    /* background-image:
+        url('/img/grok-abstract.svg'); */
+
+    /* filter: brightness(200%); */
+
+    color: #000000;
+}
+
+.heroInner {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.heroTitle {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.heroSubtitle {
+    font-size: 1.25rem;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    margin-bottom: 0.5rem;
+}
