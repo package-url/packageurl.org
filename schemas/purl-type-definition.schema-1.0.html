@@ -1,0 +1,1508 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Overpass:300,400,600,800">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="schema_doc.css">
+    <script src="https://use.fontawesome.com/facf9fa52c.js"></script>
+    <script src="schema_doc.min.js"></script>
+    <meta charset="utf-8"/>
+        
+    
+    <title>Package-URL Type Definition</title>
+</head>
+<body onload="anchorOnLoad();" id="root">
+
+     <h1>Package-URL Type Definition</h1><span class="badge badge-dark value-type">Type: object</span><br/>
+<span class="description"><p>Schema to specify a Package-URL (PURL) type as a structured definition.</p>
+</span> <span class="badge badge-info no-additional">No Additional Properties</span>
+        
+
+        
+        
+
+        
+<div class="accordion" id="accordionschema">
+    <div class="card">
+        <div class="card-header" id="headingschema">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#schema"
+                        aria-expanded="" aria-controls="schema" onclick="setAnchor('#schema')"><span class="property-name">$schema</span></button>
+            </h2>
+        </div>
+
+        <div id="schema"
+             class="collapse property-definition-div" aria-labelledby="headingschema"
+             data-parent="#accordionschema">
+            <div class="card-body pl-5">
+
+    <h4>JSON schema</h4><span class="badge badge-dark value-type">Type: const</span><span class="badge badge-info value-type">Format: uri</span><br/>
+<span class="description"><p>Contains the URL of the JSON schema for Package-URL type definition.</p>
+</span><span class="const-value" id="schema_const">Specific value: <code>"https://packageurl.org/schemas/purl-type-definition.schema-1.0.json"</code></span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionid">
+    <div class="card">
+        <div class="card-header" id="headingid">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#id"
+                        aria-expanded="" aria-controls="id" onclick="setAnchor('#id')"><span class="property-name">$id</span> <span class="badge badge-warning required-property">Required</span></button>
+            </h2>
+        </div>
+
+        <div id="id"
+             class="collapse property-definition-div" aria-labelledby="headingid"
+             data-parent="#accordionid">
+            <div class="card-body pl-5">
+
+    <h4>PURL type definition id</h4><span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>The unique identifier URI for this PURL type definition.</p>
+</span><span class="pattern-value" id="id_pattern">Must match regular expression: <code>^https:\/\/packageurl\.org/types/[a-z0-9-]+-definition\.json$</code></span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordiontype">
+    <div class="card">
+        <div class="card-header" id="headingtype">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#type"
+                        aria-expanded="" aria-controls="type" onclick="setAnchor('#type')"><span class="property-name">type</span> <span class="badge badge-warning required-property">Required</span></button>
+            </h2>
+        </div>
+
+        <div id="type"
+             class="collapse property-definition-div" aria-labelledby="headingtype"
+             data-parent="#accordiontype">
+            <div class="card-body pl-5">
+
+    <h4>PURL type</h4><span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>The type string for this Package-URL type.</p>
+</span><span class="pattern-value" id="type_pattern">Must match regular expression: <code>^[a-z][a-z0-9-\.]+$</code></span>
+        
+
+        
+        
+
+        <br/>
+<div class="badge badge-secondary">Examples:</div>
+<br/><div id="type_ex1" class="jumbotron examples"><div class="highlight"><pre><span></span><span class="s2">&quot;maven&quot;</span>
+</pre></div>
+</div><div id="type_ex2" class="jumbotron examples"><div class="highlight"><pre><span></span><span class="s2">&quot;npm&quot;</span>
+</pre></div>
+</div><div id="type_ex3" class="jumbotron examples"><div class="highlight"><pre><span></span><span class="s2">&quot;pypi&quot;</span>
+</pre></div>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordiontype_name">
+    <div class="card">
+        <div class="card-header" id="headingtype_name">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#type_name"
+                        aria-expanded="" aria-controls="type_name" onclick="setAnchor('#type_name')"><span class="property-name">type_name</span> <span class="badge badge-warning required-property">Required</span></button>
+            </h2>
+        </div>
+
+        <div id="type_name"
+             class="collapse property-definition-div" aria-labelledby="headingtype_name"
+             data-parent="#accordiontype_name">
+            <div class="card-body pl-5">
+
+    <h4>Type name</h4><span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>The name for this PURL type.</p>
+</span>
+        
+
+        
+        
+
+        <br/>
+<div class="badge badge-secondary">Examples:</div>
+<br/><div id="type_name_ex1" class="jumbotron examples"><div class="highlight"><pre><span></span><span class="s2">&quot;Apache Maven&quot;</span>
+</pre></div>
+</div><div id="type_name_ex2" class="jumbotron examples"><div class="highlight"><pre><span></span><span class="s2">&quot;Python Package&quot;</span>
+</pre></div>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordiondescription">
+    <div class="card">
+        <div class="card-header" id="headingdescription">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#description"
+                        aria-expanded="" aria-controls="description" onclick="setAnchor('#description')"><span class="property-name">description</span> <span class="badge badge-warning required-property">Required</span></button>
+            </h2>
+        </div>
+
+        <div id="description"
+             class="collapse property-definition-div" aria-labelledby="headingdescription"
+             data-parent="#accordiondescription">
+            <div class="card-body pl-5">
+
+    <h4>Description</h4><span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>The description of this PURL type.</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionrepository">
+    <div class="card">
+        <div class="card-header" id="headingrepository">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#repository"
+                        aria-expanded="" aria-controls="repository" onclick="setAnchor('#repository')"><span class="property-name">repository</span> <span class="badge badge-warning required-property">Required</span></button>
+            </h2>
+        </div>
+
+        <div id="repository"
+             class="collapse property-definition-div" aria-labelledby="headingrepository"
+             data-parent="#accordionrepository">
+            <div class="card-body pl-5">
+
+    <h4>Repository</h4><span class="badge badge-dark value-type">Type: object</span><br/>
+<span class="description"><p>The package repository usage for this PURL type.</p>
+</span> <span class="badge badge-info no-additional">No Additional Properties</span>
+        
+
+        
+        
+
+        
+<div class="accordion" id="accordionrepository_use_repository">
+    <div class="card">
+        <div class="card-header" id="headingrepository_use_repository">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#repository_use_repository"
+                        aria-expanded="" aria-controls="repository_use_repository" onclick="setAnchor('#repository_use_repository')"><span class="property-name">use_repository</span> <span class="badge badge-warning required-property">Required</span></button>
+            </h2>
+        </div>
+
+        <div id="repository_use_repository"
+             class="collapse property-definition-div" aria-labelledby="headingrepository_use_repository"
+             data-parent="#accordionrepository_use_repository">
+            <div class="card-body pl-5">
+
+    <h4>Use repository</h4><span class="badge badge-dark value-type">Type: boolean</span> <span class="badge badge-success default-value">Default: false</span><br/>
+<span class="description"><p>true if this PURL type uses a public package repository.</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionrepository_default_repository_url">
+    <div class="card">
+        <div class="card-header" id="headingrepository_default_repository_url">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#repository_default_repository_url"
+                        aria-expanded="" aria-controls="repository_default_repository_url" onclick="setAnchor('#repository_default_repository_url')"><span class="property-name">default_repository_url</span></button>
+            </h2>
+        </div>
+
+        <div id="repository_default_repository_url"
+             class="collapse property-definition-div" aria-labelledby="headingrepository_default_repository_url"
+             data-parent="#accordionrepository_default_repository_url">
+            <div class="card-body pl-5">
+
+    <h4>Default repository URL</h4><span class="badge badge-dark value-type">Type: string</span><span class="badge badge-info value-type">Format: uri</span><br/>
+<span class="description"><p>The default public repository URL for this PURL type</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionrepository_note">
+    <div class="card">
+        <div class="card-header" id="headingrepository_note">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#repository_note"
+                        aria-expanded="" aria-controls="repository_note" onclick="setAnchor('#repository_note')"><span class="property-name">note</span></button>
+            </h2>
+        </div>
+
+        <div id="repository_note"
+             class="collapse property-definition-div" aria-labelledby="headingrepository_note"
+             data-parent="#accordionrepository_note">
+            <div class="card-body pl-5">
+
+    <h4>Note</h4><span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>Extra note text.</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionnamespace_definition">
+    <div class="card">
+        <div class="card-header" id="headingnamespace_definition">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#namespace_definition"
+                        aria-expanded="" aria-controls="namespace_definition" onclick="setAnchor('#namespace_definition')"><span class="property-name">namespace_definition</span> <span class="badge badge-warning required-property">Required</span></button>
+            </h2>
+        </div>
+
+        <div id="namespace_definition"
+             class="collapse property-definition-div" aria-labelledby="headingnamespace_definition"
+             data-parent="#accordionnamespace_definition">
+            <div class="card-body pl-5">
+
+    <h4>Namespace definition</h4><span class="badge badge-dark value-type">Type: object</span><br/>
+<span class="description"><p>Definition of the namespace component for this PURL type. The PURL namespace component must be required, optional or prohibited for a specific PURL type definition.</p>
+</span>
+
+    
+        
+
+        
+        
+
+        
+<div class="accordion" id="accordionnamespace_definition_permitted_characters">
+    <div class="card">
+        <div class="card-header" id="headingnamespace_definition_permitted_characters">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#namespace_definition_permitted_characters"
+                        aria-expanded="" aria-controls="namespace_definition_permitted_characters" onclick="setAnchor('#namespace_definition_permitted_characters')"><span class="property-name">permitted_characters</span></button>
+            </h2>
+        </div>
+
+        <div id="namespace_definition_permitted_characters"
+             class="collapse property-definition-div" aria-labelledby="headingnamespace_definition_permitted_characters"
+             data-parent="#accordionnamespace_definition_permitted_characters">
+            <div class="card-body pl-5">
+
+    <h4>Permitted characters in this PURL component</h4><span class="badge badge-dark value-type">Type: string</span><span class="badge badge-info value-type">Format: regex</span><br/>
+<span class="description"><p>A regular expression (ECMA-262 dialect) defining the 'Permitted characters' for this component of this Package-URL type. If provided, this must be a subset of the 'Permitted characters' defined in the PURL specification.</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionnamespace_definition_case_sensitive">
+    <div class="card">
+        <div class="card-header" id="headingnamespace_definition_case_sensitive">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#namespace_definition_case_sensitive"
+                        aria-expanded="" aria-controls="namespace_definition_case_sensitive" onclick="setAnchor('#namespace_definition_case_sensitive')"><span class="property-name">case_sensitive</span></button>
+            </h2>
+        </div>
+
+        <div id="namespace_definition_case_sensitive"
+             class="collapse property-definition-div" aria-labelledby="headingnamespace_definition_case_sensitive"
+             data-parent="#accordionnamespace_definition_case_sensitive">
+            <div class="card-body pl-5">
+
+    <h4>Case sensitive</h4><span class="badge badge-dark value-type">Type: boolean</span> <span class="badge badge-success default-value">Default: true</span><br/>
+<span class="description"><p>true if this PURL component is case sensitive. If false, the canonical form must be lowercased.</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionnamespace_definition_normalization_rules">
+    <div class="card">
+        <div class="card-header" id="headingnamespace_definition_normalization_rules">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#namespace_definition_normalization_rules"
+                        aria-expanded="" aria-controls="namespace_definition_normalization_rules" onclick="setAnchor('#namespace_definition_normalization_rules')"><span class="property-name">normalization_rules</span></button>
+            </h2>
+        </div>
+
+        <div id="namespace_definition_normalization_rules"
+             class="collapse property-definition-div" aria-labelledby="headingnamespace_definition_normalization_rules"
+             data-parent="#accordionnamespace_definition_normalization_rules">
+            <div class="card-body pl-5">
+
+    <h4>Normalization rules</h4><span class="badge badge-dark value-type">Type: array of string</span><br/>
+<span class="description"><p>List of rules to normalize this component for this PURL type. These are plain text, unstructured rules as some require programming and cannot be enforced only with a schema. Tools are expected to apply these rules programmatically.</p>
+</span>
+        
+
+        
+        
+
+        <p><span class="badge badge-light restriction unique-items-restriction" id="namespace_definition_normalization_rules_uniqueItems">All items must be unique</span></p> <span class="badge badge-info no-additional">No Additional Items</span><h4>Each item of this array must be:</h4>
+    <div class="card">
+        <div class="card-body items-definition" id="namespace_definition_normalization_rules_items">
+            
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+
+        
+
+        
+        
+
+        
+        </div>
+    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionnamespace_definition_native_name">
+    <div class="card">
+        <div class="card-header" id="headingnamespace_definition_native_name">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#namespace_definition_native_name"
+                        aria-expanded="" aria-controls="namespace_definition_native_name" onclick="setAnchor('#namespace_definition_native_name')"><span class="property-name">native_name</span></button>
+            </h2>
+        </div>
+
+        <div id="namespace_definition_native_name"
+             class="collapse property-definition-div" aria-labelledby="headingnamespace_definition_native_name"
+             data-parent="#accordionnamespace_definition_native_name">
+            <div class="card-body pl-5">
+
+    <h4>Native name</h4><span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>The native name of this PURL component in the package ecosystem. For instance, the 'namespace' for the 'maven' type is 'groupId', and 'scope' for the 'npm' PURL type.</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionnamespace_definition_note">
+    <div class="card">
+        <div class="card-header" id="headingnamespace_definition_note">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#namespace_definition_note"
+                        aria-expanded="" aria-controls="namespace_definition_note" onclick="setAnchor('#namespace_definition_note')"><span class="property-name">note</span></button>
+            </h2>
+        </div>
+
+        <div id="namespace_definition_note"
+             class="collapse property-definition-div" aria-labelledby="headingnamespace_definition_note"
+             data-parent="#accordionnamespace_definition_note">
+            <div class="card-body pl-5">
+
+    <h4>Note</h4><span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>Extra note text.</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionnamespace_definition_requirement">
+    <div class="card">
+        <div class="card-header" id="headingnamespace_definition_requirement">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#namespace_definition_requirement"
+                        aria-expanded="" aria-controls="namespace_definition_requirement" onclick="setAnchor('#namespace_definition_requirement')"><span class="property-name">requirement</span> <span class="badge badge-warning required-property">Required</span></button>
+            </h2>
+        </div>
+
+        <div id="namespace_definition_requirement"
+             class="collapse property-definition-div" aria-labelledby="headingnamespace_definition_requirement"
+             data-parent="#accordionnamespace_definition_requirement">
+            <div class="card-body pl-5">
+
+    <h4>Namespace requirement</h4><br/>
+<span class="description"><p>States that the PURL namespace component is optional, required or prohibited for a PURL type.</p>
+</span><div class="one-of-value" id="namespace_definition_requirement_oneOf"><h2 class="handle">
+  <label>One of</label>
+</h2><ul class="nav nav-tabs" id="tabsnamespace_definition_requirement_oneOf_oneOf" role="tablist"><li class="nav-item">
+            <a class="nav-link active oneOf-option"
+               id="namespace_definition_requirement_oneOf_i0" data-toggle="tab" href="#tab-pane_namespace_definition_requirement_oneOf_i0" role="tab"
+               onclick="setAnchor('#namespace_definition_requirement_oneOf_i0')"
+            >Component optional requirement</a>
+        </li><li class="nav-item">
+            <a class="nav-link oneOf-option"
+               id="namespace_definition_requirement_oneOf_i1" data-toggle="tab" href="#tab-pane_namespace_definition_requirement_oneOf_i1" role="tab"
+               onclick="setAnchor('#namespace_definition_requirement_oneOf_i1')"
+            >Component required requirement</a>
+        </li><li class="nav-item">
+            <a class="nav-link oneOf-option"
+               id="namespace_definition_requirement_oneOf_i2" data-toggle="tab" href="#tab-pane_namespace_definition_requirement_oneOf_i2" role="tab"
+               onclick="setAnchor('#namespace_definition_requirement_oneOf_i2')"
+            >Component prohibited requirement</a>
+        </li></ul>
+<div class="tab-content card"><div class="tab-pane fade card-body active show"
+             id="tab-pane_namespace_definition_requirement_oneOf_i0" role="tabpanel">
+            
+
+    <h4>Component optional requirement</h4><span class="badge badge-dark value-type">Type: const</span><br/>
+<span class="description"><p>States that this PURL component is optional for a PURL type.</p>
+</span>
+
+    <span class="const-value" id="namespace_definition_requirement_oneOf_i0_const">Specific value: <code>"optional"</code></span>
+        
+
+        
+        
+
+        
+        </div><div class="tab-pane fade card-body "
+             id="tab-pane_namespace_definition_requirement_oneOf_i1" role="tabpanel">
+            
+
+    <h4>Component required requirement</h4><span class="badge badge-dark value-type">Type: const</span><br/>
+<span class="description"><p>States that this PURL component is required for a PURL type.</p>
+</span>
+
+    <span class="const-value" id="namespace_definition_requirement_oneOf_i1_const">Specific value: <code>"required"</code></span>
+        
+
+        
+        
+
+        
+        </div><div class="tab-pane fade card-body "
+             id="tab-pane_namespace_definition_requirement_oneOf_i2" role="tabpanel">
+            
+
+    <h4>Component prohibited requirement</h4><span class="badge badge-dark value-type">Type: const</span><br/>
+<span class="description"><p>States that this PURL component is prohibited for a PURL type.</p>
+</span>
+
+    <span class="const-value" id="namespace_definition_requirement_oneOf_i2_const">Specific value: <code>"prohibited"</code></span>
+        
+
+        
+        
+
+        
+        </div></div></div>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionname_definition">
+    <div class="card">
+        <div class="card-header" id="headingname_definition">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#name_definition"
+                        aria-expanded="" aria-controls="name_definition" onclick="setAnchor('#name_definition')"><span class="property-name">name_definition</span> <span class="badge badge-warning required-property">Required</span></button>
+            </h2>
+        </div>
+
+        <div id="name_definition"
+             class="collapse property-definition-div" aria-labelledby="headingname_definition"
+             data-parent="#accordionname_definition">
+            <div class="card-body pl-5">
+
+    <h4>Name definition</h4><span class="badge badge-dark value-type">Type: object</span><br/>
+<span class="description"><p>Definition of the name component for this PURL type. The PURL name component is required for all PURL type definitions.</p>
+</span>
+
+    
+        
+
+        
+        
+
+        
+<div class="accordion" id="accordionname_definition_permitted_characters">
+    <div class="card">
+        <div class="card-header" id="headingname_definition_permitted_characters">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#name_definition_permitted_characters"
+                        aria-expanded="" aria-controls="name_definition_permitted_characters" onclick="setAnchor('#name_definition_permitted_characters')"><span class="property-name">permitted_characters</span></button>
+            </h2>
+        </div>
+
+        <div id="name_definition_permitted_characters"
+             class="collapse property-definition-div" aria-labelledby="headingname_definition_permitted_characters"
+             data-parent="#accordionname_definition_permitted_characters">
+            <div class="card-body pl-5">
+
+    <h4>Permitted characters in this PURL component</h4><span class="badge badge-dark value-type">Type: string</span><span class="badge badge-info value-type">Format: regex</span><br/>
+<span class="description"><p>A regular expression (ECMA-262 dialect) defining the 'Permitted characters' for this component of this Package-URL type. If provided, this must be a subset of the 'Permitted characters' defined in the PURL specification.</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionname_definition_case_sensitive">
+    <div class="card">
+        <div class="card-header" id="headingname_definition_case_sensitive">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#name_definition_case_sensitive"
+                        aria-expanded="" aria-controls="name_definition_case_sensitive" onclick="setAnchor('#name_definition_case_sensitive')"><span class="property-name">case_sensitive</span></button>
+            </h2>
+        </div>
+
+        <div id="name_definition_case_sensitive"
+             class="collapse property-definition-div" aria-labelledby="headingname_definition_case_sensitive"
+             data-parent="#accordionname_definition_case_sensitive">
+            <div class="card-body pl-5">
+
+    <h4>Case sensitive</h4><span class="badge badge-dark value-type">Type: boolean</span> <span class="badge badge-success default-value">Default: true</span><br/>
+<span class="description"><p>true if this PURL component is case sensitive. If false, the canonical form must be lowercased.</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionname_definition_normalization_rules">
+    <div class="card">
+        <div class="card-header" id="headingname_definition_normalization_rules">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#name_definition_normalization_rules"
+                        aria-expanded="" aria-controls="name_definition_normalization_rules" onclick="setAnchor('#name_definition_normalization_rules')"><span class="property-name">normalization_rules</span></button>
+            </h2>
+        </div>
+
+        <div id="name_definition_normalization_rules"
+             class="collapse property-definition-div" aria-labelledby="headingname_definition_normalization_rules"
+             data-parent="#accordionname_definition_normalization_rules">
+            <div class="card-body pl-5">
+
+    <h4>Normalization rules</h4><span class="badge badge-dark value-type">Type: array of string</span><br/>
+<span class="description"><p>List of rules to normalize this component for this PURL type. These are plain text, unstructured rules as some require programming and cannot be enforced only with a schema. Tools are expected to apply these rules programmatically.</p>
+</span>
+        
+
+        
+        
+
+        <p><span class="badge badge-light restriction unique-items-restriction" id="name_definition_normalization_rules_uniqueItems">All items must be unique</span></p> <span class="badge badge-info no-additional">No Additional Items</span><h4>Each item of this array must be:</h4>
+    <div class="card">
+        <div class="card-body items-definition" id="name_definition_normalization_rules_items">
+            
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+
+        
+
+        
+        
+
+        
+        </div>
+    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionname_definition_native_name">
+    <div class="card">
+        <div class="card-header" id="headingname_definition_native_name">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#name_definition_native_name"
+                        aria-expanded="" aria-controls="name_definition_native_name" onclick="setAnchor('#name_definition_native_name')"><span class="property-name">native_name</span></button>
+            </h2>
+        </div>
+
+        <div id="name_definition_native_name"
+             class="collapse property-definition-div" aria-labelledby="headingname_definition_native_name"
+             data-parent="#accordionname_definition_native_name">
+            <div class="card-body pl-5">
+
+    <h4>Native name</h4><span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>The native name of this PURL component in the package ecosystem. For instance, the 'namespace' for the 'maven' type is 'groupId', and 'scope' for the 'npm' PURL type.</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionname_definition_note">
+    <div class="card">
+        <div class="card-header" id="headingname_definition_note">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#name_definition_note"
+                        aria-expanded="" aria-controls="name_definition_note" onclick="setAnchor('#name_definition_note')"><span class="property-name">note</span></button>
+            </h2>
+        </div>
+
+        <div id="name_definition_note"
+             class="collapse property-definition-div" aria-labelledby="headingname_definition_note"
+             data-parent="#accordionname_definition_note">
+            <div class="card-body pl-5">
+
+    <h4>Note</h4><span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>Extra note text.</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionname_definition_requirement">
+    <div class="card">
+        <div class="card-header" id="headingname_definition_requirement">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#name_definition_requirement"
+                        aria-expanded="" aria-controls="name_definition_requirement" onclick="setAnchor('#name_definition_requirement')"><span class="property-name">requirement</span> <span class="badge badge-warning required-property">Required</span></button>
+            </h2>
+        </div>
+
+        <div id="name_definition_requirement"
+             class="collapse property-definition-div" aria-labelledby="headingname_definition_requirement"
+             data-parent="#accordionname_definition_requirement">
+            <div class="card-body pl-5">
+
+    <h4>Name component requirement</h4><span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>States that the PURL name component is always required.</p>
+</span>
+
+    <span class="const-value" id="name_definition_requirement_const">Specific value: <code>"required"</code></span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionversion_definition">
+    <div class="card">
+        <div class="card-header" id="headingversion_definition">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#version_definition"
+                        aria-expanded="" aria-controls="version_definition" onclick="setAnchor('#version_definition')"><span class="property-name">version_definition</span></button>
+            </h2>
+        </div>
+
+        <div id="version_definition"
+             class="collapse property-definition-div" aria-labelledby="headingversion_definition"
+             data-parent="#accordionversion_definition">
+            <div class="card-body pl-5">
+
+    <h4>Version definition</h4><span class="badge badge-dark value-type">Type: object</span><br/>
+<span class="description"><p>Definition of the version component for this PURL type. The PURL version component is optional for a specific PURL type definition.</p>
+</span>
+
+    
+        
+
+        
+        
+
+        
+<div class="accordion" id="accordionversion_definition_permitted_characters">
+    <div class="card">
+        <div class="card-header" id="headingversion_definition_permitted_characters">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#version_definition_permitted_characters"
+                        aria-expanded="" aria-controls="version_definition_permitted_characters" onclick="setAnchor('#version_definition_permitted_characters')"><span class="property-name">permitted_characters</span></button>
+            </h2>
+        </div>
+
+        <div id="version_definition_permitted_characters"
+             class="collapse property-definition-div" aria-labelledby="headingversion_definition_permitted_characters"
+             data-parent="#accordionversion_definition_permitted_characters">
+            <div class="card-body pl-5">
+
+    <h4>Permitted characters in this PURL component</h4><span class="badge badge-dark value-type">Type: string</span><span class="badge badge-info value-type">Format: regex</span><br/>
+<span class="description"><p>A regular expression (ECMA-262 dialect) defining the 'Permitted characters' for this component of this Package-URL type. If provided, this must be a subset of the 'Permitted characters' defined in the PURL specification.</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionversion_definition_case_sensitive">
+    <div class="card">
+        <div class="card-header" id="headingversion_definition_case_sensitive">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#version_definition_case_sensitive"
+                        aria-expanded="" aria-controls="version_definition_case_sensitive" onclick="setAnchor('#version_definition_case_sensitive')"><span class="property-name">case_sensitive</span></button>
+            </h2>
+        </div>
+
+        <div id="version_definition_case_sensitive"
+             class="collapse property-definition-div" aria-labelledby="headingversion_definition_case_sensitive"
+             data-parent="#accordionversion_definition_case_sensitive">
+            <div class="card-body pl-5">
+
+    <h4>Case sensitive</h4><span class="badge badge-dark value-type">Type: boolean</span> <span class="badge badge-success default-value">Default: true</span><br/>
+<span class="description"><p>true if this PURL component is case sensitive. If false, the canonical form must be lowercased.</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionversion_definition_normalization_rules">
+    <div class="card">
+        <div class="card-header" id="headingversion_definition_normalization_rules">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#version_definition_normalization_rules"
+                        aria-expanded="" aria-controls="version_definition_normalization_rules" onclick="setAnchor('#version_definition_normalization_rules')"><span class="property-name">normalization_rules</span></button>
+            </h2>
+        </div>
+
+        <div id="version_definition_normalization_rules"
+             class="collapse property-definition-div" aria-labelledby="headingversion_definition_normalization_rules"
+             data-parent="#accordionversion_definition_normalization_rules">
+            <div class="card-body pl-5">
+
+    <h4>Normalization rules</h4><span class="badge badge-dark value-type">Type: array of string</span><br/>
+<span class="description"><p>List of rules to normalize this component for this PURL type. These are plain text, unstructured rules as some require programming and cannot be enforced only with a schema. Tools are expected to apply these rules programmatically.</p>
+</span>
+        
+
+        
+        
+
+        <p><span class="badge badge-light restriction unique-items-restriction" id="version_definition_normalization_rules_uniqueItems">All items must be unique</span></p> <span class="badge badge-info no-additional">No Additional Items</span><h4>Each item of this array must be:</h4>
+    <div class="card">
+        <div class="card-body items-definition" id="version_definition_normalization_rules_items">
+            
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+
+        
+
+        
+        
+
+        
+        </div>
+    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionversion_definition_native_name">
+    <div class="card">
+        <div class="card-header" id="headingversion_definition_native_name">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#version_definition_native_name"
+                        aria-expanded="" aria-controls="version_definition_native_name" onclick="setAnchor('#version_definition_native_name')"><span class="property-name">native_name</span></button>
+            </h2>
+        </div>
+
+        <div id="version_definition_native_name"
+             class="collapse property-definition-div" aria-labelledby="headingversion_definition_native_name"
+             data-parent="#accordionversion_definition_native_name">
+            <div class="card-body pl-5">
+
+    <h4>Native name</h4><span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>The native name of this PURL component in the package ecosystem. For instance, the 'namespace' for the 'maven' type is 'groupId', and 'scope' for the 'npm' PURL type.</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionversion_definition_note">
+    <div class="card">
+        <div class="card-header" id="headingversion_definition_note">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#version_definition_note"
+                        aria-expanded="" aria-controls="version_definition_note" onclick="setAnchor('#version_definition_note')"><span class="property-name">note</span></button>
+            </h2>
+        </div>
+
+        <div id="version_definition_note"
+             class="collapse property-definition-div" aria-labelledby="headingversion_definition_note"
+             data-parent="#accordionversion_definition_note">
+            <div class="card-body pl-5">
+
+    <h4>Note</h4><span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>Extra note text.</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionversion_definition_requirement">
+    <div class="card">
+        <div class="card-header" id="headingversion_definition_requirement">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#version_definition_requirement"
+                        aria-expanded="" aria-controls="version_definition_requirement" onclick="setAnchor('#version_definition_requirement')"><span class="property-name">requirement</span> <span class="badge badge-warning required-property">Required</span></button>
+            </h2>
+        </div>
+
+        <div id="version_definition_requirement"
+             class="collapse property-definition-div" aria-labelledby="headingversion_definition_requirement"
+             data-parent="#accordionversion_definition_requirement">
+            <div class="card-body pl-5">
+
+    <h4>Version requirement</h4><span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>States that the PURL version is optional.</p>
+</span>
+
+    <span class="const-value" id="version_definition_requirement_const">Specific value: <code>"optional"</code></span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionqualifiers_definition">
+    <div class="card">
+        <div class="card-header" id="headingqualifiers_definition">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#qualifiers_definition"
+                        aria-expanded="" aria-controls="qualifiers_definition" onclick="setAnchor('#qualifiers_definition')"><span class="property-name">qualifiers_definition</span></button>
+            </h2>
+        </div>
+
+        <div id="qualifiers_definition"
+             class="collapse property-definition-div" aria-labelledby="headingqualifiers_definition"
+             data-parent="#accordionqualifiers_definition">
+            <div class="card-body pl-5">
+
+    <h4>Qualifiers definition</h4><span class="badge badge-dark value-type">Type: array of object</span><br/>
+<span class="description"><p>Definition of the qualifiers specific to this PURL type. The PURL qualifiers component is optional for a specific PURL type, but a qualifiers key or keys may be required for a specific PURL type.</p>
+</span>
+        
+
+        
+        
+
+        <p><span class="badge badge-light restriction unique-items-restriction" id="qualifiers_definition_uniqueItems">All items must be unique</span></p> <span class="badge badge-info no-additional">No Additional Items</span><h4>Each item of this array must be:</h4>
+    <div class="card">
+        <div class="card-body items-definition" id="qualifiers_definition_items">
+            
+
+    <h4>Qualifiers definition</h4><span class="badge badge-dark value-type">Type: object</span><br/>
+<span class="description"><p>The definition of a qualifier specific to this PURL type.</p>
+</span> <span class="badge badge-info no-additional">No Additional Properties</span>
+        
+
+        
+        
+
+        
+<div class="accordion" id="accordionqualifiers_definition_items_key">
+    <div class="card">
+        <div class="card-header" id="headingqualifiers_definition_items_key">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#qualifiers_definition_items_key"
+                        aria-expanded="" aria-controls="qualifiers_definition_items_key" onclick="setAnchor('#qualifiers_definition_items_key')"><span class="property-name">key</span> <span class="badge badge-warning required-property">Required</span></button>
+            </h2>
+        </div>
+
+        <div id="qualifiers_definition_items_key"
+             class="collapse property-definition-div" aria-labelledby="headingqualifiers_definition_items_key"
+             data-parent="#accordionqualifiers_definition_items_key">
+            <div class="card-body pl-5">
+
+    <h4>Qualifier key</h4><span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>The key for the qualifier.</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionqualifiers_definition_items_requirement">
+    <div class="card">
+        <div class="card-header" id="headingqualifiers_definition_items_requirement">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#qualifiers_definition_items_requirement"
+                        aria-expanded="" aria-controls="qualifiers_definition_items_requirement" onclick="setAnchor('#qualifiers_definition_items_requirement')"><span class="property-name">requirement</span></button>
+            </h2>
+        </div>
+
+        <div id="qualifiers_definition_items_requirement"
+             class="collapse property-definition-div" aria-labelledby="headingqualifiers_definition_items_requirement"
+             data-parent="#accordionqualifiers_definition_items_requirement">
+            <div class="card-body pl-5">
+
+    <h4>Qualifier key requirement</h4><br/>
+<span class="description"><p>States that a PURL qualifier key is optional or required for a PURL type.</p>
+</span><div class="one-of-value" id="qualifiers_definition_items_requirement_oneOf"><h2 class="handle">
+  <label>One of</label>
+</h2><ul class="nav nav-tabs" id="tabsqualifiers_definition_items_requirement_oneOf_oneOf" role="tablist"><li class="nav-item">
+            <a class="nav-link active oneOf-option"
+               id="qualifiers_definition_items_requirement_oneOf_i0" data-toggle="tab" href="#tab-pane_qualifiers_definition_items_requirement_oneOf_i0" role="tab"
+               onclick="setAnchor('#qualifiers_definition_items_requirement_oneOf_i0')"
+            >Component optional requirement</a>
+        </li><li class="nav-item">
+            <a class="nav-link oneOf-option"
+               id="qualifiers_definition_items_requirement_oneOf_i1" data-toggle="tab" href="#tab-pane_qualifiers_definition_items_requirement_oneOf_i1" role="tab"
+               onclick="setAnchor('#qualifiers_definition_items_requirement_oneOf_i1')"
+            >Component required requirement</a>
+        </li></ul>
+<div class="tab-content card"><div class="tab-pane fade card-body active show"
+             id="tab-pane_qualifiers_definition_items_requirement_oneOf_i0" role="tabpanel">
+            
+
+    <h4>Component optional requirement</h4><span class="badge badge-dark value-type">Type: const</span><br/>
+<span class="description"><p>States that this PURL component is optional for a PURL type.</p>
+</span>
+
+    <span class="const-value" id="qualifiers_definition_items_requirement_oneOf_i0_const">Specific value: <code>"optional"</code></span>
+        
+
+        
+        
+
+        
+        </div><div class="tab-pane fade card-body "
+             id="tab-pane_qualifiers_definition_items_requirement_oneOf_i1" role="tabpanel">
+            
+
+    <h4>Component required requirement</h4><span class="badge badge-dark value-type">Type: const</span><br/>
+<span class="description"><p>States that this PURL component is required for a PURL type.</p>
+</span>
+
+    <span class="const-value" id="qualifiers_definition_items_requirement_oneOf_i1_const">Specific value: <code>"required"</code></span>
+        
+
+        
+        
+
+        
+        </div></div></div>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionqualifiers_definition_items_description">
+    <div class="card">
+        <div class="card-header" id="headingqualifiers_definition_items_description">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#qualifiers_definition_items_description"
+                        aria-expanded="" aria-controls="qualifiers_definition_items_description" onclick="setAnchor('#qualifiers_definition_items_description')"><span class="property-name">description</span> <span class="badge badge-warning required-property">Required</span></button>
+            </h2>
+        </div>
+
+        <div id="qualifiers_definition_items_description"
+             class="collapse property-definition-div" aria-labelledby="headingqualifiers_definition_items_description"
+             data-parent="#accordionqualifiers_definition_items_description">
+            <div class="card-body pl-5">
+
+    <h4>Description</h4><span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>The description of this qualifier.</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionqualifiers_definition_items_default_value">
+    <div class="card">
+        <div class="card-header" id="headingqualifiers_definition_items_default_value">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#qualifiers_definition_items_default_value"
+                        aria-expanded="" aria-controls="qualifiers_definition_items_default_value" onclick="setAnchor('#qualifiers_definition_items_default_value')"><span class="property-name">default_value</span></button>
+            </h2>
+        </div>
+
+        <div id="qualifiers_definition_items_default_value"
+             class="collapse property-definition-div" aria-labelledby="headingqualifiers_definition_items_default_value"
+             data-parent="#accordionqualifiers_definition_items_default_value">
+            <div class="card-body pl-5">
+
+    <h4>Default value</h4><span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>The optional default value of this qualifier if not provided.</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionqualifiers_definition_items_native_name">
+    <div class="card">
+        <div class="card-header" id="headingqualifiers_definition_items_native_name">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#qualifiers_definition_items_native_name"
+                        aria-expanded="" aria-controls="qualifiers_definition_items_native_name" onclick="setAnchor('#qualifiers_definition_items_native_name')"><span class="property-name">native_name</span></button>
+            </h2>
+        </div>
+
+        <div id="qualifiers_definition_items_native_name"
+             class="collapse property-definition-div" aria-labelledby="headingqualifiers_definition_items_native_name"
+             data-parent="#accordionqualifiers_definition_items_native_name">
+            <div class="card-body pl-5">
+
+    <h4>Native name</h4><span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>The equivalent native name for this qualifier key.</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+        </div>
+    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionsubpath_definition">
+    <div class="card">
+        <div class="card-header" id="headingsubpath_definition">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#subpath_definition"
+                        aria-expanded="" aria-controls="subpath_definition" onclick="setAnchor('#subpath_definition')"><span class="property-name">subpath_definition</span></button>
+            </h2>
+        </div>
+
+        <div id="subpath_definition"
+             class="collapse property-definition-div" aria-labelledby="headingsubpath_definition"
+             data-parent="#accordionsubpath_definition">
+            <div class="card-body pl-5">
+
+    <h4>Subpath definition</h4><span class="badge badge-dark value-type">Type: object</span><br/>
+<span class="description"><p>The definition for the subpath for this PURL type. The PURL subpath component is optional for a specific PURL type definition.</p>
+</span>
+
+    
+        
+
+        
+        
+
+        
+<div class="accordion" id="accordionsubpath_definition_permitted_characters">
+    <div class="card">
+        <div class="card-header" id="headingsubpath_definition_permitted_characters">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#subpath_definition_permitted_characters"
+                        aria-expanded="" aria-controls="subpath_definition_permitted_characters" onclick="setAnchor('#subpath_definition_permitted_characters')"><span class="property-name">permitted_characters</span></button>
+            </h2>
+        </div>
+
+        <div id="subpath_definition_permitted_characters"
+             class="collapse property-definition-div" aria-labelledby="headingsubpath_definition_permitted_characters"
+             data-parent="#accordionsubpath_definition_permitted_characters">
+            <div class="card-body pl-5">
+
+    <h4>Permitted characters in this PURL component</h4><span class="badge badge-dark value-type">Type: string</span><span class="badge badge-info value-type">Format: regex</span><br/>
+<span class="description"><p>A regular expression (ECMA-262 dialect) defining the 'Permitted characters' for this component of this Package-URL type. If provided, this must be a subset of the 'Permitted characters' defined in the PURL specification.</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionsubpath_definition_case_sensitive">
+    <div class="card">
+        <div class="card-header" id="headingsubpath_definition_case_sensitive">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#subpath_definition_case_sensitive"
+                        aria-expanded="" aria-controls="subpath_definition_case_sensitive" onclick="setAnchor('#subpath_definition_case_sensitive')"><span class="property-name">case_sensitive</span></button>
+            </h2>
+        </div>
+
+        <div id="subpath_definition_case_sensitive"
+             class="collapse property-definition-div" aria-labelledby="headingsubpath_definition_case_sensitive"
+             data-parent="#accordionsubpath_definition_case_sensitive">
+            <div class="card-body pl-5">
+
+    <h4>Case sensitive</h4><span class="badge badge-dark value-type">Type: boolean</span> <span class="badge badge-success default-value">Default: true</span><br/>
+<span class="description"><p>true if this PURL component is case sensitive. If false, the canonical form must be lowercased.</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionsubpath_definition_normalization_rules">
+    <div class="card">
+        <div class="card-header" id="headingsubpath_definition_normalization_rules">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#subpath_definition_normalization_rules"
+                        aria-expanded="" aria-controls="subpath_definition_normalization_rules" onclick="setAnchor('#subpath_definition_normalization_rules')"><span class="property-name">normalization_rules</span></button>
+            </h2>
+        </div>
+
+        <div id="subpath_definition_normalization_rules"
+             class="collapse property-definition-div" aria-labelledby="headingsubpath_definition_normalization_rules"
+             data-parent="#accordionsubpath_definition_normalization_rules">
+            <div class="card-body pl-5">
+
+    <h4>Normalization rules</h4><span class="badge badge-dark value-type">Type: array of string</span><br/>
+<span class="description"><p>List of rules to normalize this component for this PURL type. These are plain text, unstructured rules as some require programming and cannot be enforced only with a schema. Tools are expected to apply these rules programmatically.</p>
+</span>
+        
+
+        
+        
+
+        <p><span class="badge badge-light restriction unique-items-restriction" id="subpath_definition_normalization_rules_uniqueItems">All items must be unique</span></p> <span class="badge badge-info no-additional">No Additional Items</span><h4>Each item of this array must be:</h4>
+    <div class="card">
+        <div class="card-body items-definition" id="subpath_definition_normalization_rules_items">
+            
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+
+        
+
+        
+        
+
+        
+        </div>
+    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionsubpath_definition_native_name">
+    <div class="card">
+        <div class="card-header" id="headingsubpath_definition_native_name">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#subpath_definition_native_name"
+                        aria-expanded="" aria-controls="subpath_definition_native_name" onclick="setAnchor('#subpath_definition_native_name')"><span class="property-name">native_name</span></button>
+            </h2>
+        </div>
+
+        <div id="subpath_definition_native_name"
+             class="collapse property-definition-div" aria-labelledby="headingsubpath_definition_native_name"
+             data-parent="#accordionsubpath_definition_native_name">
+            <div class="card-body pl-5">
+
+    <h4>Native name</h4><span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>The native name of this PURL component in the package ecosystem. For instance, the 'namespace' for the 'maven' type is 'groupId', and 'scope' for the 'npm' PURL type.</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionsubpath_definition_note">
+    <div class="card">
+        <div class="card-header" id="headingsubpath_definition_note">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#subpath_definition_note"
+                        aria-expanded="" aria-controls="subpath_definition_note" onclick="setAnchor('#subpath_definition_note')"><span class="property-name">note</span></button>
+            </h2>
+        </div>
+
+        <div id="subpath_definition_note"
+             class="collapse property-definition-div" aria-labelledby="headingsubpath_definition_note"
+             data-parent="#accordionsubpath_definition_note">
+            <div class="card-body pl-5">
+
+    <h4>Note</h4><span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>Extra note text.</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionsubpath_definition_requirement">
+    <div class="card">
+        <div class="card-header" id="headingsubpath_definition_requirement">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#subpath_definition_requirement"
+                        aria-expanded="" aria-controls="subpath_definition_requirement" onclick="setAnchor('#subpath_definition_requirement')"><span class="property-name">requirement</span> <span class="badge badge-warning required-property">Required</span></button>
+            </h2>
+        </div>
+
+        <div id="subpath_definition_requirement"
+             class="collapse property-definition-div" aria-labelledby="headingsubpath_definition_requirement"
+             data-parent="#accordionsubpath_definition_requirement">
+            <div class="card-body pl-5">
+
+    <h4>Subpath requirement</h4><span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>States that the PURL subpath is optional.</p>
+</span>
+
+    <span class="const-value" id="subpath_definition_requirement_const">Specific value: <code>"optional"</code></span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionexamples">
+    <div class="card">
+        <div class="card-header" id="headingexamples">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#examples"
+                        aria-expanded="" aria-controls="examples" onclick="setAnchor('#examples')"><span class="property-name">examples</span> <span class="badge badge-warning required-property">Required</span></button>
+            </h2>
+        </div>
+
+        <div id="examples"
+             class="collapse property-definition-div" aria-labelledby="headingexamples"
+             data-parent="#accordionexamples">
+            <div class="card-body pl-5">
+
+    <h4>PURL examples</h4><span class="badge badge-dark value-type">Type: array of string</span><br/>
+<span class="description"><p>Example of valid, canonical PURLs for this package type.</p>
+</span>
+        
+
+        
+        
+
+        <p><span class="badge badge-light restriction min-items-restriction" id="examples_minItems">Must contain a minimum of <code>1</code> items</span></p><p><span class="badge badge-light restriction unique-items-restriction" id="examples_uniqueItems">All items must be unique</span></p> <span class="badge badge-info no-additional">No Additional Items</span><h4>Each item of this array must be:</h4>
+    <div class="card">
+        <div class="card-body items-definition" id="examples_items">
+            
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="pattern-value" id="examples_items_pattern">Must match regular expression: <code>^pkg:[a-z][a-z0-9-\.]+/.*$</code></span>
+        
+
+        
+        
+
+        
+        </div>
+    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionnote">
+    <div class="card">
+        <div class="card-header" id="headingnote">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#note"
+                        aria-expanded="" aria-controls="note" onclick="setAnchor('#note')"><span class="property-name">note</span></button>
+            </h2>
+        </div>
+
+        <div id="note"
+             class="collapse property-definition-div" aria-labelledby="headingnote"
+             data-parent="#accordionnote">
+            <div class="card-body pl-5">
+
+    <h4>Note</h4><span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>Note about this PURL type.</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionreference_urls">
+    <div class="card">
+        <div class="card-header" id="headingreference_urls">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#reference_urls"
+                        aria-expanded="" aria-controls="reference_urls" onclick="setAnchor('#reference_urls')"><span class="property-name">reference_urls</span></button>
+            </h2>
+        </div>
+
+        <div id="reference_urls"
+             class="collapse property-definition-div" aria-labelledby="headingreference_urls"
+             data-parent="#accordionreference_urls">
+            <div class="card-body pl-5">
+
+    <h4>Reference URLs</h4><span class="badge badge-dark value-type">Type: array of string</span><br/>
+<span class="description"><p>Optional list of informational reference URLs about this PURL type.</p>
+</span>
+        
+
+        
+        
+
+        <p><span class="badge badge-light restriction unique-items-restriction" id="reference_urls_uniqueItems">All items must be unique</span></p> <span class="badge badge-info no-additional">No Additional Items</span><h4>Each item of this array must be:</h4>
+    <div class="card">
+        <div class="card-body items-definition" id="reference_urls_items">
+            
+
+    <span class="badge badge-dark value-type">Type: string</span><span class="badge badge-info value-type">Format: uri</span><br/>
+
+        
+
+        
+        
+
+        
+        </div>
+    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <footer>
+        <p class="generated-by-footer">Generated using <a href="https://github.com/coveooss/json-schema-for-humans">json-schema-for-humans</a> on 2025-09-30 at 18:26:20 -0700</p>
+    </footer></body>
+</html>
