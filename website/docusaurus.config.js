@@ -30,31 +30,27 @@ const config = {
         v4: true, // Improve compatibility with the upcoming Docusaurus v4
     },
 
-    // Set the production url of your site here
+    // Set the production url
     url: "https://package-url.github.io/",
-    // 2025-10-13 Monday 17:57:32.  For temp xyz dev use as needed:
+    // For temp xyz dev use as needed:
     // url: "https://packageurl.jmh2025.xyz",
 
-    // Set the /<baseUrl>/ pathname under which your site is served
+    // The /<baseUrl>/ pathname under which the site is served
     // For GitHub pages deployment, it is often '/<projectName>/'
     baseUrl: "/packageurl.org/",
     // For DreamHost deployment:
     // baseUrl: "/",
 
-    // TODO: 2025-10-13 Monday 18:00:59.  Determine whether still needed to address file-not-found when linking to json-schema-for-humans .html files.
+    // TODO: Determine whether still needed to address file-not-found when linking to json-schema-for-humans .html files.
     staticDirectories: ["static"], // Ensure static folder is included
 
     // GitHub pages deployment config.
-    // If you aren't using GitHub pages, you don't need these.
-    organizationName: "Package-URL", // Usually your GitHub org/user name.
-    projectName: "packageurl.org", // Usually your repo name.
+    organizationName: "Package-URL",
+    projectName: "packageurl.org",
 
     onBrokenLinks: "throw",
     onBrokenMarkdownLinks: "warn",
 
-    // Even if you don't use internationalization, you can use this field to set
-    // useful metadata like html lang. For example, if your site is Chinese, you
-    // may want to replace "en" with "zh-Hans".
     i18n: {
         defaultLocale: "en",
         locales: ["en"],
@@ -66,7 +62,6 @@ const config = {
             /** @type {import('@docusaurus/preset-classic').Options} */
             ({
                 docs: {
-                    // sidebarPath: "./sidebars.js",
                     path: "docs",
                     sidebarPath: require.resolve("./sidebars.js"),
                     editUrl: "https://github.com/package-url",
@@ -84,7 +79,7 @@ const config = {
                 //     onUntruncatedBlogPosts: "warn",
                 // },
                 theme: {
-                    customCss: "./src/css/custom.css",
+                    customCss: require.resolve('./src/css/custom.css'),
                 },
             }),
         ],
@@ -96,41 +91,11 @@ const config = {
             // Replace with your project's social card
             // image: "img/docusaurus-social-card.jpg",
             navbar: {
-                // title: "PURL",
                 logo: {
                     alt: 'PURL Logo',
                     src: 'img/logo.png',
                 },
                 style: "dark",
-                // items: [
-                //     {
-                //         type: "docSidebar",
-                //         sidebarId: "mySidebar",
-                //         position: "left",
-                //         label: "Docs",
-                //     },
-                //     {
-                //         to: "/docs/PURL_SPECIFICATION",
-                //         label: "PURL Specs",
-                //         position: "left",
-                //     },
-                //     {
-                //         to: "/docs/PURL_TYPES",
-                //         label: "PURL Types",
-                //         position: "left",
-                //     },
-                //     {
-                //         href: "https://github.com/package-url",
-                //         label: "GitHub",
-                //         position: "right",
-                //     },
-                //     {
-                //         href: "https://cyclonedx.slack.com/archives/C06KTE3BWEB",
-                //         label: "Slack",
-                //         position: "right",
-                //     },
-                // ],
-
                 items: [
                     { to: '/', label: 'Home', position: 'left', exact: true },
                     {
@@ -200,91 +165,6 @@ const config = {
             footer: {
                 style: "dark",
                 links: [
-                    // {
-                    //     title: "News and Events",
-                    //     items: [
-                    //         {
-                    //             label: "Newsletter",
-                    //             to: "docs/PURL_SPECIFICATION",
-                    //         },
-                    //         {
-                    //             label: "Meetings",
-                    //             to: "docs/PURL_SPECIFICATION",
-                    //         },
-                    //         {
-                    //             label: "Blog",
-                    //             to: "/blog",
-                    //         },
-                    //     ],
-                    // },
-                    // {
-                    //     title: "Social",
-                    //     items: [
-                    //         {
-                    //             label: "Gitter",
-                    //             href: "https://app.gitter.im/#/room/#package-url_Lobby:gitter.im",
-                    //         },
-                    //         {
-                    //             label: "Slack",
-                    //             href: "https://cyclonedx.slack.com/archives/C06KTE3BWEB",
-                    //         },
-                    //         {
-                    //             label: "Github",
-                    //             href: "https://github.com/package-url",
-                    //         },
-                    //     ],
-                    // },
-                    // {
-                    //     title: "Standardisation",
-                    //     items: [
-                    //         {
-                    //             label: "ECMA",
-                    //             href: "https://ecma-international.org",
-                    //         },
-                    //         {
-                    //             label: "TC-54 PURL",
-                    //             href: "https://tc54.org/purl/",
-                    //         },
-                    //         {
-                    //             label: "TC-54 CycloneDX",
-                    //             href: "https://tc54.org/cyclonedx/",
-                    //         },
-                    //         {
-                    //             label: "TC-54 Transparency Exchange API",
-                    //             href: "https://tc54.org/tea/",
-                    //         },
-                    //         {
-                    //             label: "ISO",
-                    //             href: "https://www.iso.org/home.html",
-                    //         },
-                    //     ],
-                    // },
-                    // {
-                    //     title: "Related Specs",
-                    //     items: [
-                    //         {
-                    //             label: "CycloneDX",
-                    //             href: "https://cyclonedx.org/",
-                    //         },
-                    //         {
-                    //             label: "SPDX",
-                    //             href: "https://spdx.dev/",
-                    //         },
-                    //         {
-                    //             label: "CSAF",
-                    //             href: "https://www.csaf.io/",
-                    //         },
-                    //         {
-                    //             label: "OpenVEX",
-                    //             href: "https://github.com/openvex/",
-                    //         },
-                    //         {
-                    //             label: "OSV Schema",
-                    //             href: "https://github.com/ossf/osv-schema",
-                    //         },
-                    //     ],
-                    // },
-
                     {
                         title: '\u00A0', // non-breaking space: avoids empty-string error, renders blank
                         items: [
@@ -324,7 +204,6 @@ const config = {
                     },
 
                 ],
-                // copyright: `Copyright © ${new Date().getFullYear()} PURL, Inc. Built with Docusaurus.`,
                 copyright: `Copyright © _____ &nbsp; | &nbsp; License: _____ &nbsp; | &nbsp; Built with Docusaurus <br />Last deployed: ${getDeploymentTimestamp()}`,
             },
             prism: {

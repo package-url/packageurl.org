@@ -1,173 +1,11 @@
-/* .gifcontainer {
-    display: flex;
-    flex-direction: row;
-    justify-self: center;
-    justify-content: center;
-
-    width: 37vw;
-    height: 40vh;
-
-    border: 0.7vw solid rgba(175, 78, 138, 1);
-    border-radius: 2vw;
-
-    margin-top: 6vh;
-    margin-bottom: 5vh;
-    margin-right: 7vw;;
-    padding-bottom: 3vh;
-
-    background-color: rgba(255, 255, 255, 1);
-}
-
-.container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    background: linear-gradient(rgba(175, 78, 138, 1), rgba(27, 102, 215, 1)) no-repeat 25vw/0.3vw 100vw;
-    position : relative;
-}
-
-.homepagegif {
-    align-self: center;
-    justify-self: center;
-
-    width: 80%;
-    height: 80%;
-
-    margin-top: 30%;
-    margin-bottom: 10%;
-}
-
-.poweredby {
-    font-size: 3vw;
-    align-self: center;
-    justify-self: left;
-    color: rgba(37, 67, 202, 1);
-    margin-top: 7vh;
-    margin-right: 12vw;
-    margin-bottom: 5vh;
-    margin-left: -4vw;
-    text-align: center;
-}
-
-.logo {
-    align-self: center;
-    width: 10vw;
-    height: 30vh;;
-    margin-left: 1vw;
-    margin-right: 3vw;
-}
-
-.horizontaldivider {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 12vh;
-    border: 0.3vw;
-    border-color: black;
-    border-style: solid;
-} */
-
-/* styles.fullHero
-
-{styles.purlGridWrapper}>
-        <div className={styles.purlGridContainer}>
-            <div className={styles.purlGrid}
-{styles.twoColumn}>
-        <div className={styles.column}>
-            <h2>Community call</h2>
-            <div className={styles.card}>*/
-
-            /* Hero full-width */
+/* Hero full-width */
 .fullHero {
     width: 100%;
-    /* background: linear-gradient(135deg, #007BFF, #00C6FF); */
-    /* blue gradient */
-    /* background: linear-gradient(135deg, #0056b3, #0077cc); */
-    /* darker blue gradient */
-    /* background: linear-gradient(135deg, #003380, #0066ff); */
-    /* darker blue gradient */
-    /* background: linear-gradient(135deg, #003380, #cc0000); */
-    /* darker blue gradient */
-    /* 2025-08-30 Saturday 23:42:31.  I like this one: */
-    /* background: linear-gradient(135deg, #003399, #3377ff); */
-    /* darker blue gradient */
-
-    /* background: #1a427a; */
     color: white;
     text-align: center;
-    padding: 4rem 2rem;
-    padding: 2rem 2rem 1rem 2rem;
     padding: 2rem 2rem 2rem 2rem;
-
-    /* CycloneDX primary background */
-    /* background-image:
-        linear-gradient(to right, #08090cff, #6A1B9A, #ff0055ff),
-        url('/img/background-image.png'); */
-    /* linear-gradient(to right, #08090cff, #003399, #3377ff),
-        url('/img/background-image.png'); */
-    /* linear-gradient(to right, #000000, #006666, #003399),
-        url('/img/background-image.png'); */
-
-    /* background-image:
-        linear-gradient(to right, #08090cff, #6A1B9A, #ff0055ff),
-        url('/img/background-image.png'); */
-
     background-size: cover;
     background-blend-mode: overlay;
-
-    /* background: linear-gradient(135deg, #5c3db7 0%, #7f63d9 100%); */
-    /* color: var(--ifm-color-primary-lightest); */
-    /* color: #000000; */
-
-    /* background-image:
-        linear-gradient(135deg, #5c3db7 0%, #7f63d9 100%),
-        url('/img/background-image.png'); */
-
-    /* background-image:
-        linear-gradient(135deg, #3d2a7d 0%, #5c3db7 100%),
-        url('/img/background-image.png'); */
-
-    /* background-image:
-        linear-gradient(135deg, #000099 100%, #330000 100%),
-        url('/img/background-image.png'); */
-
-    /* background-image:
-        linear-gradient(to right, #08090cff),
-        url('/img/BackgroundPattern99.svg'); */
-
-    /* background-image:
-        linear-gradient(135deg, #66ccff),
-        url('/img/Seamless-Geometric-Line-Art-Pattern.svg'); */
-
-    /* background-image:
-        linear-gradient(to right, #009999, #000099),
-        url('/img/Seamless-Hexagonalism-Pattern.svg'); */
-
-    /* background-image:
-        linear-gradient(to right, #006666, #0022cc, #0099cc),
-        url('/img/Seamless-Tessellation-Pattern.svg'); */
-
-    /* background-image:
-        linear-gradient(to right, #006666, #0022cc, #0099cc),
-        url('/img/6171317.jpg'); */
-
-    /* background-image:
-        linear-gradient(135deg, #0066ff 0%, #0066cc 100%),
-        url('/img/6171317.jpg'); */
-
-    /* background-image: linear-gradient(135deg, #666666 0%, #999999 100%),
-        url("/img/6171317.jpg"); */
-
-    /* 2025-10-10 Friday 18:12:40.  name change from 6171317.jpg to cube-background.jpg */
-    /* 2025-10-11 Saturday 16:53:31.  We do not want the background image in the content section. */
-    /* background-image: linear-gradient(135deg, #666666 0%, #999999 100%),
-        url("/img/cube-background.jpg"); */
-
-    /* background-image:
-        url('/img/grok-abstract.svg'); */
-
-    /* filter: brightness(200%); */
-
     color: #000000;
 }
 
@@ -177,8 +15,6 @@
     display: flex;
     /* centers the inner container */
     justify-content: center;
-    padding: 2rem 1rem; /* vertical + horizontal padding */
-    /* padding: 2rem .5rem; */
     padding: 1rem 1rem;
 }
 
@@ -188,16 +24,11 @@
     max-width: 1200px;
     /* responsive */
     /* width: 100%; */
-    background: linear-gradient(180deg, #f0f5fc 0%, #ffffff 100%);
+    /* background: linear-gradient(180deg, #f0f5fc 0%, #ffffff 100%); */
     background: #f7f7f7;
     border-radius: 8px;
-    padding: 2rem 1rem;
     padding: 0.5rem 0.5rem;
-
     box-shadow: inset 0 20px 40px -20px rgba(0, 0, 0, 0.05);
-
-    /* 2025-10-06 Monday 12:33:30.  */
-    /* justify-content: center; */
 }
 
 /* Container for the grid */
@@ -206,16 +37,9 @@
     flex-wrap: wrap;
     /* centers each row, including the last */
     justify-content: center;
-    /* justify-content: flex-start; */
-    gap: 1.5rem;
-    gap: 1rem;
     gap: 0rem;
-
-    padding: 2rem;
     padding: 1rem;
-
     margin: 0 auto;
-    /* max-width: 1200px; */
 }
 
 .twoColumn {
@@ -225,18 +49,14 @@
     max-width: 1200px;
     margin: 3rem auto;
     padding: 0 2rem;
-
     padding-top: 1rem;
     margin-top: 0;
-
-    /* background-color: #f5f5f5; */
     border-radius: 10px;
 }
 
 .column h2 {
     margin-bottom: 1rem;
 }
-
 
 .card {
     background: #f8f9fa;
@@ -246,13 +66,12 @@
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
-/* 2025-09-20 Saturday 15:31:45.  Try this instead to handle dark mode for the card */
+/* Handle dark mode for the card */
 .card {
     background-color: var(--ifm-background-surface-color);
     color: var(--ifm-font-color-base);
     padding: 1rem;
     border-radius: 8px;
-    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
     box-shadow: 0 0 6px #0000001a;
 }
 
@@ -272,8 +91,7 @@
 
 /* Each card / cell */
 .packageCell {
-    /* grow: 0, shrink: 1, base width: 180px */
-    flex: 0 1 180px;
+    /* grow: 0, shrink: 1, base width: 110px */
     flex: 0 1 110px;
     display: flex;
     flex-direction: column;
@@ -282,8 +100,6 @@
     background: #ffffff;
     border: 1px solid #e0e6ef;
     border-radius: 12px;
-    padding: 1rem 1rem;
-    /* 2025-10-05 Sunday 11:32:36.  */
     padding: 0.5rem !important;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
     transition: transform 0.2s ease, box-shadow 0.2s ease,
@@ -326,11 +142,8 @@
     border-radius: 8px;
 }
 
-/* 2025-10-07 Tuesday 15:41:56.  Per ChatGPT to enlarge the tiny Arch Linux logo. See the updated <img /> in index.js. */
+/* Enlarge the tiny Arch Linux logo (defined in website/src/components/HomepageContent/index.js). */
 .packageLogo.alpm {
   width: 64px;
   height: 64px;
-
-  /* width: 60px;
-  height: 20px; */
 }

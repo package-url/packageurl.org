@@ -1,3 +1,5 @@
+/* 2025-10-14 Tuesday 09:50:16.  This file is not currently used and is
+retained but commented out in /website/src/pages/index.js. */
 .heroBanner {
   padding: 4rem 0;
   text-align: center;
@@ -11,8 +13,6 @@
   background-size: cover;
   background-blend-mode: overlay;
 }
-
-
 
 @media screen and (max-width: 996px) {
   .heroBanner {
@@ -37,7 +37,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem; 
+  gap: 1rem;
 }
 
 .buttons .button--secondary {

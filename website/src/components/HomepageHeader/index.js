@@ -1,5 +1,4 @@
 import React from 'react';
-// import styles from './HomepageHeader.module.css';
 import styles from './styles.module.css';
 
 export default function HomepageHeader() {
