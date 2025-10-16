@@ -1,0 +1,93 @@
+.toolGridWrapper {
+  display: flex;
+  justify-content: center;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.toolGridContainer {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.toolGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+/* Each cell/card */
+.toolCard {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  flex: 1 1 calc(33% - 1.5rem); /* 3 across */
+  max-width: calc(33% - 1.5rem);
+  padding: 1.25rem;
+  text-align: center;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.toolCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Logo and text */
+.toolLogo {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1rem;
+}
+
+.toolName {
+  font-size: 1.1rem;
+  margin: 0.25rem 0;
+}
+
+.toolDescription {
+  font-size: 0.9rem;
+  color: #444;
+  margin: 0.5rem 0 1rem;
+  min-height: 3em;
+}
+
+.toolMeta {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 1rem;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.toolLinks a {
+  margin: 0 0.5rem;
+  text-decoration: none;
+  color: #0366d6;
+  font-weight: 500;
+}
+
+.toolLinks a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive layout */
+@media (max-width: 1000px) {
+  .toolCard {
+    flex: 1 1 calc(45% - 1rem);
+    max-width: calc(45% - 1rem);
+  }
+}
+
+@media (max-width: 600px) {
+  .toolCard {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}

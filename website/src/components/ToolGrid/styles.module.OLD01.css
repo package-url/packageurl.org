@@ -1,0 +1,129 @@
+.toolsPage {
+  padding: 2rem;
+  text-align: center;
+}
+
+.pageTitle {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.pageIntro {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 2rem;
+}
+
+/* Grid layout */
+.toolsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1rem;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* Each tool card */
+.toolCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 260px;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+  padding: 1.25rem;
+  text-align: left;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.toolCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo styling */
+.toolLogo {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 0.75rem auto;
+  object-fit: contain;
+}
+
+/* Tool name and description */
+.toolHeader {
+  text-align: center;
+  margin-bottom: 0.25rem;
+}
+
+.toolName {
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #0a58ca;
+  text-decoration: none;
+}
+
+.toolName:hover {
+  text-decoration: underline;
+}
+
+.toolDesc {
+  font-size: 0.9rem;
+  color: #333;
+  text-align: center;
+  line-height: 1.3;
+  margin-bottom: 0.75rem;
+}
+
+/* Metadata section */
+.toolMeta {
+  font-size: 0.85rem;
+  color: #555;
+  margin-bottom: 0.75rem;
+}
+
+.metaLabel {
+  font-weight: 600;
+  color: #222;
+}
+
+/* Link buttons */
+.toolLinks {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.toolLinks a {
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 0.3rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  transition: background 0.15s ease, color 0.15s ease, border 0.15s ease;
+}
+
+.homeLink {
+  color: #0a58ca;
+  border-color: #0a58ca;
+}
+
+.homeLink:hover {
+  background: #0a58ca;
+  color: #fff;
+}
+
+.downloadLink {
+  color: #198754;
+  border-color: #198754;
+}
+
+.downloadLink:hover {
+  background: #198754;
+  color: #fff;
+}
