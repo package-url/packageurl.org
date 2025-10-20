@@ -35,10 +35,7 @@ export default function ToolGrid() {
               className={styles.toolCard}
               onClick={() => setSelectedTool(tool)}
             >
-              {/* <img src={tool.logo} alt={tool.name} className={styles.toolLogo} /> */}
-              {/* <h3 className={styles.toolName}>{tool.name}</h3> */}
               <h3 className={styles.toolName} style={{ marginBottom: '.5rem' }}>{tool.name}</h3>
-
             </div>
           ))}
         </div>

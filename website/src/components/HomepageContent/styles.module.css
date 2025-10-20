@@ -20,11 +20,8 @@
 
 /* Constrain gradient to this container only */
 .purlGridContainer {
-    /* matches your grid max-width */
+    /* matches grid max-width */
     max-width: 1200px;
-    /* responsive */
-    /* width: 100%; */
-    /* background: linear-gradient(180deg, #f0f5fc 0%, #ffffff 100%); */
     background: #f7f7f7;
     border-radius: 8px;
     padding: 0.5rem 0.5rem;
@@ -91,7 +88,6 @@
 
 /* Each card / cell */
 .packageCell {
-    /* grow: 0, shrink: 1, base width: 110px */
     flex: 0 1 110px;
     display: flex;
     flex-direction: column;

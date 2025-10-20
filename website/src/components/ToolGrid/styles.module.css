@@ -49,64 +49,6 @@
   margin: 0 auto 1rem;
 }
 
-/* Modal styles */
-/* .modalBackdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.modalContent {
-  background: #fff;
-  padding: 2rem;
-  border-radius: 12px;
-  max-width: 500px;
-  width: 90%;
-  position: relative;
-  text-align: left;
-}
-
-.modalClose {
-  position: absolute;
-  bottom: 1rem;
-  right: 1rem;
-  padding: 0.5rem 1rem;
-  background-color: #0366d6;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.modalClose:hover {
-  background-color: #024c9c;
-}
-
-.toolLinks a {
-  margin-right: 1rem;
-  text-decoration: none;
-  color: #0366d6;
-  font-weight: 500;
-}
-
-.toolLinks a:hover {
-  text-decoration: underline;
-}
-
-.toolMeta {
-  list-style: none;
-  padding: 0;
-  margin: 0.5rem 0;
-} */
-
-/* 2025-10-15 Wednesday 18:56:53.  Replace the block just above with the following -- slight animation. */
 /* Modal backdrop fade-in */
 .modalBackdrop {
   position: fixed;
@@ -121,7 +63,6 @@
   z-index: 1000;
 
   opacity: 0;
-  /* animation: fadeInBackdrop 0.2s forwards; */
   animation: fadeInBackdrop 0.25s forwards ease-out;
 }
 
@@ -141,7 +82,6 @@
 
   transform: translateY(20px);
   opacity: 0;
-  /* animation: slideUp 0.2s forwards; */
   animation: slideUp 0.25s forwards ease-out;
 }
 
