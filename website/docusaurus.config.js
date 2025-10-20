@@ -64,7 +64,7 @@ const config = {
                 docs: {
                     path: "docs",
                     sidebarPath: require.resolve("./sidebars.js"),
-                    editUrl: "https://github.com/package-url",
+                    editUrl: "https://github.com/package-url/packageurl.org/blob/main/website",
                 },
                 // blog: {
                 //     showReadingTime: true,
