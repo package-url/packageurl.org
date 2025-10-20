@@ -4,36 +4,10 @@
  * work well for content-centric websites.
  */
 
-/* Override Infima primary colors with CycloneDX palette */
-/* :root {
-  --ifm-color-primary: #5c3db7;
-  --ifm-color-primary-dark: #4a2f8f;
-  --ifm-color-primary-darker: #3a2370;
-  --ifm-color-primary-darkest: #2a1750;
-  --ifm-color-primary-light: #7f63d9;
-  --ifm-color-primary-lighter: #9a86e5;
-  --ifm-color-primary-lightest: #b3a9f0;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(84, 56, 168, 0.1);
-} */
-
-/* Dark mode CycloneDX colors */
-/* [data-theme='dark'] {
-  --ifm-color-primary: #7f63d9;
-  --ifm-color-primary-dark: #6a52c8;
-  --ifm-color-primary-darker: #563fad;
-  --ifm-color-primary-darkest: #422f83;
-  --ifm-color-primary-light: #9a86e5;
-  --ifm-color-primary-lighter: #b3a9f0;
-  --ifm-color-primary-lightest: #c9bef8;
-  --docusaurus-highlighted-code-line-bg: rgba(127, 99, 217, 0.3);
-} */
-
 .navbar__brand {
     margin-right: 0px;
 }
 
-/* 2025-09-05 Friday 12:48:20.  */
 .navbar__logo {
     margin-right: 0;
 }

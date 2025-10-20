@@ -1,0 +1,26 @@
+[
+  {
+    "name": "packageurl-dotnet",
+    "description": ".NET implementation of the package url spec",
+    "homepage": "https://github.com/package-url/packageurl-dotnet",
+    "download": "https://www.nuget.org/packages/packageurl-dotnet/",
+    "language": "C#",
+    "license": "MIT License (MIT)"
+  },
+    {
+    "name": "packageurl-python",
+    "description": "Python implementation of the package url spec.",
+    "homepage": "https://github.com/package-url/packageurl-python",
+    "download": "https://pypi.org/project/packageurl-python/",
+    "language": "Python",
+    "license": "MIT License (MIT)"
+  },
+  {
+    "name": "univers",
+    "description": "Parse and compare all the package versions and all the ranges. From debian, npm, pypi, ruby and more. Process all the version range specs and expressions. ",
+    "homepage": "https://github.com/nexB/univers",
+    "download": "https://pypi.org/project/univers/",
+    "language": "Python",
+    "license": "MIT License (MIT)"
+  }
+]
