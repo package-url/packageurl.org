@@ -64,20 +64,52 @@ const config = {
                 docs: {
                     path: "docs",
                     sidebarPath: require.resolve("./sidebars.js"),
-                    editUrl: "https://github.com/package-url",
+                    editUrl: ({ docPath }) => {
+                        // Explicit mapping of Docusaurus path → actual GitHub source
+                        const editUrlMap = {
+                            // Getting Started
+                            "getting-started/getting-started-intro.md": `https://github.com/package-url/packageurl.org/blob/main/website/docs/${docPath}`,
+                            "getting-started/getting-started-use-cases.md": `https://github.com/package-url/packageurl.org/blob/main/website/docs/${docPath}`,
+                            "getting-started/getting-started-tools.mdx": `https://github.com/package-url/packageurl.org/blob/main/website/docs/${docPath}`,
+
+                            // PURL Specification
+                            "purl-spec/purl-spec-overview.md": `https://github.com/package-url/purl-spec/blob/main/docs/standard/introduction.md`,
+                            "purl-spec/purl-spec-purl-types.md": `https://github.com/package-url/packageurl.org/blob/main/website/docs/${docPath}`,
+                            "purl-spec/purl-spec-documentation.md": `https://github.com/package-url/purl-spec/blob/main/purl-specification.md`,
+                            "purl-spec/purl-spec-schemas.md": `https://github.com/package-url/packageurl.org/blob/main/website/docs/${docPath}`,
+                            "purl-spec/purl-spec-adopters.md": `https://github.com/package-url/purl-spec/blob/main/ADOPTERS.md`,
+
+                            // VERS Specification
+                            "vers-spec/vers-spec-overview.md": `https://github.com/package-url/packageurl.org/blob/main/website/docs/${docPath}`,
+                            "vers-spec/vers-spec-documentation.md": `https://github.com/package-url/vers-spec/blob/main/VERSION-RANGE-SPEC.md`,
+                            "vers-spec/vers-spec-schemas.md": `https://github.com/package-url/packageurl.org/blob/main/website/docs/${docPath}`,
+                            "vers-spec/vers-spec-adopters.md": `https://github.com/package-url/vers-spec/blob/main/ADOPTERS.md`,
+
+                            // Participate
+                            "participate/participate-contribute.md": `https://github.com/package-url/packageurl.org/blob/main/website/docs/${docPath}`,
+                            "participate/participate-meetings.md": `https://github.com/package-url/packageurl.org/blob/main/website/docs/${docPath}`,
+                            "participate/participate-events.md": `https://github.com/package-url/packageurl.org/blob/main/website/docs/${docPath}`,
+
+                            // About
+                            "about/about-guiding-principles.md": `https://github.com/package-url/packageurl.org/blob/main/website/docs/${docPath}`,
+                            "about/about-governance.md": `https://github.com/package-url/packageurl.org/blob/main/website/docs/${docPath}`,
+                            "about/about-supporters.md": `https://github.com/package-url/packageurl.org/blob/main/website/docs/${docPath}`,
+                            "about/about-history.md": `https://github.com/package-url/packageurl.org/blob/main/website/docs/${docPath}`,
+                            "about/about-branding.md": `https://github.com/package-url/packageurl.org/blob/main/website/docs/${docPath}`,
+                        };
+
+                        // Return the mapped URL if it exists
+                        if (editUrlMap[docPath]) {
+                            return editUrlMap[docPath];
+                        }
+
+                        // For files that live in packageurl.org repo (about/, participate/, etc.)
+                        // return `https://github.com/package-url/packageurl.org/edit/main/docs/${docPath}`;
+
+                        // Otherwise, provide a default (so “Edit this page” still works)
+                        return `https://github.com/package-url/packageurl.org/blob/main/website/docs/${docPath}`;
+                    },
                 },
-                // blog: {
-                //     showReadingTime: true,
-                //     feedOptions: {
-                //         type: ["rss", "atom"],
-                //         xslt: true,
-                //     },
-                //     editUrl: "https://github.com/package-url",
-                //     // Useful options to enforce blogging best practices
-                //     onInlineTags: "warn",
-                //     onInlineAuthors: "warn",
-                //     onUntruncatedBlogPosts: "warn",
-                // },
                 theme: {
                     customCss: require.resolve('./src/css/custom.css'),
                 },
