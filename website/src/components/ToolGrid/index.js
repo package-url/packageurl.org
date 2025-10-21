@@ -1,72 +1,91 @@
-// import React, { useState } from 'react';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import styles from './styles.module.css';
-import tools from '@site/src/data/tools.json'; // or JS module
+import tools from '@site/src/data/tools.json';
 
 export default function ToolGrid() {
-  const [selectedTool, setSelectedTool] = useState(null);
+    const [message, setMessage] = useState(null);
 
-
-  useEffect(() => {
-    function handleKeyDown(event) {
-      if (event.key === 'Escape') {
-        setSelectedTool(null);
-      }
-    }
-
-    if (selectedTool) {
-      window.addEventListener('keydown', handleKeyDown);
-    }
-
-    // Cleanup when modal closes or component unmounts
-    return () => {
-      window.removeEventListener('keydown', handleKeyDown);
+    const handleLinkClick = (e, tool) => {
+        // If homepage looks like a placeholder or is missing, intercept click
+        if (
+            !tool.homepage ||
+            tool.homepage === '#' ||
+            tool.homepage === 'under-construction'
+        ) {
+            e.preventDefault();
+            setMessage(`"${tool.name}" is under construction.`);
+            // Automatically clear the message after a few seconds
+            setTimeout(() => setMessage(null), 2500);
+        }
     };
-  }, [selectedTool]);
 
+    return (
+        <div className={styles.toolGridWrapper}>
+            <div className={styles.toolGridContainer}>
+                <div className={styles.toolGrid}>
+                    {tools.map((tool, idx) => (
+                        <div key={idx} className={styles.toolCard}>
+                            <h3 className={styles.toolName}>{tool.name}</h3>
+                            <p className={styles.toolDescription}>
+                                {tool.description}
+                            </p>
+                            <ul className={styles.toolMeta}>
+                                <li>
+                                    <strong>Base language:</strong>{' '}
+                                    {tool.language}
+                                </li>
+                                <li>
+                                    <strong>License:</strong> {tool.license}
+                                </li>
+                            </ul>
 
-  return (
-    <div className={styles.toolGridWrapper}>
-      <div className={styles.toolGridContainer}>
-        <div className={styles.toolGrid}>
-          {tools.map((tool, idx) => (
-            <div
-              key={idx}
-              className={styles.toolCard}
-              onClick={() => setSelectedTool(tool)}
-            >
-              <h3 className={styles.toolName} style={{ marginBottom: '.5rem' }}>{tool.name}</h3>
+                            <div className={styles.toolLinks}>
+                                {tool.homepage && (
+                                    <a
+                                        href={tool.homepage}
+                                        target={
+                                            tool.homepage.startsWith('http')
+                                                ? '_blank'
+                                                : '_self'
+                                        }
+                                        rel='noopener noreferrer'
+                                        onClick={(e) =>
+                                            handleLinkClick(e, tool)
+                                        }
+                                    >
+                                        Home
+                                    </a>
+                                )}
+                                {tool.download && (
+                                    <a
+                                        href={tool.download}
+                                        // target='_blank'
+                                        target={
+                                            tool.homepage.startsWith('http')
+                                                ? '_blank'
+                                                : '_self'
+                                        }
+                                        rel='noopener noreferrer'
+                                        onClick={(e) =>
+                                            handleLinkClick(e, tool)
+                                        }
+                                    >
+                                        Download
+                                    </a>
+                                )}
+                            </div>
+                        </div>
+                    ))}
+                </div>
             </div>
-          ))}
-        </div>
-      </div>
 
-      {/* Modal */}
-      {selectedTool && (
-        <div className={styles.modalBackdrop} onClick={() => setSelectedTool(null)}>
-          <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
-            <h2>{selectedTool.name}</h2>
-            <p>{selectedTool.description}</p>
-            <ul className={styles.toolMeta}>
-              <li><strong>Base language:</strong> {selectedTool.language}</li>
-              <li><strong>License:</strong> {selectedTool.license}</li>
-            </ul>
-            <div className={styles.toolLinks}>
-              <a href={selectedTool.homepage} target="_blank" rel="noopener noreferrer">
-                Home
-              </a>
-              {selectedTool.download && (
-                <a href={selectedTool.download} target="_blank" rel="noopener noreferrer">
-                  Download
-                </a>
-              )}
-            </div>
-            <button className={styles.modalClose} onClick={() => setSelectedTool(null)}>
-              Close
-            </button>
-          </div>
+      {/* Popup message appears here */}
+      {message && (
+        <div className={styles.popupMessage}>
+          {message}
         </div>
       )}
-    </div>
-  );
+
+        </div>
+    );
 }
