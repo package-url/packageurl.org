@@ -1,26 +1,114 @@
 [
-  {
-    "name": "packageurl-dotnet",
-    "description": ".NET implementation of the package url spec",
-    "homepage": "https://github.com/package-url/packageurl-dotnet",
-    "download": "https://www.nuget.org/packages/packageurl-dotnet/",
-    "language": "C#",
-    "license": "MIT License (MIT)"
-  },
     {
-    "name": "packageurl-python",
-    "description": "Python implementation of the package url spec.",
-    "homepage": "https://github.com/package-url/packageurl-python",
-    "download": "https://pypi.org/project/packageurl-python/",
-    "language": "Python",
-    "license": "MIT License (MIT)"
-  },
-  {
-    "name": "univers",
-    "description": "Parse and compare all the package versions and all the ranges. From debian, npm, pypi, ruby and more. Process all the version range specs and expressions. ",
-    "homepage": "https://github.com/nexB/univers",
-    "download": "https://pypi.org/project/univers/",
-    "language": "Python",
-    "license": "MIT License (MIT)"
-  }
+        "name": "Elixir",
+        "description": "---",
+        "homepage": "under-construction",
+        "download": "under-construction",
+        "language": "---",
+        "license": "---"
+    },
+    {
+        "name": "packageurl-dotnet",
+        "description": ".NET implementation of the package url spec",
+        "homepage": "https://github.com/package-url/packageurl-dotnet",
+        "download": "https://www.nuget.org/packages/packageurl-dotnet/",
+        "language": "C#",
+        "license": "MIT License (MIT)"
+    },
+    {
+        "name": "packageurl-go",
+        "description": "---",
+        "homepage": "under-construction",
+        "download": "under-construction",
+        "language": "---",
+        "license": "---"
+    },
+    {
+        "name": "packageurl-java",
+        "description": "---",
+        "homepage": "under-construction",
+        "download": "under-construction",
+        "language": "---",
+        "license": "---"
+    },
+    {
+        "name": "packageurl-js",
+        "description": "---",
+        "homepage": "under-construction",
+        "download": "under-construction",
+        "language": "---",
+        "license": "---"
+    },
+    {
+        "name": "packageurl-php",
+        "description": "---",
+        "homepage": "under-construction",
+        "download": "under-construction",
+        "language": "---",
+        "license": "---"
+    },
+    {
+        "name": "packageurl-python",
+        "description": "Python implementation of the package url spec.",
+        "homepage": "https://github.com/package-url/packageurl-python",
+        "download": "https://pypi.org/project/packageurl-python/",
+        "language": "Python",
+        "license": "MIT License (MIT)"
+    },
+    {
+        "name": "packageurl-rs",
+        "description": "---",
+        "homepage": "under-construction",
+        "download": "under-construction",
+        "language": "---",
+        "license": "---"
+    },
+    {
+        "name": "packageurl-ruby",
+        "description": "---",
+        "homepage": "under-construction",
+        "download": "under-construction",
+        "language": "---",
+        "license": "---"
+    },
+    {
+        "name": "packageurl-swift",
+        "description": "---",
+        "homepage": "under-construction",
+        "download": "under-construction",
+        "language": "---",
+        "license": "---"
+    },
+    {
+        "name": "perl-URI-PackageURL",
+        "description": "---",
+        "homepage": "under-construction",
+        "download": "under-construction",
+        "language": "---",
+        "license": "---"
+    },
+    {
+        "name": "PUrlKt (Kotlin)",
+        "description": "---",
+        "homepage": "under-construction",
+        "download": "under-construction",
+        "language": "---",
+        "license": "---"
+    },
+    {
+        "name": "univers",
+        "description": "Parse and compare all the package versions and all the ranges. From debian, npm, pypi, ruby and more. Process all the version range specs and expressions. ",
+        "homepage": "https://github.com/nexB/univers",
+        "download": "https://pypi.org/project/univers/",
+        "language": "Python",
+        "license": "MIT License (MIT)"
+    },
+    {
+        "name": "vers",
+        "description": "---",
+        "homepage": "under-construction",
+        "download": "under-construction",
+        "language": "---",
+        "license": "---"
+    }
 ]
