@@ -1,11 +1,11 @@
 [
     {
         "name": "Elixir",
-        "description": "---",
-        "homepage": "under-construction",
-        "download": "under-construction",
-        "language": "---",
-        "license": "---"
+        "description": "Implementation of the purl (package url) specification.",
+        "homepage": "https://github.com/erlef/purl",
+        "download": "https://hex.pm/packages/purl",
+        "language": "Elixir",
+        "license": "Apache License 2.0"
     },
     {
         "name": "packageurl-dotnet",
@@ -17,35 +17,35 @@
     },
     {
         "name": "packageurl-go",
-        "description": "---",
-        "homepage": "under-construction",
-        "download": "under-construction",
-        "language": "---",
-        "license": "---"
+        "description": "Go implementation of the package url spec.",
+        "homepage": "https://github.com/package-url/packageurl-go",
+        "download": "https://pkg.go.dev/search?q=packageurl-go",
+        "language": "Go",
+        "license": "MIT License (MIT)"
     },
     {
         "name": "packageurl-java",
-        "description": "---",
-        "homepage": "under-construction",
-        "download": "under-construction",
-        "language": "---",
-        "license": "---"
+        "description": "This project implements a purl parser and class for Java.",
+        "homepage": "https://github.com/package-url/packageurl-java",
+        "download": "https://central.sonatype.com/artifact/com.github.package-url/packageurl-java",
+        "language": "Java",
+        "license": "MIT License (MIT)"
     },
     {
         "name": "packageurl-js",
-        "description": "---",
-        "homepage": "under-construction",
-        "download": "under-construction",
-        "language": "---",
-        "license": "---"
+        "description": "JavaScript implementation of the package url spec",
+        "homepage": "https://github.com/package-url/packageurl-js",
+        "download": "https://www.npmjs.com/package/packageurl-js",
+        "language": "JavaScript",
+        "license": "MIT License (MIT)"
     },
     {
         "name": "packageurl-php",
-        "description": "---",
-        "homepage": "under-construction",
-        "download": "under-construction",
-        "language": "---",
-        "license": "---"
+        "description": "A parser and builder based on package url spec, implemented in PHP.",
+        "homepage": "https://github.com/package-url/packageurl-php",
+        "download": "https://packagist.org/packages/package-url/packageurl-php",
+        "language": "PHP",
+        "license": "MIT License (MIT)"
     },
     {
         "name": "packageurl-python",
@@ -56,59 +56,59 @@
         "license": "MIT License (MIT)"
     },
     {
-        "name": "packageurl-rs",
-        "description": "---",
-        "homepage": "under-construction",
-        "download": "under-construction",
-        "language": "---",
-        "license": "---"
+        "name": "packageurl.rs",
+        "description": "This crate is an implementation of the Package URL specification for the Rust programming language.",
+        "homepage": "https://github.com/scm-rs/packageurl.rs",
+        "download": "https://crates.io/crates/packageurl",
+        "language": "Rust",
+        "license": "MIT License (MIT)"
     },
     {
         "name": "packageurl-ruby",
-        "description": "---",
-        "homepage": "under-construction",
-        "download": "under-construction",
-        "language": "---",
-        "license": "---"
+        "description": "A Ruby implementation of the package url specification.",
+        "homepage": "https://github.com/package-url/packageurl-ruby",
+        "download": "https://rubygems.org/gems/packageurl-ruby",
+        "language": "Ruby",
+        "license": "MIT License (MIT)"
     },
     {
         "name": "packageurl-swift",
-        "description": "---",
-        "homepage": "under-construction",
-        "download": "under-construction",
-        "language": "---",
-        "license": "---"
+        "description": "Swift implementation of the package url spec",
+        "homepage": "https://github.com/package-url/packageurl-swift",
+        "download": "no packages found",
+        "language": "Swift",
+        "license": "MIT License (MIT)"
     },
     {
         "name": "perl-URI-PackageURL",
-        "description": "---",
-        "homepage": "under-construction",
-        "download": "under-construction",
-        "language": "---",
-        "license": "---"
+        "description": "Perl extension for Package URL (PURL)",
+        "homepage": "https://github.com/giterlizzi/perl-URI-PackageURL",
+        "download": "https://metacpan.org/dist/URI-PackageURL",
+        "language": "Perl",
+        "license": "Artistic License 2.0"
     },
     {
-        "name": "PUrlKt (Kotlin)",
-        "description": "---",
-        "homepage": "under-construction",
-        "download": "under-construction",
-        "language": "---",
-        "license": "---"
+        "name": "PUrlKt",
+        "description": "A Kotlin library for parsing and generating package-url",
+        "homepage": "https://github.com/iseki0/PurlKt",
+        "download": "https://central.sonatype.com/artifact/space.iseki.purlkt/purlkt",
+        "language": "Kotlin",
+        "license": "Apache License 2.0"
     },
     {
         "name": "univers",
         "description": "Parse and compare all the package versions and all the ranges. From debian, npm, pypi, ruby and more. Process all the version range specs and expressions. ",
-        "homepage": "https://github.com/nexB/univers",
+        "homepage": "https://github.com/aboutcode-org/univers",
         "download": "https://pypi.org/project/univers/",
         "language": "Python",
-        "license": "MIT License (MIT)"
+        "license": "Apache License 2.0, BSD-3-Clause, and MIT License (MIT)"
     },
     {
         "name": "vers",
-        "description": "---",
-        "homepage": "under-construction",
-        "download": "under-construction",
-        "language": "---",
-        "license": "---"
+        "description": "A Ruby gem for parsing, comparing and sorting versions according to the VERS spec.",
+        "homepage": "https://github.com/andrew/vers",
+        "download": "https://rubygems.org/gems/vers",
+        "language": "Ruby",
+        "license": "MIT License (MIT)"
     }
 ]

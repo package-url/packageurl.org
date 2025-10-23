@@ -43,6 +43,11 @@
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
+/* 2025-10-21 Tuesday 19:01:54.  Reduce line height in tool descriptions. */
+.toolCard p {
+    line-height: 1.3;
+}
+
 .toolLogo {
   width: 60px;
   height: 60px;
