@@ -5,16 +5,38 @@ import tools from '@site/src/data/tools.json';
 export default function ToolGrid() {
     const [message, setMessage] = useState(null);
 
-    const handleLinkClick = (e, tool) => {
+    const handleLinkClick = (e, tool, linkType) => {
         // If homepage looks like a placeholder or is missing, intercept click
         if (
-            !tool.homepage ||
+            linkType === 'homepage' &&
+            (!tool.homepage ||
             tool.homepage === '#' ||
-            tool.homepage === 'under-construction'
+            tool.homepage === 'under-construction')
         ) {
             e.preventDefault();
             setMessage(`"${tool.name}" is under construction.`);
             // Automatically clear the message after a few seconds
+            setTimeout(() => setMessage(null), 2500);
+        }
+        // Apply to download as well
+        else if (
+            linkType === 'download' &&
+            (!tool.download ||
+            tool.download === '#' ||
+            tool.download === 'under-construction')
+        ) {
+            e.preventDefault();
+            setMessage(`"${tool.name}" is under construction.`);
+            setTimeout(() => setMessage(null), 2500);
+        }
+        // If download contains 'no packages found', intercept click
+        else if (
+            linkType === 'download' &&
+            tool.download &&
+            tool.download.toLowerCase().includes('no packages found')
+        ) {
+            e.preventDefault();
+            setMessage(`No download packages found for "${tool.name}".`);
             setTimeout(() => setMessage(null), 2500);
         }
     };
@@ -38,7 +60,6 @@ export default function ToolGrid() {
                                     <strong>License:</strong> {tool.license}
                                 </li>
                             </ul>
-
                             <div className={styles.toolLinks}>
                                 {tool.homepage && (
                                     <a
@@ -50,7 +71,7 @@ export default function ToolGrid() {
                                         }
                                         rel='noopener noreferrer'
                                         onClick={(e) =>
-                                            handleLinkClick(e, tool)
+                                            handleLinkClick(e, tool, 'homepage')
                                         }
                                     >
                                         Home
@@ -59,15 +80,14 @@ export default function ToolGrid() {
                                 {tool.download && (
                                     <a
                                         href={tool.download}
-                                        // target='_blank'
                                         target={
-                                            tool.homepage.startsWith('http')
+                                            tool.download.startsWith('http')
                                                 ? '_blank'
                                                 : '_self'
                                         }
                                         rel='noopener noreferrer'
                                         onClick={(e) =>
-                                            handleLinkClick(e, tool)
+                                            handleLinkClick(e, tool, 'download')
                                         }
                                     >
                                         Download
@@ -78,14 +98,12 @@ export default function ToolGrid() {
                     ))}
                 </div>
             </div>
-
-      {/* Popup message appears here */}
-      {message && (
-        <div className={styles.popupMessage}>
-          {message}
-        </div>
-      )}
-
+            {/* Popup message appears here */}
+            {message && (
+                <div className={styles.popupMessage}>
+                    {message}
+                </div>
+            )}
         </div>
     );
 }
