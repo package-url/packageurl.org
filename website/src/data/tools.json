@@ -97,6 +97,14 @@
         "license": "Artistic License 2.0"
     },
     {
+        "name": "PURL - Package URL specification v1.0.X",
+        "description": "PURL - Package URL specification v1.0.X",
+        "homepage": "https://github.com/lizmat/PURL",
+        "download": "https://raku.land/zef:lizmat/PURL",
+        "language": "Raku",
+        "license": "Artistic License 2.0"
+    },
+    {
         "name": "PUrlKt",
         "description": "A Kotlin library for parsing and generating package-url",
         "homepage": "https://github.com/iseki0/PurlKt",
@@ -105,15 +113,7 @@
         "license": "Apache License 2.0"
     },
     {
-        "name": "PURL-raku",
-        "description": "PURL - Package URL specification v1.0.X",
-        "homepage": "https://github.com/lizmat/PURL",
-        "download": "https://raku.land/zef:lizmat/PURL",
-        "language": "Raku",
-        "license": "Artistic License 2.0"
-    },
-    {
-        "name": "univers",
+        "name": "univers: mostly universal version and version ranges comparison and conversion",
         "description": "Parse and compare all the package versions and all the ranges. From debian, npm, pypi, ruby and more. Process all the version range specs and expressions. ",
         "homepage": "https://github.com/aboutcode-org/univers",
         "download": "https://pypi.org/project/univers/",
@@ -121,7 +121,7 @@
         "license": "Apache License 2.0, BSD-3-Clause, and MIT License (MIT)"
     },
     {
-        "name": "vers",
+        "name": "Vers - Version Range Parser for Ruby",
         "description": "A Ruby gem for parsing, comparing and sorting versions according to the VERS spec.",
         "homepage": "https://github.com/andrew/vers",
         "download": "https://rubygems.org/gems/vers",
