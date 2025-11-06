@@ -1,7 +1,7 @@
 ---
-id: purl-spec-overview
-title: Overview
-sidebar_label: Overview
+id: purl-spec-introduction
+title: Introduction
+sidebar_label: Introduction
 ---
 
 # Introduction

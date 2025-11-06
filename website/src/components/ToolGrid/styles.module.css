@@ -3,9 +3,11 @@
   display: flex;
   justify-content: center;
   margin: 2rem auto;
+  margin: 1rem auto;
   padding: 1rem;
 
   background-color: #f7f7f7;
+  background-color: transparent;
 }
 
 .toolGridContainer {
