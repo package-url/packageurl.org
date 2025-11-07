@@ -11,6 +11,11 @@ export default function getPackages(baseUrl) {
             logo: `${baseUrl}img/alpine.png`,
         },
         {
+            name: "bazel",
+            url: "https://github.com/package-url/purl-spec/blob/main/types-doc/bazel-definition.md",
+            logo: `${baseUrl}img/bazel-icon.png`,
+        },
+        {
             name: "bitbucket",
             url: "https://github.com/package-url/purl-spec/blob/main/types-doc/bitbucket-definition.md",
             logo: `${baseUrl}img/Bitbucket_mark_brand_RGB_2x.png`,
@@ -99,6 +104,11 @@ export default function getPackages(baseUrl) {
             name: "huggingface",
             url: "https://github.com/package-url/purl-spec/blob/main/types-doc/huggingface-definition.md",
             logo: `${baseUrl}img/huggingface-logo.svg`,
+        },
+        {
+            name: "julia",
+            url: "https://github.com/package-url/purl-spec/blob/main/types-doc/julia-definition.md",
+            logo: `${baseUrl}img/julia_logo.png`,
         },
         {
             name: "luarocks",
