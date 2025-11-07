@@ -67,14 +67,8 @@ const config = {
                     editUrl: ({ docPath }) => {
                         // Explicit mapping of Docusaurus path → actual GitHub source
                         const editUrlMap = {
-                            // Getting Started
-                            // "getting-started/getting-started-intro.md": `https://github.com/package-url/packageurl.org/blob/main/website/docs/${docPath}`,
-                            // "getting-started/getting-started-use-cases.md": `https://github.com/package-url/packageurl.org/blob/main/website/docs/${docPath}`,
-                            // "getting-started/getting-started-tools.mdx": `https://github.com/package-url/packageurl.org/blob/main/website/docs/${docPath}`,
-
                             // PURL Specification
                             "purl-spec/purl-spec-overview.md": `https://github.com/package-url/purl-spec/blob/main/docs/standard/introduction.md`,
-                            // "purl-spec/purl-spec-purl-types.md": `https://github.com/package-url/packageurl.org/blob/main/website/docs/${docPath}`,
                             "purl-spec/purl-spec-purl-types.mdx": `https://github.com/package-url/packageurl.org/blob/main/website/docs/${docPath}`,
                             "purl-spec/purl-spec-documentation.md": `https://github.com/package-url/purl-spec/blob/main/purl-specification.md`,
                             "purl-spec/purl-spec-schemas.md": `https://github.com/package-url/packageurl.org/blob/main/website/docs/${docPath}`,
@@ -86,22 +80,10 @@ const config = {
                             "vers-spec/vers-spec-schemas.md": `https://github.com/package-url/packageurl.org/blob/main/website/docs/${docPath}`,
                             "vers-spec/vers-spec-adopters.md": `https://github.com/package-url/vers-spec/blob/main/ADOPTERS.md`,
 
-                            // Participate
-                            // "participate/participate-contribute.md": `https://github.com/package-url/packageurl.org/blob/main/website/docs/${docPath}`,
-                            // "participate/participate-meetings.md": `https://github.com/package-url/packageurl.org/blob/main/website/docs/${docPath}`,
-                            // "participate/participate-events.md": `https://github.com/package-url/packageurl.org/blob/main/website/docs/${docPath}`,
-
                             // About -- formerly participate
                             "about/about-contribute.md": `https://github.com/package-url/packageurl.org/blob/main/website/docs/${docPath}`,
                             "about/about-meetings.md": `https://github.com/package-url/packageurl.org/blob/main/website/docs/${docPath}`,
                             "about/about-events.md": `https://github.com/package-url/packageurl.org/blob/main/website/docs/${docPath}`,
-
-                            // About
-                            // "about/about-guiding-principles.md": `https://github.com/package-url/packageurl.org/blob/main/website/docs/${docPath}`,
-                            // "about/about-governance.md": `https://github.com/package-url/packageurl.org/blob/main/website/docs/${docPath}`,
-                            // "about/about-supporters.md": `https://github.com/package-url/packageurl.org/blob/main/website/docs/${docPath}`,
-                            // "about/about-history.md": `https://github.com/package-url/packageurl.org/blob/main/website/docs/${docPath}`,
-                            // "about/about-branding.md": `https://github.com/package-url/packageurl.org/blob/main/website/docs/${docPath}`,
                         };
 
                         // Return the mapped URL if it exists
@@ -136,12 +118,6 @@ const config = {
                 style: "dark",
                 items: [
                     { to: '/', label: 'Home', position: 'left', exact: true },
-                    // {
-                    //     type: 'docSidebar',
-                    //     sidebarId: 'getting_started',
-                    //     position: 'left',
-                    //     label: 'Getting Started',
-                    // },
                     {
                         type: 'docSidebar',
                         sidebarId: 'purl_spec',
@@ -154,24 +130,12 @@ const config = {
                         position: 'left',
                         label: 'VERS Specification',
                     },
-                    // {
-                    //     type: 'docSidebar',
-                    //     sidebarId: 'participate',
-                    //     position: 'left',
-                    //     label: 'Participate',
-                    // },
                     {
                         type: 'docSidebar',
                         sidebarId: 'about',
                         position: 'left',
                         label: 'About',
                     },
-                    // {
-                    //     type: 'docSidebar',
-                    //     sidebarId: 'about',
-                    //     position: 'left',
-                    //     label: 'About',
-                    // },
                     {
                         href: 'https://github.com/package-url',
                         label: 'GitHub',
@@ -181,28 +145,6 @@ const config = {
                         href: 'https://cyclonedx.slack.com/archives/C06KTE3BWEB',
                         label: 'Slack',
                         position: 'right',
-                    },
-                    {
-                        type: 'dropdown',
-                        label: 'Schemas',
-                        position: 'right',
-                        items: [
-                            {
-                                href: '/schemas/purl-type-definition.schema-1.0.html',
-                                label: 'Package-URL Type Definition ↗',
-                                target: '_blank',
-                            },
-                            {
-                                href: '/schemas/purl-test.schema.html',
-                                label: 'Package-URL test definition ↗',
-                                target: '_blank',
-                            },
-                            {
-                                href: '/schemas/purl-types-index.schema-1.0.html',
-                                label: 'Package-URL types index ↗',
-                                target: '_blank',
-                            },
-                        ],
                     },
                 ],
             },
