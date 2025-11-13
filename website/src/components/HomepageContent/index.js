@@ -2,6 +2,9 @@ import React from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import HomeInfo from './HomeInfo.mdx';
 import ToolGrid from '@site/src/components/ToolGrid';
+import ToolGrid_1A from '@site/src/components/ToolGrid_1A';
+import ToolGrid_1B from '@site/src/components/ToolGrid_1B';
+import ToolGrid_1C from '@site/src/components/ToolGrid_1C';
 
 import styles from './styles.module.css';
 
@@ -37,7 +40,10 @@ export default function HomepageContent() {
                     These are community-maintained tools that support or use the
                     Package-URL (PURL) or VERS standards.
                 </div>
-                <ToolGrid />
+                {/* <ToolGrid /> */}
+                {/* <ToolGrid_1A /> */}
+                {/* <ToolGrid_1B /> */}
+                <ToolGrid_1C />
             </section>
 
             {/* General Info Section */}
@@ -66,11 +72,11 @@ export default function HomepageContent() {
                             <div className={styles.card}>
                                 <p>
                                     Join our next PURL community call on
-                                    2025-10-15 to discuss the status of the PURL
+                                    2025-11-26 to discuss the status of the PURL
                                     standard submission to Ecma.
                                 </p>
                                 <p>
-                                    The schedules for PURL community and
+                                    The schedules for the PURL community and
                                     TC54-TG2 calls are available at{' '}
                                     <a
                                         class='a_page'
