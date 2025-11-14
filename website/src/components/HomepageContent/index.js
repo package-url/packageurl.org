@@ -5,6 +5,7 @@ import ToolGrid from '@site/src/components/ToolGrid';
 import ToolGrid_1A from '@site/src/components/ToolGrid_1A';
 import ToolGrid_1B from '@site/src/components/ToolGrid_1B';
 import ToolGrid_1C from '@site/src/components/ToolGrid_1C';
+import ToolGrid_1C_2025_11_12 from '@site/src/components/ToolGrid_1C-2025-11-12';
 
 import styles from './styles.module.css';
 
@@ -43,7 +44,8 @@ export default function HomepageContent() {
                 {/* <ToolGrid /> */}
                 {/* <ToolGrid_1A /> */}
                 {/* <ToolGrid_1B /> */}
-                <ToolGrid_1C />
+                {/* <ToolGrid_1C /> */}
+                <ToolGrid_1C_2025_11_12 />
             </section>
 
             {/* General Info Section */}

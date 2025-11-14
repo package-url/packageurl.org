@@ -1,41 +1,54 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+// 2025-11-12 Wednesday 12:54:49.  add this for the tooltip only whenh needed code below
 import styles from './styles.module.css';
 // import tools from '@site/src/data/tools.json';
 import tools from '@site/src/data/tools-2025-11-11.json';
-
-/* --- Helper component for tooltip only when truncated --- */
-function DescriptionWithTooltip({ description }) {
-    const descRef = useRef(null);
-    const [showTooltip, setShowTooltip] = useState(false);
-
-    useEffect(() => {
-        const el = descRef.current;
-        if (el) {
-            // 1px tolerance avoids false positives with line-clamp rounding
-            const isOverflowing =
-                el.scrollHeight - el.clientHeight > 1 ||
-                el.scrollWidth - el.clientWidth > 1;
-            setShowTooltip(isOverflowing);
-        }
-    }, [description]);
-
-    return (
-        <div className={styles.toolDescriptionWrapper}>
-            <div
-                ref={descRef}
-                className={`${styles.toolDescription} ${styles.multiline}`}
-            >
-                {description}
-            </div>
-            {showTooltip && <div className={styles.tooltip}>{description}</div>}
-        </div>
-    );
-}
 
 export default function ToolGrid() {
     const [message, setMessage] = useState(null);
     const [selectedTool, setSelectedTool] = useState(null);
     const [activeTab, setActiveTab] = useState('overview');
+
+    // 2025-11-12 Wednesday 18:28:43.  This might prevent a description within the defined line-height from still displaying a tooltip.
+    React.useEffect(() => {
+        const el = descRef.current;
+        if (el) {
+            const isOverflowing =
+                el.scrollHeight - el.clientHeight > 1 ||
+                el.scrollWidth - el.clientWidth > 1;
+            setShowTooltip(isOverflowing);
+        }
+    }, [text]);
+
+    // 2025-11-12 Wednesday 18:02:32.  This limits when the tooltip appears ==
+    function DescriptionWithTooltip({ text }) {
+        const descRef = React.useRef(null);
+        const [showTooltip, setShowTooltip] = React.useState(false);
+
+        React.useEffect(() => {
+            const el = descRef.current;
+            if (el) {
+                // check if content is overflowing its container
+                setShowTooltip(
+                    el.scrollHeight > el.clientHeight ||
+                        el.scrollWidth > el.clientWidth
+                );
+            }
+        }, [text]);
+
+        return (
+            <div className={styles.toolDescriptionWrapper}>
+                <div
+                    ref={descRef}
+                    className={`${styles.toolDescription} ${styles.multiline}`}
+                >
+                    {text}
+                </div>
+                {showTooltip && <div className={styles.tooltip}>{text}</div>}
+            </div>
+        );
+    }
+    // =======================================================================
 
     // Close modal on Escape key
     useEffect(() => {
@@ -62,8 +75,7 @@ export default function ToolGrid() {
         ) {
             e.preventDefault();
             setMessage(`"${tool.name}" is under construction.`);
-            // setTimeout(() => setMessage(null), 2500);
-            setTimeout(() => setMessage(null), 5000);
+            setTimeout(() => setMessage(null), 2500);
         } else if (
             linkType === 'download' &&
             (!tool.download ||
@@ -72,8 +84,7 @@ export default function ToolGrid() {
         ) {
             e.preventDefault();
             setMessage(`"${tool.name}" is under construction.`);
-            // setTimeout(() => setMessage(null), 2500);
-            setTimeout(() => setMessage(null), 5000);
+            setTimeout(() => setMessage(null), 2500);
         } else if (
             linkType === 'download' &&
             tool.download &&
@@ -81,8 +92,7 @@ export default function ToolGrid() {
         ) {
             e.preventDefault();
             setMessage(`No download packages found for "${tool.name}".`);
-            // setTimeout(() => setMessage(null), 2500);
-            setTimeout(() => setMessage(null), 5000);
+            setTimeout(() => setMessage(null), 2500);
         }
     };
 
@@ -103,10 +113,17 @@ export default function ToolGrid() {
                         >
                             <h3 className={styles.toolName}>{tool.name}</h3>
 
-                            {/* ✅ Replace old description block with helper */}
-                            <DescriptionWithTooltip
-                                description={tool.description}
-                            />
+                            <div className={styles.toolDescriptionWrapper}>
+                                {/* <div className={styles.toolDescription}>
+                                    {tool.description}
+                                </div> */}
+                                {/* <div className={styles.tooltip}>
+                                    {tool.description}
+                                </div> */}
+                                <DescriptionWithTooltip
+                                    text={tool.description}
+                                />
+                            </div>
 
                             <ul className={styles.toolMeta}>
                                 <li>
@@ -116,8 +133,11 @@ export default function ToolGrid() {
                                 <li>
                                     <strong>License:</strong> {tool.license}
                                 </li>
+                                <li>
+                                    <strong>Functions:</strong> {tool.functions}
+                                </li>
                             </ul>
-                            <div className={styles.toolLinks}>
+                            {/* <div className={styles.toolLinks}>
                                 {tool.homepage && (
                                     <a
                                         href={tool.homepage}
@@ -160,7 +180,7 @@ export default function ToolGrid() {
                                         Download
                                     </a>
                                 )}
-                            </div>
+                            </div> */}
                         </div>
                     ))}
                 </div>
@@ -204,11 +224,13 @@ export default function ToolGrid() {
                         <div className={styles.modalBody}>
                             {activeTab === 'overview' && (
                                 <>
+                                    {/* Full width section */}
                                     <div className={styles.fullWidthSection}>
                                         <h2>{selectedTool.name}</h2>
                                         <p>{selectedTool.description}</p>
                                     </div>
 
+                                    {/* Two column section */}
                                     <div className={styles.twoColumnSection}>
                                         <div className={styles.column}>
                                             <h3>Technical Info</h3>
