@@ -117,6 +117,7 @@ export default function ToolGrid() {
                                     <strong>License:</strong> {tool.license}
                                 </li>
                             </ul>
+                            {/* The links at the bottom of the main page: */}
                             <div className={styles.toolLinks}>
                                 {tool.homepage && (
                                     <a

@@ -1,43 +1,20 @@
 import React, { useState, useEffect } from 'react';
-// 2025-11-12 Wednesday 12:54:49.  add this for the tooltip only whenh needed code below
 import styles from './styles.module.css';
-// import tools from '@site/src/data/tools.json';
 import tools from '@site/src/data/tools-2025-11-11.json';
 
 export default function ToolGrid() {
     const [message, setMessage] = useState(null);
     const [selectedTool, setSelectedTool] = useState(null);
     const [activeTab, setActiveTab] = useState('overview');
-
-    // 2025-11-13 Thursday 11:15:19.  Monitor when the modal is open so that
-    // state prevents the main-page alert from being displayed.
+    // Monitor open modal -- state prevents display of main-page alert
     const [isModalOpen, setIsModalOpen] = useState(false);
-
     const openModal = (tool) => {
         setSelectedTool(tool); // sets modal content
-        // any other logic you want when opening, e.g., resetting modalMessage
     };
-
-    // 2025-11-13 Thursday 11:49:19.  Use a separate state for the modal alert (e.g., modalMessage) so it doesn’t interfere with the global alert:
+    // Use a separate state for the modal alert
     const [modalMessage, setModalMessage] = useState(null);
 
-    // 2025-11-13 Thursday 09:34:32.  I commented out the next block due to
-    // the "tesxt is not defined" error, and now this only displays a tooltip
-    // when it needs to.
-
-    // 2025-11-12 Wednesday 18:28:43.  This might prevent a description
-    // within the defined line-height from still displaying a tooltip.
-    // React.useEffect(() => {
-    //     const el = descRef.current;
-    //     if (el) {
-    //         const isOverflowing =
-    //             el.scrollHeight - el.clientHeight > 1 ||
-    //             el.scrollWidth - el.clientWidth > 1;
-    //         setShowTooltip(isOverflowing);
-    //     }
-    // }, [text]);
-
-    // 2025-11-12 Wednesday 18:02:32.  This limits when the tooltip appears ==
+    // Limit when the tooltip appears
     function DescriptionWithTooltip({ text }) {
         const descRef = React.useRef(null);
         const [showTooltip, setShowTooltip] = React.useState(false);
@@ -65,7 +42,6 @@ export default function ToolGrid() {
             </div>
         );
     }
-    // =======================================================================
 
     // Close modal on Escape key
     useEffect(() => {
@@ -83,8 +59,6 @@ export default function ToolGrid() {
         };
     }, [selectedTool]);
 
-    // 2025-11-13 Thursday 12:14:38.  What if I rename and try to reuse this code, which originally worked with the main page links.
-    // const handleLinkClick = (e, tool, linkType) => {
     const handleMainLinkClick = (e, tool, linkType) => {
         if (
             linkType === 'homepage' &&
@@ -117,10 +91,6 @@ export default function ToolGrid() {
         }
     };
 
-    // 2025-11-13 Thursday 12:13:04.  Handle a link on the main page.
-
-    // 2025-11-13 Thursday 10:23:21.  This enables an alert to be triggered from within the modal.
-
     const handleLinkClick = (e, tool, linkType) => {
         e.preventDefault();
         e.stopPropagation();
@@ -152,10 +122,6 @@ export default function ToolGrid() {
         }
 
         if (message) {
-            // setMessage(message);
-            // setTimeout(() => setMessage(null), 2500);
-
-            // 2025-11-13 Thursday 12:09:26.  new modalMessage
             setModalMessage(message);
             setTimeout(() => setModalMessage(null), 2500);
         } else {
@@ -179,8 +145,6 @@ export default function ToolGrid() {
                         <div
                             key={idx}
                             className={styles.toolCard}
-                            // onClick={() => setSelectedTool(tool)}
-                            // 2025-11-13 Thursday 11:44:57.  Replace above ^ with this new constant to handle clicks from inside an open modal.
                             onClick={() => openModal(tool)}
                         >
                             <h3 className={styles.toolName}>{tool.name}</h3>
@@ -271,123 +235,6 @@ export default function ToolGrid() {
                         className={styles.modalContent}
                         onClick={(e) => e.stopPropagation()}
                     >
-                        {/* Tabs */}
-                        {/* <div className={styles.modalTabs}>
-                            <button
-                                className={`${styles.tab} ${
-                                    activeTab === 'overview'
-                                        ? styles.tabActive
-                                        : ''
-                                }`}
-                                onClick={() => setActiveTab('overview')}
-                            >
-                                Overview
-                            </button>
-                            <button
-                                className={`${styles.tab} ${
-                                    activeTab === 'details'
-                                        ? styles.tabActive
-                                        : ''
-                                }`}
-                                onClick={() => setActiveTab('details')}
-                            >
-                                Details
-                            </button>
-                        </div> */}
-
-                        {/* Tab Content */}
-                        {/* <div className={styles.modalBody}>
-                            {activeTab === 'overview' && (
-                                <>
-                                    <div className={styles.fullWidthSection}>
-                                        <h2>{selectedTool.name}</h2>
-                                        <p>{selectedTool.description}</p>
-                                    </div>
-
-                                    <div className={styles.twoColumnSection}>
-                                        <div className={styles.column}>
-                                            <h3>Technical Info</h3>
-                                            <ul>
-                                                <li>
-                                                    <strong>Language:</strong>{' '}
-                                                    {selectedTool.language}
-                                                </li>
-                                                <li>
-                                                    <strong>License:</strong>{' '}
-                                                    {selectedTool.license}
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div className={styles.column}>
-                                            <h3>Links</h3>
-                                            <div className={styles.modalLinks}>
-                                                {selectedTool.homepage && (
-                                                    <a
-                                                        href={
-                                                            selectedTool.homepage
-                                                        }
-                                                        target='_blank'
-                                                        rel='noopener noreferrer'
-                                                        onClick={(e) =>
-                                                            handleLinkClick(
-                                                                e,
-                                                                selectedTool,
-                                                                'homepage'
-                                                            )
-                                                        }
-                                                    >
-                                                        Homepage
-                                                    </a>
-                                                )}
-                                                {selectedTool.download && (
-                                                    <a
-                                                        href={
-                                                            selectedTool.download
-                                                        }
-                                                        target='_blank'
-                                                        rel='noopener noreferrer'
-                                                        onClick={(e) =>
-                                                            handleLinkClick(
-                                                                e,
-                                                                selectedTool,
-                                                                'download'
-                                                            )
-                                                        }
-                                                    >
-                                                        Download
-                                                    </a>
-                                                )}
-                                            </div>
-                                        </div>
-                                    </div>
-                                </>
-                            )}
-
-                            {activeTab === 'details' && (
-                                <div className={styles.twoColumnSection}>
-                                    <div className={styles.column}>
-                                        <h3>Column 1</h3>
-                                        <p>
-                                            Additional details about{' '}
-                                            {selectedTool.name} can go here.
-                                        </p>
-                                    </div>
-                                    <div className={styles.column}>
-                                        <h3>Column 2</h3>
-                                        <p>
-                                            More information can be displayed in
-                                            this column.
-                                        </p>
-                                    </div>
-                                </div>
-                            )}
-                        </div> */}
-
-                        {/* {modalMessage && (
-                            <div className={styles.modalAlertOverlay}>
-                                {modalMessage}
-                            </div>
-                        )} */}
 
                         <div className={styles.modalBody}>
                             <>
@@ -400,23 +247,37 @@ export default function ToolGrid() {
                                 {/* Two column section */}
                                 <div className={styles.twoColumnSection}>
                                     <div className={styles.column}>
-                                        <h3>Technical Info</h3>
+                                        {/* <h3>Technical Info</h3> */}
                                         <ul>
                                             <li>
-                                                <strong>Language:</strong>{' '}
+                                                <strong>Base language:</strong>{' '}
                                                 {selectedTool.language}
                                             </li>
                                             <li>
                                                 <strong>License:</strong>{' '}
                                                 {selectedTool.license}
                                             </li>
+                                            <li>
+                                                <strong>Functions:</strong>{' '}
+                                                {selectedTool.functions}
+                                            </li>
+                                            <li>
+                                                <strong>Type:</strong>{' '}
+                                                {selectedTool.type}
+                                            </li>
+                                            <li>
+                                                <strong>Standards:</strong>{' '}
+                                                {selectedTool.standards}
+                                            </li>
+                                            <li>
+                                                <strong>Platform:</strong>{' '}
+                                                {selectedTool.platform}
+                                            </li>
                                         </ul>
                                     </div>
 
                                     <div className={styles.column}>
-                                        <h3>Links</h3>
-                                        {/* <div className={styles.modalLinks}> */}
-                                        {/* <div className={styles.toolLinks}> */}
+                                        {/* <h3>Links</h3> */}
                                         <div className={styles.modalLinks01}>
                                             <span
                                                 style={{ fontWeight: 'bold' }}
