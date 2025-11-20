@@ -39,11 +39,14 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 0;
-
     /* Handle the long URL values. */
-  overflow-wrap: anywhere;   /* modern and reliable */
-  word-break: break-word;    /* fallback */
-  min-width: 0;              /* critical for grid children */
+    word-break: break-all;
+    overflow-wrap: anywhere;
+    min-width: 0;              /* critical for grid children */
+
+    /* YO: Modern approach: */
+    overflow-wrap: break-word;
+    word-break: normal;
 
 }
 
@@ -96,39 +99,58 @@
     background-color: #024c9c;
 }
 
+
 /* Tool links inside modal */
+.toolLinks {
+    text-align: left;
+    border-top: solid 1px #d8d8d8;
+    padding-top: 5px;
+    margin-top: 10px;
+
+    /* Handle the long URL values. */
+    word-break: break-all;
+    overflow-wrap: anywhere;
+    line-height: 1.25rem;
+
+    /* Modern approach: */
+    overflow-wrap: break-word;
+    word-break: normal;
+}
+
 .toolLinks a {
     margin-right: 1rem;
     text-decoration: none;
     color: #0366d6;
     font-weight: 500;
+    /* 'break-all' for links -- "words" don't matter */
+    word-break: break-all;
+    overflow-wrap: anywhere;
 }
 
 .toolLinks a:hover {
     text-decoration: underline;
 }
 
-.toolLinks {
-    text-align: center;
-    text-align: left;
-    border-top: solid 1px #d8d8d8;
-    padding-top: 5px;
-    margin-top: 10px;
-}
-
 .modalLinks01 {
-    text-align: center;
     text-align: left;
     padding-top: 5px;
+    line-height: 1.25rem;
 }
 .modalLinks01 a {
     margin-right: 1rem;
     text-decoration: none;
     color: #0366d6;
     font-weight: 500;
+    /* Handle the long URL values. */
+    word-break: break-all;
+    overflow-wrap: anywhere;
 }
 .modalLinks01 a:hover {
     text-decoration: underline;
+}
+
+.featureList {
+    line-height: 1.25rem;
 }
 
 /* Tool metadata list */
@@ -188,7 +210,9 @@
     font-size: 1rem;
     font-weight: 500;
     transition: background-color 0.2s;
+
     border-bottom: 2px solid #e8e8e8;
+
     color: #606060;
     background-color: #f8f8f8;
     background-color: #f5f5f5;
@@ -208,8 +232,10 @@
     background-color: white;
     border-bottom: 2px solid #007bff;
     border-bottom: 2px solid #000000;
+
     color: #000000;
 }
+
 .tabActive:hover {
     background-color: white;
     cursor: auto;
@@ -225,6 +251,7 @@
     padding: 1.5rem;
     border-top: solid 1px #ff0000;
     border-top: 0 !important;
+
     padding-bottom: 0;
 }
 
@@ -237,6 +264,7 @@
     padding-bottom: 0rem;
 
     border-bottom: 1px solid #e0e0e0;
+    line-height: 1.25rem;
 }
 
 .fullWidthSection h2 {
@@ -283,6 +311,9 @@
     text-decoration: none;
     border-radius: 4px;
     transition: background-color 0.2s;
+
+    /* No effect? */
+    display: inline;
 }
 
 .modalLinks a:hover {
@@ -294,6 +325,7 @@
 .modalFooter {
     padding: 1rem 2rem;
     padding: 0rem 1.5rem 1.5rem 1.5rem;
+
     display: flex;
     justify-content: flex-end;
 }
@@ -329,6 +361,8 @@
     }
 }
 
+/* Limit display to two lines, then add ellipsis. */
+/* YO 2025-11-18 Tuesday 18:22:21.  Maybe rename to tooltipTarget */
 .toolDescription {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -338,9 +372,14 @@
     -webkit-box-orient: vertical;
     line-height: 1.4em;
     height: 2.8em;
+    /* height: 4.2em; */
     cursor: default;
+
+    /* 2025-11-18 Tuesday 09:40:29.   */
+    line-height: 1.25em;
 }
 
+ /* YO 2025-11-18 Tuesday 18:22:21.  Maybe rename to tooltipTargetWrapper */
 .toolDescriptionWrapper {
     position: relative;
     width: 100%;
@@ -382,6 +421,12 @@
     font-size: 14px;
     font-size: 15px;
     line-height: 1.5;
+    line-height: 1.25em;
+    font-size: 0.9rem;
+
+    /* Modern approach: */
+    overflow-wrap: break-word;
+    word-break: normal;
 }
 
 .toolDescriptionWrapper:hover .tooltip {
@@ -486,7 +531,7 @@ the modal when the link is clicked from inside an open modal. */
     }
 }
 
-/* Adapt this (used in the modal) to the main page: */
+/* See if I can adapt this (used in the modal) to the main page: */
 .modalAlertOverlay_main {
     position: absolute;
     position: fixed;
@@ -519,10 +564,30 @@ the modal when the link is clicked from inside an open modal. */
 
 /* Handle the long URLs. */
 .modalLinkUrl {
-    font-size: 0.85rem;          /* slightly smaller */
-    line-height: 1.2;            /* tighter vertical spacing */
+    font-size: 0.85rem;
+    line-height: 1.2;
     word-break: break-all;       /* forces breaks anywhere when needed */
     overflow-wrap: anywhere;     /* clean modern wrapping */
-    display: inline-block;       /* allows width constraints */
     max-width: 100%;             /* prevents overflow */
+
+    /* This fixed the display-on-same-line-as-field problem!!! */
+    display: inline;
+    line-height: 1.25rem;
+}
+
+.modalText {
+    font-size: 1rem;
+    line-height: 1.2;
+    max-width: 100%;             /* prevents overflow */
+    /* This fixed the display-on-same-line-as-field problem!!! */
+    display: inline;
+    line-height: 1.25rem;
+    /* Modern approach: */
+    overflow-wrap: break-word;
+    word-break: normal;
+}
+
+.note_field {
+    line-height: 1.25rem;
+    padding-top: 5px;
 }

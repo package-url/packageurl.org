@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styles from './styles.module.css';
-import tools from '@site/src/data/tools-2025-11-11.json';
+import tools from '@site/src/data/tools.json';
 
 export default function ToolGrid() {
     const [message, setMessage] = useState(null);
@@ -15,6 +15,7 @@ export default function ToolGrid() {
     const [modalMessage, setModalMessage] = useState(null);
 
     // Limit when the tooltip appears
+    // Maybe name this ConditionalTooltip instead?
     function DescriptionWithTooltip({ text }) {
         const descRef = React.useRef(null);
         const [showTooltip, setShowTooltip] = React.useState(false);
@@ -59,88 +60,55 @@ export default function ToolGrid() {
         };
     }, [selectedTool]);
 
+    // main page link events
     const handleMainLinkClick = (e, tool, linkType) => {
         if (
             linkType === 'homepage' &&
             (!tool.homepage ||
-                tool.homepage === 'N/A')
+                tool.homepage === 'n/a')
         ) {
             e.preventDefault();
-            setMessage(`A homepage is not available for "${tool.name}".`);
-            setTimeout(() => setMessage(null), 2500);
-        } else if (
-            linkType === 'homepage' &&
-            (!tool.homepage ||
-                tool.homepage === 'TBD')
-        ) {
-            e.preventDefault();
-            setMessage(`The homepage field is under construction for "${tool.name}".`);
-            setTimeout(() => setMessage(null), 2500);
-        } else if (
-            linkType === 'source_download' &&
-            (!tool.source_download ||
-                tool.source_download === 'N/A')
-        ) {
-            e.preventDefault();
-            setMessage(`A source download URL is not available for "${tool.name}".`);
-            setTimeout(() => setMessage(null), 2500);
-        } else if (
-            linkType === 'source_download' &&
-            (!tool.source_download ||
-                tool.source_download === 'N/A')
-        ) {
-            e.preventDefault();
-            setMessage(`The source download field is under construction for "${tool.name}".`);
-            setTimeout(() => setMessage(null), 2500);
+            setMessage(`The homepage for "${tool.name}" is not available.`);
+            setTimeout(() => setMessage(null), 3000);
         }
     };
 
-    // Experiment with mapping
-    const LINK_META = {
-        homepage: {
-            field: 'homepage',
-            missingMessage: (name) => `The homepage has not yet been determined for "${name}".`,
-        },
-        source_download: {
-            field: 'source_download',
-            missingMessage: (name) => `The source download URL has not yet been determined for "${name}".`,
-        },
-        package_download: {
-            field: 'package_download',
-            missingMessage: (name) => `The package download URL has not yet been determined for "${name}".`,
-        },
-    };
-
-    const INVALID_VALUES = ['#', 'N/A', 'under-construction', 'TBD', null, undefined];
-
-    const isMissing = (value) => INVALID_VALUES.includes(value) || value === '';
-
+    // modal link events
     const handleLinkClick = (e, tool, linkType) => {
         e.preventDefault();
         e.stopPropagation();
 
-        const meta = LINK_META[linkType];
-        if (!meta) return; // if an unknown linkType is passed
+        let message = null;
 
-        const value = tool[meta.field];
-        const name = tool.name;
-
-        // Generic missing/invalid link
-        if (isMissing(value)) {
-            setModalMessage(meta.missingMessage(name));
-            setTimeout(() => setModalMessage(null), 2500);
-            return;
+        if (
+            linkType === 'homepage' &&
+            (!tool.homepage ||
+                tool.homepage === 'n/a')
+        ) {
+            message = `The homepage for "${tool.name}" is not available.`;
+        } else if (
+            linkType === 'source_download' &&
+            (!tool.source_download ||
+                tool.source_download === 'n/a')
+        ) {
+            message = `The source download URL for "${tool.name}" is not available.`;
+        } else if (
+            linkType === 'package_download' &&
+            (!tool.package_download ||
+                tool.package_download === 'n/a')
+        ) {
+            message = `The package download URL for "${tool.name}" is not available.`;
         }
 
-        // Optional special validation (e.g., “no packages found”)
-        if (meta.specialInvalid && meta.specialInvalid(value)) {
-            setModalMessage(meta.specialMessage(name));
-            setTimeout(() => setModalMessage(null), 2500);
-            return;
+        if (message) {
+            setModalMessage(message);
+            setTimeout(() => setModalMessage(null), 3000);
+        } else {
+            // manually open the valid link if it passed checks
+            const url =
+                linkType === 'homepage' ? tool.homepage : tool.source_download;
+            window.open(url, '_blank', 'noopener noreferrer');
         }
-
-        // Otherwise: valid link → open it
-        window.open(value, '_blank', 'noopener noreferrer');
     };
 
     const closeModal = () => {
@@ -158,7 +126,7 @@ export default function ToolGrid() {
                             className={styles.toolCard}
                             onClick={() => openModal(tool)}
                         >
-                            {/* Make a block for title and description with set height to align display blocks */}
+
                             <div className={styles.toolCardTopBlock}>
                                 <h4 className={styles.toolName}>{tool.name}</h4>
                             </div>
@@ -185,6 +153,7 @@ export default function ToolGrid() {
                                     </li>
                                 </ul>
                             </div>
+
                             {/* The links at the bottom of the main page: */}
                             <div className={styles.toolLinks}>
                                 <span style={{ fontWeight: 'bold' }}>
@@ -209,7 +178,13 @@ export default function ToolGrid() {
                                         }}
                                         className={styles.modalLinkUrl}
                                     >
-                                        {tool.homepage}
+                                        {/* {tool.homepage} */}
+
+                                    {/* Maybe rename to ConditionalTooltip? */}
+                                    <DescriptionWithTooltip
+                                        text={tool.homepage}
+                                    />
+
                                     </a>
                                 )}
                             </div>
@@ -244,8 +219,7 @@ export default function ToolGrid() {
                                 {/* Two column section */}
                                 <div className={styles.twoColumnSection}>
                                     <div className={styles.column}>
-                                        {/* <h3>Technical Info</h3> */}
-                                        <ul>
+                                        <ul className={styles.featureList}>
                                             <li>
                                                 <strong>Base language:</strong>{' '}
                                                 {selectedTool.language}
@@ -360,6 +334,17 @@ export default function ToolGrid() {
                                                     }
                                                 </a>
                                             )}
+                                        </div>
+
+                                        <div className={styles.note_field}>
+                                            <span
+                                                style={{ fontWeight: 'bold' }}
+                                            >
+                                                Notes:{' '}
+                                            </span>
+                                            <div className={styles.modalText}>
+                                                {selectedTool.notes}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
