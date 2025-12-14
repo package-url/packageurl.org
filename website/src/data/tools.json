@@ -12,7 +12,8 @@
         "functions": "compare, parse, sort",
         "platform": "n/a",
         "standards": "VERS",
-        "notes": "n/a"
+        "notes": "Currently listed as Tool and Adopter.",
+        "logo": "img/no_logo_placeholder.svg"
     },
     {
         "name": "Bulletproof Trust",
@@ -27,42 +28,13 @@
         "functions": "consume, transform",
         "platform": "n/a",
         "standards": "PURL v1.0",
-        "notes": "n/a"
-    },
-    {
-        "name": "Common Security Advisory Framework (CSAF)",
-        "publisher": "CSAF",
-        "description": "A language to exchange Security Advisories",
-        "homepage": "https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html#31232-branches-type---name-under-product-version-range",
-        "source_download": "n/a",
-        "package_download": "n/a",
-        "language": "n/a",
-        "license": "n/a",
-        "type": "Specification",
-        "functions": "n/a",
-        "platform": "n/a",
-        "standards": "VERS",
-        "notes": "n/a"
-    },
-    {
-        "name": "CycloneDX",
-        "publisher": "OWASP",
-        "description": "A lightweight software bill-of-material (SBOM) specification",
-        "homepage": "https://github.com/CycloneDX/specification",
-        "source_download": "https://github.com/CycloneDX/specification/releases",
-        "package_download": "n/a",
-        "language": "n/a",
-        "license": "Apache-2.0",
-        "type": "Specification",
-        "functions": "n/a",
-        "platform": "n/a",
-        "standards": "PURL v1.0, VERS",
-        "notes": "n/a"
+        "notes": "n/a",
+        "logo": "img/no_logo_placeholder.svg"
     },
     {
         "name": "Dependency-Track",
         "publisher": "OWASP",
-        "description": "Open source component analysis platform",
+        "description": "Open source component analysis platform.",
         "homepage": "https://www.owasp.org/index.php/OWASP_Dependency_Track_Project",
         "source_download": "https://github.com/DependencyTrack/dependency-track/releases",
         "package_download": "https://github.com/DependencyTrack/dependency-track/releases",
@@ -72,7 +44,8 @@
         "functions": "n/a",
         "platform": "n/a",
         "standards": "PURL v1.0",
-        "notes": "n/a"
+        "notes": "n/a",
+        "logo": "img/dependency-track.png"
     },
     {
         "name": "Ecosyste.ms",
@@ -83,11 +56,12 @@
         "package_download": "n/a",
         "language": "n/a",
         "license": "AGPL-3.0-only, CC-BY-SA-4.0",
-        "type": "Application",
+        "type": "Application, Service",
         "functions": "n/a",
         "platform": "n/a",
         "standards": "PURL v1.0",
-        "notes": "See also https://github.com/ecosyste-ms/home (no releases).  Should 'Type' be 'Applications'? (plural)"
+        "notes": "See also https://github.com/ecosyste-ms/home (no releases).  Should 'Type' be 'Applications'? (plural)",
+        "logo": "img/ecosyste.ms.png"
     },
     {
         "name": "erlef/purl",
@@ -102,7 +76,8 @@
         "functions": "n/a",
         "platform": "n/a",
         "standards": "PURL v1.0",
-        "notes": "n/a"
+        "notes": "n/a",
+        "logo": "img/erlef.png"
     },
     {
         "name": "GitHub Dependency Submission API",
@@ -113,16 +88,17 @@
         "package_download": "n/a",
         "language": "n/a",
         "license": "n/a",
-        "type": "Application",
+        "type": "Service",
         "functions": "n/a",
         "platform": "n/a",
         "standards": "PURL v1.0",
-        "notes": "n/a"
+        "notes": "n/a",
+        "logo": "img/github-mark.svg"
     },
     {
         "name": "nscuro/versatile",
         "publisher": "Niklas Scuro",
-        "description": "Java implementation of vers, a mostly universal version range specifier",
+        "description": "Java implementation of vers, a mostly universal version range specifier.",
         "homepage": "https://github.com/nscuro/versatile",
         "source_download": "https://github.com/nscuro/versatile/releases",
         "package_download": "n/a",
@@ -137,7 +113,7 @@
     {
         "name": "OSS Index",
         "publisher": "Sonatype",
-        "description": "A free catalog of Open Source Components and scanning tools to help developers identify vulnerable components",
+        "description": "A free catalog of Open Source Components and scanning tools to help developers identify vulnerable components.",
         "homepage": "https://ossindex.sonatype.org/",
         "source_download": "https://github.com/sonatype/ossindex-public/releases",
         "package_download": "n/a",
@@ -165,19 +141,64 @@
         "notes": "n/a"
     },
     {
-        "name": "OSV.dev",
-        "publisher": "OSV",
-        "description": "Open Source Vulnerability Schema and distributed vulnerability database",
-        "homepage": "https://osv.dev/",
-        "source_download": "https://github.com/google/osv.dev/releases",
-        "package_download": "n/a",
-        "language": "n/a",
-        "license": "n/a",
-        "type": "Application, Specification",
+        "name": "packageurl.rs",
+        "publisher": "n/a",
+        "description": "This crate is an implementation of the Package URL specification for the Rust programming language.",
+        "homepage": "https://github.com/scm-rs/packageurl.rs",
+        "source_download": "https://github.com/scm-rs/packageurl.rs/releases",
+        "package_download": "https://crates.io/crates/packageurl",
+        "language": "Rust",
+        "license": "MIT",
+        "type": "Library",
         "functions": "n/a",
         "platform": "n/a",
         "standards": "PURL v1.0",
-        "notes": "See also OSV Schema -- https://ossf.github.io/osv-schema/ and https://github.com/ossf/osv-schema/releases."
+        "notes": "https://github.com/package-url/packageurl.rs is a fork."
+    },
+    {
+        "name": "packageurl-dotnet",
+        "publisher": "n/a",
+        "description": ".NET implementation of the package url spec.",
+        "homepage": "https://github.com/package-url/packageurl-dotnet",
+        "source_download": "https://github.com/package-url/packageurl-dotnet/releases",
+        "package_download": "https://www.nuget.org/packages/packageurl-dotnet/",
+        "language": "C#",
+        "license": "MIT",
+        "type": "Library",
+        "functions": "n/a",
+        "platform": "n/a",
+        "standards": "PURL v1.0",
+        "notes": "n/a"
+    },
+    {
+        "name": "packageurl-go",
+        "publisher": "n/a",
+        "description": "Go implementation of the package url spec.",
+        "homepage": "https://github.com/package-url/packageurl-go",
+        "source_download": "https://github.com/package-url/packageurl-go/releases",
+        "package_download": "https://pkg.go.dev/search?q=packageurl-go",
+        "language": "Go",
+        "license": "MIT",
+        "type": "Library",
+        "functions": "n/a",
+        "platform": "n/a",
+        "standards": "PURL v1.0",
+        "notes": "n/a"
+    },
+    {
+        "name": "--",
+        "publisher": "n/a",
+        "description": "n/a",
+        "homepage": "n/a",
+        "source_download": "n/a",
+        "package_download": "n/a",
+        "language": "n/a",
+        "license": "n/a",
+        "type": "n/a",
+        "functions": "n/a",
+        "platform": "n/a",
+        "standards": "n/a",
+        "notes": "n/a"
     },
     {
         "name": "--",
@@ -197,7 +218,7 @@
     {
         "name": "Sonatype Lifecycle",
         "publisher": "Sonatype",
-        "description": "Enterprise grade Open Source component management",
+        "description": "Enterprise grade Open Source component management.",
         "homepage": "https://www.sonatype.com/product-nexus-lifecycle",
         "source_download": "n/a",
         "package_download": "n/a",
