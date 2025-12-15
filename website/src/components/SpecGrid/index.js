@@ -1,21 +1,23 @@
+// 2025-11-22 Saturday 09:58:08.  From ToolGrid
 import React, { useState, useEffect } from 'react';
 import styles from './styles.module.css';
-import tools from '@site/src/data/tools.json';
+import specs from '@site/src/data/specifications.json';
 
-export default function ToolGrid() {
+export default function SpecGrid() {
     const [message, setMessage] = useState(null);
-    const [selectedTool, setSelectedTool] = useState(null);
+    const [selectedSpec, setSelectedSpec] = useState(null);
     const [activeTab, setActiveTab] = useState('overview');
     // Monitor open modal -- state prevents display of main-page alert
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const openModal = (tool) => {
-        setSelectedTool(tool); // sets modal content
+    const openModal = (spec) => {
+        setSelectedSpec(spec); // sets modal content
     };
     // Use a separate state for the modal alert
     const [modalMessage, setModalMessage] = useState(null);
 
     // Limit when the tooltip appears
     // Maybe name this ConditionalTooltip instead?
+    // 2025-11-23 Sunday 17:15:34.  Remove.
     function DescriptionWithTooltip({ text }) {
         const descRef = React.useRef(null);
         const [showTooltip, setShowTooltip] = React.useState(false);
@@ -32,10 +34,10 @@ export default function ToolGrid() {
         }, [text]);
 
         return (
-            <div className={styles.toolDescriptionWrapper}>
+            <div className={styles.specDescriptionWrapper}>
                 <div
                     ref={descRef}
-                    className={`${styles.toolDescription} ${styles.multiline}`}
+                    className={`${styles.specDescription} ${styles.multiline}`}
                 >
                     {text}
                 </div>
@@ -48,33 +50,33 @@ export default function ToolGrid() {
     useEffect(() => {
         function handleKeyDown(event) {
             if (event.key === 'Escape') {
-                setSelectedTool(null);
+                setSelectedSpec(null);
                 setActiveTab('overview');
             }
         }
-        if (selectedTool) {
+        if (selectedSpec) {
             window.addEventListener('keydown', handleKeyDown);
         }
         return () => {
             window.removeEventListener('keydown', handleKeyDown);
         };
-    }, [selectedTool]);
+    }, [selectedSpec]);
 
     // main page link events
-    // const handleMainLinkClick = (e, tool, linkType) => {
+    // const handleMainLinkClick = (e, spec, linkType) => {
     //     if (
     //         linkType === 'homepage' &&
-    //         (!tool.homepage ||
-    //             tool.homepage === 'n/a')
+    //         (!spec.homepage ||
+    //             spec.homepage === 'n/a')
     //     ) {
     //         e.preventDefault();
-    //         setMessage(`The homepage for "${tool.name}" is not available.`);
+    //         setMessage(`The homepage for "${spec.name}" is not available.`);
     //         setTimeout(() => setMessage(null), 3000);
     //     }
     // };
 
     // modal link events
-    const handleLinkClick = (e, tool, linkType) => {
+    const handleLinkClick = (e, spec, linkType) => {
         e.preventDefault();
         e.stopPropagation();
 
@@ -82,19 +84,19 @@ export default function ToolGrid() {
 
         if (
             linkType === 'homepage' &&
-            (!tool.homepage || tool.homepage === 'n/a')
+            (!spec.homepage || spec.homepage === 'n/a')
         ) {
-            message = `The homepage for "${tool.name}" is not available.`;
+            message = `The homepage for "${spec.name}" is not available.`;
         } else if (
             linkType === 'source_download' &&
-            (!tool.source_download || tool.source_download === 'n/a')
+            (!spec.source_download || spec.source_download === 'n/a')
         ) {
-            message = `The source download URL for "${tool.name}" is not available.`;
+            message = `The source download URL for "${spec.name}" is not available.`;
         } else if (
             linkType === 'package_download' &&
-            (!tool.package_download || tool.package_download === 'n/a')
+            (!spec.package_download || spec.package_download === 'n/a')
         ) {
-            message = `The package download URL for "${tool.name}" is not available.`;
+            message = `The package download URL for "${spec.name}" is not available.`;
         }
 
         if (message) {
@@ -103,54 +105,33 @@ export default function ToolGrid() {
         } else {
             // manually open the valid link if it passed checks
             const url =
-                linkType === 'homepage' ? tool.homepage : tool.source_download;
+                linkType === 'homepage' ? spec.homepage : spec.source_download;
             window.open(url, '_blank', 'noopener noreferrer');
         }
     };
 
     const closeModal = () => {
-        setSelectedTool(null);
+        setSelectedSpec(null);
         setActiveTab('overview');
     };
 
     return (
-        <div className={styles.toolGridWrapper}>
-            <div className={styles.toolGridContainer}>
-                <div className={styles.toolGrid}>
-                    {tools.map((tool, idx) => (
+        <div className={styles.specGridWrapper}>
+            <div className={styles.specGridContainer}>
+                <div className={styles.specGrid}>
+                    {specs.map((spec, idx) => (
                         <div
                             key={idx}
-                            className={styles.toolCard}
-                            onClick={() => openModal(tool)}
+                            className={styles.specCard}
+                            onClick={() => openModal(spec)}
                         >
-                            {/* <div className={styles.toolCardTopBlock}> */}
-                                {/* <h4 className={styles.toolName}>{tool.name}</h4> */}
-
-                                {/* {tool.homepage && (
-                                    <a
-                                        href={tool.homepage}
-                                        target={
-                                            tool.homepage.startsWith('http')
-                                                ? '_blank'
-                                                : '_self'
-                                        }
-                                        rel='noopener noreferrer'
-
-                                        className={styles.modalLinkUrl}
-                                    >
-
-                                        <h4 className={styles.toolName}>
-                                            {tool.name}
-                                        </h4>
-                                    </a>
-                                )} */}
-
-                                {/* <h4 className={styles.toolName}>
-                                    {tool.homepage ? (
+                            {/* <div className={styles.specCardTopBlock}>
+                                <h4>
+                                    {spec.homepage ? (
                                         <a
-                                            href={tool.homepage}
+                                            href={spec.homepage}
                                             target={
-                                                tool.homepage.startsWith('http')
+                                                spec.homepage.startsWith('http')
                                                     ? '_blank'
                                                     : '_self'
                                             }
@@ -158,39 +139,39 @@ export default function ToolGrid() {
                                             className={styles.modalLinkUrl}
                                             onClick={(e) => e.stopPropagation()}
                                         >
-                                            {tool.name}
+                                            {spec.name}
                                         </a>
                                     ) : (
-                                        tool.name
+                                        spec.name
                                     )}
-                                </h4> */}
-                            {/* </div> */}
+                                </h4>
+                            </div> */}
 
-<div className={styles.toolCardTopBlock}>
+<div className={styles.specCardTopBlock}>
     <div className={styles.topRow}>
-        <h4 className={styles.toolName}>
-            {tool.homepage ? (
+        <h4 className={styles.specName}>
+            {spec.homepage ? (
                 <a
-                    href={tool.homepage}
-                    target={tool.homepage.startsWith('http') ? '_blank' : '_self'}
+                    href={spec.homepage}
+                    target={spec.homepage.startsWith('http') ? '_blank' : '_self'}
                     rel="noopener noreferrer"
                     // className={styles.modalLinkUrl}
                     className={styles.modalLinkUrl_break_word}
                     onClick={(e) => e.stopPropagation()}
                 >
-                    {tool.name}
+                    {spec.name}
                 </a>
             ) : (
-                tool.name
+                spec.name
             )}
         </h4>
 
         {/* Optional logo (only if available) */}
-        {tool.logo && (
+        {spec.logo && (
             <div className={styles.logoWrapper}>
                 <img
-                    src={tool.logo}
-                    alt={`${tool.name} logo`}
+                    src={spec.logo}
+                    alt={`${spec.name} logo`}
                     className={styles.logoImg}
                 />
             </div>
@@ -198,44 +179,45 @@ export default function ToolGrid() {
     </div>
 </div>
 
-                            <div className={styles.toolCardMidBlock}>
-                                <div className={styles.toolDescriptionWrapper}>
+
+                            <div className={styles.specCardMidBlock}>
+                                <div className={styles.specDescriptionWrapper}>
                                     <DescriptionWithTooltip
-                                        text={tool.description}
+                                        text={spec.description}
                                     />
 
-                                    {/* {tool.description} */}
+                                    {/* {spec.description} */}
                                 </div>
                             </div>
 
-                            <div className={styles.toolCardMidBlock}>
-                                <ul className={styles.toolMeta}>
+                            <div className={styles.specCardMidBlock}>
+                                <ul className={styles.specMeta}>
                                     <li>
                                         <strong>Base language:</strong>{' '}
-                                        {tool.language}
+                                        {spec.language}
                                     </li>
                                     <li>
-                                        <strong>License:</strong> {tool.license}
+                                        <strong>License:</strong> {spec.license}
                                     </li>
                                     <li>
                                         {/* <strong>Functions:</strong>{' '}
-                                        {tool.functions} */}
+                                        {spec.functions} */}
                                         <strong>Standards:</strong>{' '}
-                                        {tool.standards}
+                                        {spec.standards}
                                     </li>
                                 </ul>
                             </div>
 
                             {/* The links at the bottom of the main page: */}
-                            {/* <div className={styles.toolLinks}>
+                            {/* <div className={styles.specLinks}>
                                 <span style={{ fontWeight: 'bold' }}>
                                     Home:{' '}
                                 </span>
-                                {tool.homepage && (
+                                {spec.homepage && (
                                     <a
-                                        href={tool.homepage}
+                                        href={spec.homepage}
                                         target={
-                                            tool.homepage.startsWith('http')
+                                            spec.homepage.startsWith('http')
                                                 ? '_blank'
                                                 : '_self'
                                         }
@@ -244,25 +226,24 @@ export default function ToolGrid() {
                                             e.stopPropagation();
                                             handleMainLinkClick(
                                                 e,
-                                                tool,
+                                                spec,
                                                 'homepage'
                                             );
                                         }}
                                         className={styles.modalLinkUrl}
                                     >
                                     <DescriptionWithTooltip
-                                        text={tool.homepage}
+                                        text={spec.homepage}
                                     />
-
                                     </a>
                                 )}
                             </div> */}
                         </div>
                     ))}
                 </div>
-                {/* ^ end of toolGrid */}
+                {/* ^ end of specGrid */}
             </div>
-            {/* ^ end of toolGridContainer */}
+            {/* ^ end of specGridContainer */}
 
             {/* Popup message */}
             {/* Don't display this message if the modal is open. */}
@@ -271,7 +252,7 @@ export default function ToolGrid() {
             )}
 
             {/* Modal */}
-            {selectedTool && (
+            {selectedSpec && (
                 <div className={styles.modalBackdrop} onClick={closeModal}>
                     <div
                         className={styles.modalContent}
@@ -281,8 +262,8 @@ export default function ToolGrid() {
                             <>
                                 {/* Full width section */}
                                 <div className={styles.fullWidthSection}>
-                                    <h2>{selectedTool.name}</h2>
-                                    <p>{selectedTool.description}</p>
+                                    <h2>{selectedSpec.name}</h2>
+                                    <p>{selectedSpec.description}</p>
                                 </div>
 
                                 {/* Two column section */}
@@ -291,27 +272,27 @@ export default function ToolGrid() {
                                         <ul className={styles.featureList}>
                                             <li>
                                                 <strong>Base language:</strong>{' '}
-                                                {selectedTool.language}
+                                                {selectedSpec.language}
                                             </li>
                                             <li>
                                                 <strong>License:</strong>{' '}
-                                                {selectedTool.license}
+                                                {selectedSpec.license}
                                             </li>
                                             <li>
                                                 <strong>Functions:</strong>{' '}
-                                                {selectedTool.functions}
+                                                {selectedSpec.functions}
                                             </li>
                                             <li>
                                                 <strong>Type:</strong>{' '}
-                                                {selectedTool.type}
+                                                {selectedSpec.type}
                                             </li>
                                             <li>
                                                 <strong>Standards:</strong>{' '}
-                                                {selectedTool.standards}
+                                                {selectedSpec.standards}
                                             </li>
                                             <li>
                                                 <strong>Platform:</strong>{' '}
-                                                {selectedTool.platform}
+                                                {selectedSpec.platform}
                                             </li>
                                         </ul>
                                     </div>
@@ -323,15 +304,15 @@ export default function ToolGrid() {
                                             >
                                                 Home:{' '}
                                             </span>
-                                            {/* {selectedTool.homepage && (
+                                            {/* {selectedSpec.homepage && (
                                                 <a
-                                                    href={selectedTool.homepage}
+                                                    href={selectedSpec.homepage}
                                                     target='_blank'
                                                     rel='noopener noreferrer'
                                                     // onClick={(e) =>
                                                     //     handleLinkClick(
                                                     //         e,
-                                                    //         selectedTool,
+                                                    //         selectedSpec,
                                                     //         'homepage'
                                                     //     )
                                                     // }
@@ -339,22 +320,22 @@ export default function ToolGrid() {
                                                         styles.modalLinkUrl
                                                     }
                                                 >
-                                                    {selectedTool.homepage}
+                                                    {selectedSpec.homepage}
                                                 </a>
                                             )} */}
 
-                                            {selectedTool.homepage &&
-                                            selectedTool.homepage !== 'n/a' &&
-                                            selectedTool.homepage !== '#' ? (
+                                            {selectedSpec.homepage &&
+                                            selectedSpec.homepage !== 'n/a' &&
+                                            selectedSpec.homepage !== '#' ? (
                                                 <a
-                                                    href={selectedTool.homepage}
+                                                    href={selectedSpec.homepage}
                                                     target='_blank'
                                                     rel='noopener noreferrer'
                                                     className={
                                                         styles.modalLinkUrl
                                                     }
                                                 >
-                                                    {selectedTool.homepage}
+                                                    {selectedSpec.homepage}
                                                 </a>
                                             ) : (
                                                 <span>n/a</span>
@@ -366,17 +347,17 @@ export default function ToolGrid() {
                                             >
                                                 Source download:{' '}
                                             </span>
-                                            {/* {selectedTool.source_download && (
+                                            {/* {selectedSpec.source_download && (
                                                 <a
                                                     href={
-                                                        selectedTool.source_download
+                                                        selectedSpec.source_download
                                                     }
                                                     target='_blank'
                                                     rel='noopener noreferrer'
                                                     // onClick={(e) =>
                                                     //     handleLinkClick(
                                                     //         e,
-                                                    //         selectedTool,
+                                                    //         selectedSpec,
                                                     //         'source_download'
                                                     //     )
                                                     // }
@@ -385,19 +366,19 @@ export default function ToolGrid() {
                                                     }
                                                 >
                                                     {
-                                                        selectedTool.source_download
+                                                        selectedSpec.source_download
                                                     }
                                                 </a>
                                             )} */}
 
-                                            {selectedTool.source_download &&
-                                            selectedTool.source_download !==
+                                            {selectedSpec.source_download &&
+                                            selectedSpec.source_download !==
                                                 'n/a' &&
-                                            selectedTool.source_download !==
+                                            selectedSpec.source_download !==
                                                 '#' ? (
                                                 <a
                                                     href={
-                                                        selectedTool.source_download
+                                                        selectedSpec.source_download
                                                     }
                                                     target='_blank'
                                                     rel='noopener noreferrer'
@@ -406,7 +387,7 @@ export default function ToolGrid() {
                                                     }
                                                 >
                                                     {
-                                                        selectedTool.source_download
+                                                        selectedSpec.source_download
                                                     }
                                                 </a>
                                             ) : (
@@ -420,17 +401,17 @@ export default function ToolGrid() {
                                             >
                                                 Package download:{' '}
                                             </span>
-                                            {/* {selectedTool.package_download && (
+                                            {/* {selectedSpec.package_download && (
                                                 <a
                                                     href={
-                                                        selectedTool.package_download
+                                                        selectedSpec.package_download
                                                     }
                                                     target='_blank'
                                                     rel='noopener noreferrer'
                                                     // onClick={(e) =>
                                                     //     handleLinkClick(
                                                     //         e,
-                                                    //         selectedTool,
+                                                    //         selectedSpec,
                                                     //         'package_download'
                                                     //     )
                                                     // }
@@ -439,19 +420,19 @@ export default function ToolGrid() {
                                                     }
                                                 >
                                                     {
-                                                        selectedTool.package_download
+                                                        selectedSpec.package_download
                                                     }
                                                 </a>
                                             )} */}
 
-                                            {selectedTool.package_download &&
-                                            selectedTool.package_download !==
+                                            {selectedSpec.package_download &&
+                                            selectedSpec.package_download !==
                                                 'n/a' &&
-                                            selectedTool.package_download !==
+                                            selectedSpec.package_download !==
                                                 '#' ? (
                                                 <a
                                                     href={
-                                                        selectedTool.package_download
+                                                        selectedSpec.package_download
                                                     }
                                                     target='_blank'
                                                     rel='noopener noreferrer'
@@ -460,7 +441,7 @@ export default function ToolGrid() {
                                                     }
                                                 >
                                                     {
-                                                        selectedTool.package_download
+                                                        selectedSpec.package_download
                                                     }
                                                 </a>
                                             ) : (
@@ -475,7 +456,7 @@ export default function ToolGrid() {
                                                 Notes:{' '}
                                             </span>
                                             <div className={styles.modalText}>
-                                                {selectedTool.notes}
+                                                {selectedSpec.notes}
                                             </div>
                                         </div>
                                     </div>

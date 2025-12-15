@@ -168,4 +168,51 @@
     padding-top: 1rem;
     /* margin-top: 0; */
     border-radius: 10px;
+
+    background-color: #00ccff;
+}
+
+/* 2025-11-22 Saturday 10:12:48.  In place of using .introContainer for text-only blocks, use a div like this. */
+.sectionIntro {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 0;
+  padding: 0.5rem 0;
+
+  /* background-color: #ffffcc; */
+  line-height: 1.4rem;
+}
+
+.sectionHeader {
+    display: flex;
+    /* justify-content: center; */
+
+    /* background-color: #ffcccc; */
+    padding: 0px 0px 0px 0px;
+    /* padding: 1rem 2rem; */
+}
+
+.sectionHeader h1 {
+    margin-bottom: 0px;
+    color: #000000;
+}
+
+.sectionHeader h2 {
+    margin-bottom: 0px;
+    color: #336699;
+    color: #992600;
+}
+
+/* 2025-11-22 Saturday 12:29:30.   */
+/* .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+} */
+
+/* styles.module.css */
+.sectionContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
 }

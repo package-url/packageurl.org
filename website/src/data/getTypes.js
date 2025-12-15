@@ -141,6 +141,11 @@ export default function getPackages(baseUrl) {
             logo: `${baseUrl}img/oci.png`,
         },
         {
+            name: "otp",
+            url: "https://github.com/package-url/purl-spec/blob/main/types-doc/otp-definition.md",
+            logo: `${baseUrl}img/otp-erlang.png`,
+        },
+        {
             name: "pub",
             url: "https://github.com/package-url/purl-spec/blob/main/types-doc/pub-definition.md",
             logo: `${baseUrl}img/pub-gh-logo.png`,

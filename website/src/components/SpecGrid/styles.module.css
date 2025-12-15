@@ -1,5 +1,5 @@
 /* Grid layout (reuse existing) */
-.toolGridWrapper {
+.specGridWrapper {
     margin: 2rem auto;
     margin: 1rem auto;
     margin: 0.5rem auto;
@@ -12,22 +12,22 @@
     border: 0;
 }
 
-.toolGridContainer {
+.specGridContainer {
     max-width: 1200px;
     width: 100%;
-    /* Center the toolgrid on the page. */
+    /* Center the specgrid on the page. */
     margin: 0 auto;
 }
 
  /* NEW: Replace flexbox with a proper grid */
-.toolGrid {
+.specGrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columns */
     gap: 1.5rem;
     align-items: stretch; /* Auto-match heights per row */
 }
 
-.toolCard {
+.specCard {
     background: #fff;
     border: 1px solid #e0e0e0;
     border: 1px solid #909090;
@@ -58,26 +58,26 @@
 
 }
 
-.toolCard:hover {
+.specCard:hover {
     transform: translateY(-3px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 /* Breakpoints for tablets */
 @media (max-width: 1024px) {
-    .toolGrid {
+    .specGrid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 /* Breakpoints for mobile */
 @media (max-width: 640px) {
-    .toolGrid {
+    .specGrid {
         grid-template-columns: 1fr;
     }
 }
 
-.toolLogo {
+.specLogo {
     width: 60px;
     height: 60px;
     margin: 0 auto 1rem;
@@ -108,8 +108,8 @@
 }
 
 
-/* Tool links inside modal */
-.toolLinks {
+/* Spec links inside modal */
+.specLinks {
     text-align: left;
     border-top: solid 1px #d8d8d8;
     padding-top: 5px;
@@ -125,7 +125,7 @@
     word-break: normal;
 }
 
-.toolLinks a {
+.specLinks a {
     margin-right: 1rem;
     text-decoration: none;
     color: #0366d6;
@@ -135,7 +135,7 @@
     overflow-wrap: anywhere;
 }
 
-.toolLinks a:hover {
+.specLinks a:hover {
     text-decoration: underline;
 }
 
@@ -161,8 +161,8 @@
     line-height: 1.25rem;
 }
 
-/* Tool metadata list */
-.toolMeta {
+/* Spec metadata list */
+.specMeta {
     list-style: none;
     padding: 0;
     margin: 0.5rem 0;
@@ -304,7 +304,7 @@
     margin-bottom: 0.5rem;
 }
 
-/* See also new modalLinks01 style I'm creating below the toollinks style toward the top of this file -- using that in the modal to displayHome: x on 1 line. */
+/* See also new modalLinks01 style I'm creating below the speclinks style toward the top of this file -- using that in the modal to displayHome: x on 1 line. */
 .modalLinks {
     display: flex;
     flex-direction: column;
@@ -372,7 +372,7 @@
 
 /* Limit display to two lines, then add ellipsis. */
 /* YO 2025-11-18 Tuesday 18:22:21.  Maybe rename to tooltipTarget */
-.toolDescription {
+.specDescription {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -386,10 +386,12 @@
 
     /* 2025-11-18 Tuesday 09:40:29.   */
     /* line-height: 1.25em; */
+    /* 2025-11-24 Monday 14:27:30.  */
+    /* line-height: 0.5rem; */
 }
 
  /* YO 2025-11-18 Tuesday 18:22:21.  Maybe rename to tooltipTargetWrapper */
-.toolDescriptionWrapper {
+.specDescriptionWrapper {
     position: relative;
     width: 100%;
     line-height: 1.25rem;
@@ -413,8 +415,8 @@
     bottom: 100%;
     left: 50%;
     transform: translateX(-50%);
-    /* background: var(--ifm-background-surface-color);
-    color: var(--ifm-font-color-base); */
+    /* background: var(--ifm-background-surface-color); */
+    /* color: var(--ifm-font-color-base); */
 
     background: #f5f5f5;
     color: #000000;
@@ -435,18 +437,16 @@
     font-size: 0.9rem;
     font-size: 14px;
     font-size: 15px;
-    font-size: 16px;
     line-height: 1.5;
     line-height: 1.25em;
     font-size: 0.9rem;
     font-size: 1.0rem;
 
-    /* Modern approach: */
     overflow-wrap: break-word;
     word-break: normal;
 }
 
-.toolDescriptionWrapper:hover .tooltip {
+.specDescriptionWrapper:hover .tooltip {
     opacity: 1;
 }
 
@@ -582,14 +582,24 @@ the modal when the link is clicked from inside an open modal. */
 /* Handle the long URLs. */
 .modalLinkUrl {
     /* font-size: 0.85rem; */
-    line-height: 1.2;
+    /* line-height: 1.2; */
     word-break: break-all;       /* forces breaks anywhere when needed */
     overflow-wrap: anywhere;     /* clean modern wrapping */
     max-width: 100%;             /* prevents overflow */
+    /* 2025-11-24 Monday 15:00:41.  */
+    width: auto;
 
     /* This fixed the display-on-same-line-as-field problem!!! */
     display: inline;
-    line-height: 1.25rem;
+    /* line-height: 1.25rem; */
+}
+/* 2025-11-24 Monday 16:45:48.  For the spec.name value */
+.modalLinkUrl_break_word {
+    overflow-wrap: break-word;
+    word-break: normal;
+    max-width: 100%;
+    width: auto;
+    display: inline;
 }
 
 .modalText {
@@ -609,6 +619,7 @@ the modal when the link is clicked from inside an open modal. */
     padding-top: 5px;
 }
 
+
 /* 2025-11-22 Saturday 12:08:53.  Does this work? */
 /* Dark mode */
 /* [data-theme='dark'] .card {
@@ -621,27 +632,34 @@ the modal when the link is clicked from inside an open modal. */
   color: #f0f0f0;
 } */
 
-[data-theme='dark'] .toolCard {
+/* [data-theme='dark'] .specCard {
+  background: #1d1f21;
+  background: #303030;
+  border-color: #909090;
+  color: #e5e5e5;
+} */
+
+[data-theme='dark'] .specCard {
   background: #000000;
   border-color: #909090;
   border-color: #505050;
   color: #e5e5e5;
 }
 
-[data-theme='dark'] .toolGridWrapper {
+[data-theme='dark'] .specGridWrapper {
   background: #303030;
   border: solid 1px #505050;
   color: #e5e5e5;
 }
 
 /* 2025-11-23 Sunday 18:53:02.  */
-.toolName {
+.specName {
     /* Modern approach: */
     overflow-wrap: break-word;
     word-break: normal;
 }
 
-/* 2025-11-25 Tuesday 09:55:19.  Modify tool card to add logo (if any). */
+/* 2025-11-24 Monday 16:33:21.  Modify spec card to add logo (if any). */
 .topRow {
   display: flex;
   align-items: center;
