@@ -64,6 +64,22 @@
         "logo": "img/cyclonedx.png"
     },
     {
+        "name": "OpenVEX",
+        "publisher": "OpenSSF",
+        "description": "An implementation of the Vulnerability Exploitability Exchange (VEX for short) that is designed to be minimal, compliant, interoperable, and embeddable.",
+        "homepage": "https://openssf.org/projects/openvex/",
+        "source_download": "https://github.com/openvex/spec/blob/main/OPENVEX-SPEC.md",
+        "package_download": "n/a",
+        "language": "n/a",
+        "license": "CC0-1.0",
+        "type": "Specification",
+        "functions": "n/a",
+        "platform": "n/a",
+        "standards": "PURL v1.0",
+        "notes": "n/a",
+        "logo": "img/openvex.png"
+    },
+    {
         "name": "OSV Schema",
         "publisher": "OSSF",
         "description": "Open Source Vulnerability Schema.",
