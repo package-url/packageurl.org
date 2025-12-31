@@ -141,6 +141,21 @@
         "notes": "n/a"
     },
     {
+        "name": "OSV.dev",
+        "publisher": "OSV",
+        "description": "Open Source Vulnerability database",
+        "homepage": "https://osv.dev/",
+        "source_download": "https://github.com/google/osv.dev/releases",
+        "package_download": "n/a",
+        "language": "n/a",
+        "license": "n/a",
+        "type": "Service",
+        "functions": "n/a",
+        "platform": "n/a",
+        "standards": "PURL v1.0",
+        "notes": "n/a"
+    },
+    {
         "name": "packageurl.rs",
         "publisher": "n/a",
         "description": "This crate is an implementation of the Package URL specification for the Rust programming language.",

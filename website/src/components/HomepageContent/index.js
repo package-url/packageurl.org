@@ -2,27 +2,18 @@ import React from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import HomeInfo from './HomeInfo.mdx';
 import GeneralInfo from '@site/src/components/GeneralInfo';
-// import ToolGrid_1D from '@site/src/components/ToolGrid_1D';
 import SpecGrid from '@site/src/components/SpecGrid';
 import ToolGrid from '@site/src/components/ToolGrid';
-
 import styles from './styles.module.css';
-// 2025-11-20 Thursday 14:11:38.  No longer needed?
-// import getTypes from '@site/src/data/getTypes';
 
 export default function HomepageContent() {
     // Get baseUrl from Docusaurus context
     const { siteConfig } = useDocusaurusContext();
     const { baseUrl } = siteConfig;
-    // const types = getTypes(baseUrl);
 
     return (
         <main>
-            {/* Intro Section */}
-            {/* <section className='container margin-vert--lg'> */}
-            {/* <section className='container'> */}
             <section className={styles.sectionContainer}>
-                {/* <div className={styles.introContainer}> */}
                 <div className={styles.sectionIntro}>
                     <HomeInfo />
                 </div>
@@ -36,8 +27,13 @@ export default function HomepageContent() {
                 {/* <div style={{ display: 'flex', justifyContent: 'center' }}>
                     <h1>Software Tools</h1>
                 </div> */}
-                <div className={styles.sectionHeader} style={{ marginBottom: '15px' }}>
-                    <h1>Software Specifications and Tools</h1>
+                <div
+                    className={styles.sectionHeader}
+                    style={{ marginBottom: '15px' }}
+                >
+                    <h1 id='software-specifications-and-tools'>
+                        Software Specifications and Tools
+                    </h1>
                 </div>
                 {/* <div
                     className={styles.sectionIntro}
