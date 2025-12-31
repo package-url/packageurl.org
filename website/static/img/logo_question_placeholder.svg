@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <!-- Background -->
+  <rect width="48" height="48" rx="4" fill="#f3f4f6"/>
+  
+  <!-- Border -->
+  <rect width="48" height="48" rx="4" fill="none" stroke="#d1d5db" stroke-width="1"/>
+  
+  <!-- Text -->
+  <text x="24" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="600" fill="#6b7280" text-anchor="middle">Logo?</text>
+</svg>
