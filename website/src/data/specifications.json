@@ -12,8 +12,9 @@
         "functions": "n/a",
         "platform": "n/a",
         "standards": "VERS",
-        "notes": "See also https://owasp.org/www-project-common-lifecycle-enumeration/ and https://ecma-tc54.github.io/ECMA-xxx-CLE/.",
-        "logo": "img/no_logo_placeholder.svg"
+        "notes": "See also https://owasp.org/www-project-common-lifecycle-enumeration/ and https://ecma-tc54.github.io/ECMA-xxx-CLE/.  No logo located.",
+        "logo": "img/logo_question_placeholder.svg"
+
     },
     {
         "name": "Common Security Advisory Framework (CSAF)",
@@ -83,8 +84,8 @@
         "name": "OSV Schema",
         "publisher": "OSSF",
         "description": "Open Source Vulnerability Schema.",
-        "homepage": "https://osv.dev/",
-        "source_download": "https://github.com/google/osv.dev/releases",
+        "homepage": "https://ossf.github.io/osv-schema/",
+        "source_download": "n/a",
         "package_download": "n/a",
         "language": "n/a",
         "license": "Apache-2.0",
@@ -92,8 +93,8 @@
         "functions": "n/a",
         "platform": "n/a",
         "standards": "PURL v1.0",
-        "notes": "See also OSV Schema -- https://ossf.github.io/osv-schema/ and https://github.com/ossf/osv-schema/releases.  OSV has a white-lettered logo displayed on a black background, unable to find an OSV logo for a white background.",
-        "logo": "img/no_logo_placeholder.svg"
+        "notes": "See also https://github.com/ossf/osv-schema/releases.  OSV has a white-lettered logo displayed on a black background, not yet able to find an OSV logo for a white background.",
+        "logo": "img/osv-schema-svg.svg"
     },
     {
         "name": "System Package Data Exchange (SPDX)",

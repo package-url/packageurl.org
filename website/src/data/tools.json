@@ -12,8 +12,8 @@
         "functions": "compare, parse, sort",
         "platform": "n/a",
         "standards": "VERS",
-        "notes": "Currently listed as Tool and Adopter.",
-        "logo": "img/no_logo_placeholder.svg"
+        "notes": "Currently listed as Tool and Adopter.  No logo located.",
+        "logo": "img/logo_question_placeholder.svg"
     },
     {
         "name": "Bulletproof Trust",
@@ -29,7 +29,7 @@
         "platform": "n/a",
         "standards": "PURL v1.0",
         "notes": "n/a",
-        "logo": "img/no_logo_placeholder.svg"
+        "logo": "img/darkskytech_logo.jpg"
     },
     {
         "name": "Dependency-Track",
@@ -108,7 +108,8 @@
         "functions": "n/a",
         "platform": "n/a",
         "standards": "VERS",
-        "notes": "2025-11-18. https://central.sonatype.com/artifact/io.github.nscuro/versatile also exists but stops at v0.7.0 while GitHub has v0.13.1."
+        "notes": "https://github.com/package-url/versatile is a fork. Currently listed as Tool and Adopter.  2025-11-18. https://central.sonatype.com/artifact/io.github.nscuro/versatile also exists but stops at v0.7.0 while GitHub has v0.13.1.",
+        "logo": "img/nscuro-versatile.jpg"
     },
     {
         "name": "OSS Index",
@@ -123,7 +124,8 @@
         "functions": "n/a",
         "platform": "n/a",
         "standards": "PURL v1.0",
-        "notes": "n/a"
+        "notes": "n/a",
+        "logo": "img/ossindex.png"
     },
     {
         "name": "OSS Review Toolkit",
@@ -138,7 +140,8 @@
         "functions": "n/a",
         "platform": "Container",
         "standards": "PURL v1.0",
-        "notes": "n/a"
+        "notes": "n/a",
+        "logo": "img/oss-review-toolkit.svg"
     },
     {
         "name": "OSV.dev",
@@ -153,7 +156,8 @@
         "functions": "n/a",
         "platform": "n/a",
         "standards": "PURL v1.0",
-        "notes": "n/a"
+        "notes": "Logos thus far located are tiny when displayed here.",
+        "logo": "img/osv_logo_light-full.svg"
     },
     {
         "name": "packageurl.rs",
@@ -168,7 +172,8 @@
         "functions": "n/a",
         "platform": "n/a",
         "standards": "PURL v1.0",
-        "notes": "https://github.com/package-url/packageurl.rs is a fork."
+        "notes": "https://github.com/package-url/packageurl.rs is a fork.",
+        "logo": "img/packageurl.rs.png"
     },
     {
         "name": "packageurl-dotnet",
@@ -183,7 +188,8 @@
         "functions": "n/a",
         "platform": "n/a",
         "standards": "PURL v1.0",
-        "notes": "n/a"
+        "notes": "n/a",
+        "logo": "img/packageurl-dotnet.png"
     },
     {
         "name": "packageurl-go",
@@ -198,13 +204,126 @@
         "functions": "n/a",
         "platform": "n/a",
         "standards": "PURL v1.0",
-        "notes": "n/a"
+        "notes": "n/a",
+        "logo": "img/packageurl-go.png"
     },
     {
-        "name": "--",
+        "name": "packageurl-java",
         "publisher": "n/a",
-        "description": "n/a",
-        "homepage": "n/a",
+        "description": "This project implements a purl parser and class for Java.",
+        "homepage": "https://github.com/package-url/packageurl-java",
+        "source_download": "https://github.com/package-url/packageurl-java",
+        "package_download": "https://central.sonatype.com/artifact/com.github.package-url/packageurl-java",
+        "language": "Java",
+        "license": "MIT",
+        "type": "n/a",
+        "functions": "n/a",
+        "platform": "n/a",
+        "standards": "PURL v1.0",
+        "notes": "n/a",
+        "logo": "img/packageurl-java.png"
+    },
+    {
+        "name": "packageurl-js",
+        "publisher": "n/a",
+        "description": "JavaScript implementation of the package url spec",
+        "homepage": "https://github.com/package-url/packageurl-js",
+        "source_download": "https://github.com/package-url/packageurl-js",
+        "package_download": "https://www.npmjs.com/package/packageurl-js",
+        "language": "JavaScript",
+        "license": "MIT",
+        "type": "n/a",
+        "functions": "n/a",
+        "platform": "n/a",
+        "standards": "PURL v1.0",
+        "notes": "n/a",
+        "logo": "img/packageurl-js.png"
+    },
+    {
+        "name": "packageurl-php",
+        "publisher": "n/a",
+        "description": "A parser and builder based on package url spec, implemented in PHP.",
+        "homepage": "https://github.com/package-url/packageurl-php",
+        "source_download": "https://github.com/package-url/packageurl-php",
+        "package_download": "https://packagist.org/packages/package-url/packageurl-php",
+        "language": "PHP",
+        "license": "MIT",
+        "type": "n/a",
+        "functions": "n/a",
+        "platform": "n/a",
+        "standards": "PURL v1.0",
+        "notes": "n/a",
+        "logo": "img/packageurl-php.png"
+    },
+    {
+        "name": "packageurl-python",
+        "publisher": "AboutCode",
+        "description": "Python implementation of the package url spec. ",
+        "homepage": "https://github.com/package-url/packageurl-python",
+        "source_download": "https://github.com/package-url/packageurl-python",
+        "package_download": "https://pypi.org/project/packageurl-python/",
+        "language": "Python",
+        "license": "MIT",
+        "type": "n/a",
+        "functions": "n/a",
+        "platform": "n/a",
+        "standards": "PURL v1.0",
+        "notes": "n/a",
+        "logo": "img/packageurl-python.png"
+    },
+    {
+        "name": "packageurl-ruby",
+        "publisher": "n/a",
+        "description": "A Ruby implementation of the package url specification.",
+        "homepage": "https://github.com/package-url/packageurl-ruby",
+        "source_download": "https://github.com/package-url/packageurl-ruby",
+        "package_download": "https://rubygems.org/gems/packageurl-ruby",
+        "language": "Ruby",
+        "license": "MIT",
+        "type": "n/a",
+        "functions": "n/a",
+        "platform": "n/a",
+        "standards": "PURL v1.0",
+        "notes": "n/a",
+        "logo": "img/packageurl-ruby.png"
+    },
+    {
+        "name": "packageurl-swift",
+        "publisher": "n/a",
+        "description": "Swift implementation of the package url spec",
+        "homepage": "https://github.com/package-url/packageurl-swift",
+        "source_download": "n/a",
+        "package_download": "n/a",
+        "language": "Swift",
+        "license": "n/a",
+        "type": "n/a",
+        "functions": "n/a",
+        "platform": "n/a",
+        "standards": "PURL v1.0",
+        "notes": "n/a",
+        "logo": "img/packageurl-swift.png"
+    },
+    {
+        "name": "perl-URI-PackageURL",
+        "publisher": "n/a",
+        "description": "A Perl implementation of PURL and VERS",
+        "homepage": "https://github.com/giterlizzi/perl-URI-PackageURL",
+        "source_download": "n/a",
+        "package_download": "n/a",
+        "language": "Perl",
+        "license": "n/a",
+        "type": "n/a",
+        "functions": "n/a",
+        "platform": "n/a",
+        "standards": "PURL v1.0, VERS",
+        "notes": "https://github.com/package-url/perl-URI-PackageURL is a fork. Currently also listed as VERS adopter: URI-PackageURL.",
+        "logo": "img/perl-URI-PackageURL.jpg"
+    },
+    {
+        "name": "purl-swid-generator-ui",
+        "publisher": "n/a",
+        "description": "A simple webapp that provides guidance on and creates Package URLs of type 'swid'.",
+        "homepage": "https://github.com/package-url/purl-swid-generator-ui",
         "source_download": "n/a",
         "package_download": "n/a",
         "language": "n/a",
@@ -212,23 +331,73 @@
         "type": "n/a",
         "functions": "n/a",
         "platform": "n/a",
-        "standards": "n/a",
-        "notes": "n/a"
+        "standards": "PURL v1.0",
+        "notes": "n/a",
+        "logo": "img/purl-swid-generator-ui.png"
     },
     {
-        "name": "--",
+        "name": "PUrlKt",
         "publisher": "n/a",
-        "description": "n/a",
-        "homepage": "n/a",
+        "description": "A Kotlin library for parsing and generating package-url",
+        "homepage": "https://github.com/iseki0/PUrlKt",
+        "source_download": "n/a",
+        "package_download": "n/a",
+        "language": "Kotlin",
+        "license": "Apache-2.0",
+        "type": "n/a",
+        "functions": "n/a",
+        "platform": "n/a",
+        "standards": "PURL v1.0",
+        "notes": "n/a",
+        "logo": "img/PUrlKt.png"
+    },
+    {
+        "name": "PURL-raku",
+        "publisher": "n/a",
+        "description": "PURL - Package URL specification v1.0.X",
+        "homepage": "https://github.com/lizmat/PURL",
+        "source_download": "n/a",
+        "package_download": "n/a",
+        "language": "Raku",
+        "license": "Artistic-2.0",
+        "type": "n/a",
+        "functions": "n/a",
+        "platform": "n/a",
+        "standards": "PURL v1.0",
+        "notes": "https://github.com/package-url/PURL-raku is a fork.",
+        "logo": "img/purl-raku.jpg"
+    },
+    {
+        "name": "Scancode Toolkit",
+        "publisher": "AboutCode",
+        "description": "Reports PURLs from parsed package manifests using https.  Collects VERS from parsed package manifests using https.",
+        "homepage": "https://github.com/aboutcode-org/scancode-toolkit",
         "source_download": "n/a",
         "package_download": "n/a",
         "language": "n/a",
         "license": "n/a",
-        "type": "n/a",
+        "type": "CLI Utility, Library",
         "functions": "n/a",
         "platform": "n/a",
-        "standards": "n/a",
-        "notes": "n/a"
+        "standards": "PURL v1.0, VERS",
+        "notes": "Currently listed as Tool and Adopter.",
+        "logo": "img/logo_question_placeholder.svg"
+    },
+    {
+        "name": "Scancode.io",
+        "publisher": "AboutCode",
+        "description": "Collects VERS from scanned and matched packages using https",
+        "homepage": "https://github.com/aboutcode-org/scancode.io",
+        "source_download": "n/a",
+        "package_download": "n/a",
+        "language": "n/a",
+        "license": "n/a",
+        "type": "Application, CLI Utility",
+        "functions": "n/a",
+        "platform": "Container, Linux",
+        "standards": "PURL v1.0, VERS",
+        "notes": "n/a",
+        "logo": "img/logo_question_placeholder.svg"
     },
     {
         "name": "Sonatype Lifecycle",
@@ -243,7 +412,40 @@
         "functions": "n/a",
         "platform": "n/a",
         "standards": "PURL v1.0",
-        "notes": "n/a"
+        "notes": "n/a",
+        "logo": "img/logo_question_placeholder.svg"
+    },
+    {
+        "name": "Spectra Assure",
+        "publisher": "Reversing Labs",
+        "description": "Software supply chain security platform for the enterprise to detect threats and exposures",
+        "homepage": "https://www.reversinglabs.com/products/software-supply-chain-security",
+        "source_download": "n/a",
+        "package_download": "n/a",
+        "language": "n/a",
+        "license": "n/a",
+        "type": "n/a",
+        "functions": "n/a",
+        "platform": "n/a",
+        "standards": "PURL v1.0",
+        "notes": "n/a",
+        "logo": "img/logo_question_placeholder.svg"
+    },
+    {
+        "name": "univers",
+        "publisher": "AboutCode",
+        "description": "Parse and compare all the package versions and all the ranges. From debian, npm, pypi, ruby and more. Process all the version range specs and expressions.",
+        "homepage": "https://github.com/aboutcode-org/univers",
+        "source_download": "https://github.com/package-url/univers",
+        "package_download": "https://pypi.org/project/univers/",
+        "language": "Python",
+        "license": "MIT",
+        "type": "n/a",
+        "functions": "n/a",
+        "platform": "n/a",
+        "standards": "VERS",
+        "notes": "https://github.com/package-url/univers is a fork.",
+        "logo": "img/logo_question_placeholder.svg"
     },
     {
         "name": "ZEN SecDB",
@@ -258,6 +460,7 @@
         "functions": "n/a",
         "platform": "n/a",
         "standards": "PURL v1.0",
-        "notes": "This platform does not appear to have its own repo or published license but is connected to https://github.com/giterlizzi/secdb-feeds (MIT) and https://github.com/giterlizzi/secdb-nmap (Apache-2.0)."
+        "notes": "This platform does not appear to have its own repo or published license but is connected to https://github.com/giterlizzi/secdb-feeds (MIT) and https://github.com/giterlizzi/secdb-nmap (Apache-2.0).",
+        "logo": "img/logo_question_placeholder.svg"
     }
 ]
