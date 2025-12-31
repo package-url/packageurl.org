@@ -67,12 +67,32 @@ const config = {
                     editUrl: ({ docPath }) => {
                         // Explicit mapping of Docusaurus path → actual GitHub source
                         const editUrlMap = {
-                            // PURL Specification
-                            "purl-spec/purl-spec-overview.md": `https://github.com/package-url/purl-spec/blob/main/docs/standard/introduction.md`,
-                            "purl-spec/purl-spec-purl-types.mdx": `https://github.com/package-url/packageurl.org/blob/main/website/docs/${docPath}`,
-                            "purl-spec/purl-spec-documentation.md": `https://github.com/package-url/purl-spec/blob/main/purl-specification.md`,
-                            "purl-spec/purl-spec-schemas.md": `https://github.com/package-url/packageurl.org/blob/main/website/docs/${docPath}`,
-                            "purl-spec/purl-spec-adopters.md": `https://github.com/package-url/purl-spec/blob/main/ADOPTERS.md`,
+                            // PURL Specification -- superseded
+                            // "purl-spec/purl-spec-overview.md": `https://github.com/package-url/purl-spec/blob/main/docs/standard/introduction.md`,
+                            // "purl-spec/purl-spec-purl-types.mdx": `https://github.com/package-url/packageurl.org/blob/main/website/docs/${docPath}`,
+                            // "purl-spec/purl-spec-documentation.md": `https://github.com/package-url/purl-spec/blob/main/purl-specification.md`,
+                            // "purl-spec/purl-spec-schemas.md": `https://github.com/package-url/packageurl.org/blob/main/website/docs/${docPath}`,
+                            // "purl-spec/purl-spec-adopters.md": `https://github.com/package-url/purl-spec/blob/main/ADOPTERS.md`,
+
+                            // 2025-12-30 Tuesday 15:04:54.New "PURL" section
+                            "purl/how-to-build.md": `https://github.com/package-url/purl-spec/blob/main/docs/how-to-build.md`,
+                            "purl/how-to-parse.md": `https://github.com/package-url/purl-spec/blob/main/docs/how-to-parse.md`,
+                            "purl/purl-spec-adopters.md": `https://github.com/package-url/packageurl.org/blob/main/website/docs/${docPath}`,
+                            "purl/purl-spec-folder-page.md": `https://github.com/package-url/packageurl.org/blob/main/website/docs/${docPath}`,
+                            // is the next one still used?
+                            "purl/purl-spec-introduction.md": `https://github.com/package-url/purl-spec/blob/main/docs/standard/introduction.md`,
+
+                            "purl/purl-spec-purl-types.mdx": `https://github.com/package-url/packageurl.org/blob/main/website/docs/${docPath}`,
+
+                            "purl/purl-spec-schemas.md": `https://github.com/package-url/packageurl.org/blob/main/website/docs/${docPath}`,
+                            "purl/specification.md": `https://github.com/package-url/purl-spec/blob/main/docs/standard/specification.md`,
+                            "purl/tests.md": `https://github.com/package-url/purl-spec/blob/main/docs/tests.md`,
+
+
+
+
+
+
 
                             // VERS Specification
                             "vers-spec/vers-spec-overview.md": `https://github.com/package-url/packageurl.org/blob/main/website/docs/${docPath}`,
@@ -118,12 +138,20 @@ const config = {
                 style: "dark",
                 items: [
                     { to: '/', label: 'Home', position: 'left', exact: true },
+                    // {
+                    //     type: 'docSidebar',
+                    //     sidebarId: 'purl_spec',
+                    //     position: 'left',
+                    //     label: 'PURL',
+                    // },
+
                     {
                         type: 'docSidebar',
-                        sidebarId: 'purl_spec',
+                        sidebarId: 'purl',
                         position: 'left',
-                        label: 'PURL Specification',
+                        label: 'PURL',
                     },
+
                     {
                         type: 'docSidebar',
                         sidebarId: 'vers_spec',

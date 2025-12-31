@@ -1,46 +1,39 @@
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
-    // getting_started: [
-    //     'getting-started/getting-started-intro',
-    //     'getting-started/getting-started-use-cases',
-    //     'getting-started/getting-started-tools',
-    // ],
-
-    purl_spec: [
-        // 'purl-spec/purl-spec-overview',
-        'purl-spec/purl-spec-introduction',
-        'purl-spec/purl-spec-purl-types',
-        'purl-spec/purl-spec-documentation',
-        'purl-spec/purl-spec-schemas',
-        'purl-spec/purl-spec-adopters',
+    purl: [
+        'purl/purl-spec-introduction',
+        {
+            type: 'category',
+            label: 'Specification',
+            link: {
+                type: 'doc',
+                id: 'purl/purl-spec-folder-page', // The doc to display
+            },
+            collapsed: false,
+            items: [
+                'purl/specification',
+                'purl/how-to-build',
+                'purl/how-to-parse',
+                'purl/tests',
+            ],
+        },
+        'purl/purl-spec-purl-types',
+        'purl/purl-spec-schemas',
+        'purl/purl-spec-adopters',
+        // 2025-12-30 Tuesday 15:30:35.Is the next one superseded?  Yes
+        // 'purl/purl-spec-documentation',
     ],
-
     vers_spec: [
         'vers-spec/vers-spec-overview',
         'vers-spec/vers-spec-documentation',
         'vers-spec/vers-spec-schemas',
         'vers-spec/vers-spec-adopters',
     ],
-
-    // participate: [
-    //     'participate/participate-contribute',
-    //     'participate/participate-meetings',
-    //     'participate/participate-events',
-    // ],
-
     about: [
         'about/about-contribute',
         'about/about-meetings',
         'about/about-events',
     ],
-
-    // about: [
-    //     'about/about-guiding-principles',
-    //     'about/about-governance',
-    //     'about/about-supporters',
-    //     'about/about-history',
-    //     'about/about-branding',
-    // ],
 };
 
 export default sidebars;
