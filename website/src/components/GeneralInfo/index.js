@@ -33,8 +33,31 @@ export default function GeneralInfoSection() {
                 <div className={styles.column}>
                     <h2>Releases</h2>
                     <div className={styles.card}>
-                        <h3>Release 1.0.0</h3>
-                        <p>Coming soon . . .</p>
+                        <h3>Release v1.0.0</h3>
+                        <p>
+                            The 1st edition of the PURL specification was
+                            approved by the Ecma General Assembly on 2025-12-10
+                            and has been designated{' '}
+                            <a
+                                className='a_page'
+                                href='https://ecma-international.org/publications-and-standards/standards/ecma-427/'
+                                target='_blank'
+                            >
+                                ECMA-427
+                            </a>
+                            .
+                        </p>
+                        <p>
+                            The{' '}
+                            <a
+                                className='a_page'
+                                href='https://github.com/package-url/purl-spec/releases/tag/v1.0.0'
+                                target='_blank'
+                            >
+                                first release (v1.0.0)
+                            </a>
+                            {' '}of the purl-spec project followed on 2025-12-18.
+                        </p>
                     </div>
                 </div>
             </div>

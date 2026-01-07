@@ -20,8 +20,6 @@ const sidebars = {
         'purl/purl-spec-purl-types',
         'purl/purl-spec-schemas',
         'purl/purl-spec-adopters',
-        // 2025-12-30 Tuesday 15:30:35.Is the next one superseded?  Yes
-        // 'purl/purl-spec-documentation',
     ],
     vers_spec: [
         'vers-spec/vers-spec-overview',
@@ -29,10 +27,10 @@ const sidebars = {
         'vers-spec/vers-spec-schemas',
         'vers-spec/vers-spec-adopters',
     ],
-    about: [
-        'about/about-contribute',
-        'about/about-meetings',
-        'about/about-events',
+    participate: [
+        'participate/participate-contribute',
+        'participate/participate-meetings',
+        'participate/participate-events',
     ],
 };
 
