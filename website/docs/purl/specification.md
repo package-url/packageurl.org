@@ -1,4 +1,4 @@
-# Package-URL Specification
+# Core Specification
 
 PURL stands for **Package-URL**.
 

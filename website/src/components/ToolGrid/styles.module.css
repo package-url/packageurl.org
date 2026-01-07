@@ -256,13 +256,23 @@
 .modalBody {
     flex: 1;
     overflow-y: auto;
-    padding: 2rem;
+    /* padding: 2rem; */
     padding: 1.5rem;
     border-top: solid 1px #ff0000;
     border-top: 0 !important;
 
-    padding-bottom: 0;
+    /* padding-bottom: 0; */
 }
+
+/* 2026-01-06 Tuesday 10:50:59.  This seems to remove the unneeded vertical scrollbar.  */
+.modalBody > *:first-child {
+  margin-top: 0;
+}
+
+.modalBody > *:last-child {
+  margin-bottom: 0;
+}
+/* === */
 
 /* Full width section */
 .fullWidthSection {
@@ -475,9 +485,9 @@ the modal when the link is clicked from inside an open modal. */
 }
 
 /* In place of .modalAlert just above, try this (including another .modalContent with 'position: relative;' hoping to position the alert inside the open modal. */
-
+/* ensure positioning context */
 .modalContent {
-    position: relative; /* ensure positioning context */
+    position: relative;
 }
 
 .modalAlertOverlay {
