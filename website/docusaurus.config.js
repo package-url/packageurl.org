@@ -156,46 +156,46 @@ const config = {
             },
             footer: {
                 style: 'dark',
-                links: [
-                    {
-                        title: '\u00A0', // non-breaking space: avoids empty-string error, renders blank
-                        items: [
-                            {
-                                html: '<img src="/img/logo1.png" alt="Logo 1" style="max-height:40px; margin-bottom:8px;" />',
-                            },
-                            {
-                                html: '<img src="/img/logo2.png" alt="Logo 2" style="max-height:40px;" />',
-                            },
-                        ],
-                    },
-                    {
-                        title: 'Social',
-                        items: [
-                            { label: 'Twitter', href: '#' },
-                            { label: 'Facebook', href: '#' },
-                        ],
-                    },
-                    {
-                        title: 'GitHub',
-                        items: [
-                            { label: 'Repo 1', href: '#' },
-                            { label: 'Repo 2', href: '#' },
-                        ],
-                    },
-                    {
-                        title: 'Gitter',
-                        items: [{ label: 'Room 1', href: '#' }],
-                    },
-                    {
-                        title: 'LinkedIn',
-                        items: [{ label: 'Company Page', href: '#' }],
-                    },
-                    {
-                        title: 'Slack',
-                        items: [{ label: 'Community Slack', href: '#' }],
-                    },
-                ],
-                copyright: `Copyright © _____ &nbsp; | &nbsp; License: _____ &nbsp; | &nbsp; Built with Docusaurus <br />Last deployed: ${getDeploymentTimestamp()}`,
+                // links: [
+                //     {
+                //         title: '\u00A0', // non-breaking space: avoids empty-string error, renders blank
+                //         items: [
+                //             {
+                //                 html: '<img src="/img/logo1.png" alt="Logo 1" style="max-height:40px; margin-bottom:8px;" />',
+                //             },
+                //             {
+                //                 html: '<img src="/img/logo2.png" alt="Logo 2" style="max-height:40px;" />',
+                //             },
+                //         ],
+                //     },
+                //     {
+                //         title: 'Social',
+                //         items: [
+                //             { label: 'Twitter', href: '#' },
+                //             { label: 'Facebook', href: '#' },
+                //         ],
+                //     },
+                //     {
+                //         title: 'GitHub',
+                //         items: [
+                //             { label: 'Repo 1', href: '#' },
+                //             { label: 'Repo 2', href: '#' },
+                //         ],
+                //     },
+                //     {
+                //         title: 'Gitter',
+                //         items: [{ label: 'Room 1', href: '#' }],
+                //     },
+                //     {
+                //         title: 'LinkedIn',
+                //         items: [{ label: 'Company Page', href: '#' }],
+                //     },
+                //     {
+                //         title: 'Slack',
+                //         items: [{ label: 'Community Slack', href: '#' }],
+                //     },
+                // ],
+                copyright: `Copyright © The Package-URL authors &nbsp; | &nbsp; License: _____ &nbsp; | &nbsp; Built with Docusaurus <br />Last deployed: ${getDeploymentTimestamp()}`,
             },
             prism: {
                 theme: prismThemes.github,
