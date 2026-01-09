@@ -10,6 +10,10 @@
         url("/img/cube-background.jpg");
     color: #000000;
 }
+html[data-theme="dark"] .fullHero {
+  background-color: #252525;
+  color: white;
+}
 
 .heroInner {
     max-width: 900px;
@@ -22,8 +26,6 @@
 }
 
 .heroSubtitle {
-    font-size: 1.25rem;
     font-size: 2rem;
-    margin-bottom: 2rem;
     margin-bottom: 0.5rem;
 }
