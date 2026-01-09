@@ -1,15 +1,14 @@
 /* Grid layout (reuse existing) */
 .specGridWrapper {
-    margin: 2rem auto;
-    margin: 1rem auto;
     margin: 0.5rem auto;
     padding: 1rem;
-    background-color: #e8e8e8;
     background-color: #f5f5f5;
-    border-radius: 12px;
-
-    border: solid 1px #b8b8b8;
     border: 0;
+}
+[data-theme='dark'] .specGridWrapper {
+    background: #303030;
+    border: solid 1px #505050;
+    color: #e5e5e5;
 }
 
 .specGridContainer {
@@ -18,8 +17,11 @@
     /* Center the specgrid on the page. */
     margin: 0 auto;
 }
+[data-theme='dark'] .specGridContainer {
+    background: #303030;
+}
 
- /* NEW: Replace flexbox with a proper grid */
+ /* Replace flexbox with a proper grid */
 .specGrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columns */
@@ -29,33 +31,28 @@
 
 .specCard {
     background: #fff;
-    border: 1px solid #e0e0e0;
     border: 1px solid #909090;
     border-radius: 12px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-
     padding: 1rem;
     text-align: left;
     cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-
     /* Remove sizing from flexbox layout */
     flex: none;
-    max-width: none;
-
     /* Keep your vertical stacking */
     display: flex;
     flex-direction: column;
     margin-bottom: 0;
-    /* Handle the long URL values. */
-    word-break: break-all;
-    overflow-wrap: anywhere;
-    min-width: 0;              /* critical for grid children */
-
-    /* YO: Modern approach: */
+    /* critical for grid children */
+    min-width: 0;
     overflow-wrap: break-word;
     word-break: normal;
-
+}
+[data-theme='dark'] .specCard {
+  background: #000000;
+  border-color: #505050;
+  color: #e5e5e5;
 }
 
 .specCard:hover {
@@ -185,7 +182,7 @@
     padding: 1rem;
 }
 
-/* Adding another .modalContent below with 'position: relative;' hoping to position the alert inside the open modal. */
+/* Adding 'position: relative;' hoping to position the alert inside the open modal. Alert's no longer used, right?*/
 .modalContent {
     background: white;
     border-radius: 8px;
@@ -198,9 +195,14 @@
     display: flex;
     flex-direction: column;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative; /* ensure positioning context */
+}
+[data-theme='dark'] .modalContent {
+    background: #202020;
+    border: solid 1px #404040;
 }
 
-/* Tabs */
+/* Tabs -- no longer used, right? */
 .modalTabs {
     display: flex;
     border-bottom: 1px solid #e0e0e0;
@@ -275,6 +277,9 @@
     border-bottom: 1px solid #e0e0e0;
     line-height: 1.25rem;
 }
+[data-theme='dark'] .fullWidthSection {
+    border-bottom: 1px solid #404040;
+}
 
 .fullWidthSection h2 {
     margin-top: 0;
@@ -313,9 +318,7 @@
 
 .modalLinks a {
     display: inline-block;
-    background-color: #007bff;
     background-color: #ffffff;
-    color: white;
     color: #0066ff;
     text-decoration: none;
     border-radius: 4px;
@@ -326,15 +329,12 @@
 }
 
 .modalLinks a:hover {
-    background-color: #0056b3;
     background-color: #ffffff;
     text-decoration: underline;
 }
 
 .modalFooter {
-    padding: 1rem 2rem;
     padding: 0rem 1.5rem 1.5rem 1.5rem;
-
     display: flex;
     justify-content: flex-end;
 }
@@ -371,7 +371,6 @@
 }
 
 /* Limit display to two lines, then add ellipsis. */
-/* YO 2025-11-18 Tuesday 18:22:21.  Maybe rename to tooltipTarget */
 .specDescription {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -379,18 +378,9 @@
     -webkit-line-clamp: 2;
     line-clamp: 2;
     -webkit-box-orient: vertical;
-    /* line-height: 1.4em; */
-    /* height: 2.8em; */
-    /* height: 4.2em; */
     cursor: default;
-
-    /* 2025-11-18 Tuesday 09:40:29.   */
-    /* line-height: 1.25em; */
-    /* 2025-11-24 Monday 14:27:30.  */
-    /* line-height: 0.5rem; */
 }
 
- /* YO 2025-11-18 Tuesday 18:22:21.  Maybe rename to tooltipTargetWrapper */
 .specDescriptionWrapper {
     position: relative;
     width: 100%;
@@ -415,14 +405,9 @@
     bottom: 100%;
     left: 50%;
     transform: translateX(-50%);
-    /* background: var(--ifm-background-surface-color); */
-    /* color: var(--ifm-font-color-base); */
-
     background: #f5f5f5;
     color: #000000;
-    border: 1px solid var(--ifm-color-emphasis-200);
     border: solid 2px #000000;
-
     padding: 8px 10px;
     border-radius: 6px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
@@ -433,17 +418,15 @@
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.2s ease-in-out;
-
-    font-size: 0.9rem;
-    font-size: 14px;
-    font-size: 15px;
-    line-height: 1.5;
     line-height: 1.25em;
-    font-size: 0.9rem;
     font-size: 1.0rem;
-
     overflow-wrap: break-word;
     word-break: normal;
+}
+[data-theme='dark'] .tooltip {
+    background: #282828;
+    color: #f0f0f0;
+    border: solid 2px #505050;
 }
 
 .specDescriptionWrapper:hover .tooltip {
@@ -474,12 +457,6 @@ the modal when the link is clicked from inside an open modal. */
     }
 }
 
-/* In place of .modalAlert just above, try this (including another .modalContent with 'position: relative;' hoping to position the alert inside the open modal. */
-
-.modalContent {
-    position: relative; /* ensure positioning context */
-}
-
 .modalAlertOverlay {
     position: absolute;
     bottom: 1rem;
@@ -508,7 +485,7 @@ the modal when the link is clicked from inside an open modal. */
     }
 }
 
-/* For the under-construction popup. */
+/* For the under-construction popup. No longer used, right? Ditto elsewhere. */
 .popupMessage {
     position: fixed;
     bottom: 2rem;
@@ -525,7 +502,6 @@ the modal when the link is clicked from inside an open modal. */
     box-shadow: 0 2px 10px #000000;
     z-index: 999;
     opacity: 0;
-    animation: fadeInOut 2.5s ease forwards;
     animation: fadeInOut 5s ease forwards;
 }
 
@@ -548,7 +524,7 @@ the modal when the link is clicked from inside an open modal. */
     }
 }
 
-/* See if I can adapt this (used in the modal) to the main page: */
+/* adapt this (used in the modal) to the main page: */
 .modalAlertOverlay_main {
     position: absolute;
     position: fixed;
@@ -586,14 +562,13 @@ the modal when the link is clicked from inside an open modal. */
     word-break: break-all;       /* forces breaks anywhere when needed */
     overflow-wrap: anywhere;     /* clean modern wrapping */
     max-width: 100%;             /* prevents overflow */
-    /* 2025-11-24 Monday 15:00:41.  */
     width: auto;
 
     /* This fixed the display-on-same-line-as-field problem!!! */
     display: inline;
     /* line-height: 1.25rem; */
 }
-/* 2025-11-24 Monday 16:45:48.  For the spec.name value */
+/* For the spec.name value */
 .modalLinkUrl_break_word {
     overflow-wrap: break-word;
     word-break: normal;
@@ -620,46 +595,13 @@ the modal when the link is clicked from inside an open modal. */
 }
 
 
-/* 2025-11-22 Saturday 12:08:53.  Does this work? */
-/* Dark mode */
-/* [data-theme='dark'] .card {
-  background: #1d1f21;
-  color: #e5e5e5;
-} */
-
-/* [data-theme='dark'] .sectionHeader h1,
-[data-theme='dark'] .column h2 {
-  color: #f0f0f0;
-} */
-
-/* [data-theme='dark'] .specCard {
-  background: #1d1f21;
-  background: #303030;
-  border-color: #909090;
-  color: #e5e5e5;
-} */
-
-[data-theme='dark'] .specCard {
-  background: #000000;
-  border-color: #909090;
-  border-color: #505050;
-  color: #e5e5e5;
-}
-
-[data-theme='dark'] .specGridWrapper {
-  background: #303030;
-  border: solid 1px #505050;
-  color: #e5e5e5;
-}
-
-/* 2025-11-23 Sunday 18:53:02.  */
 .specName {
     /* Modern approach: */
     overflow-wrap: break-word;
     word-break: normal;
 }
 
-/* 2025-11-24 Monday 16:33:21.  Modify spec card to add logo (if any). */
+/* Modify spec card to add logo (if any). */
 .topRow {
   display: flex;
   align-items: center;
