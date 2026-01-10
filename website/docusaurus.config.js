@@ -16,7 +16,7 @@ const getDeploymentTimestamp = () => {
 };
 
 const config = {
-    title: 'packageurl.org',
+    title: 'www.packageurl.org',
     tagline:
         'A simple, consistent, and flexible approach for identifying software packages with precision and clarity.',
     favicon: 'img/favicon.ico',
@@ -37,7 +37,7 @@ const config = {
 
     // The /<baseUrl>/ pathname under which the site is served
     // For GitHub pages deployment, it is often '/<projectName>/'
-    baseUrl: '/packageurl.org/',
+    baseUrl: '/www.packageurl.org/',
     // For DreamHost deployment:
     // baseUrl: "/",
 
@@ -46,7 +46,7 @@ const config = {
 
     // GitHub pages deployment config.
     organizationName: 'Package-URL',
-    projectName: 'packageurl.org',
+    projectName: 'www.packageurl.org',
 
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
@@ -70,24 +70,24 @@ const config = {
                             // New "PURL" section
                             'purl/how-to-build.md': `https://github.com/package-url/purl-spec/blob/main/docs/how-to-build.md`,
                             'purl/how-to-parse.md': `https://github.com/package-url/purl-spec/blob/main/docs/how-to-parse.md`,
-                            'purl/purl-spec-adopters.md': `https://github.com/package-url/packageurl.org/blob/main/website/docs/${docPath}`,
-                            'purl/purl-spec-folder-page.md': `https://github.com/package-url/packageurl.org/blob/main/website/docs/${docPath}`,
+                            'purl/purl-spec-adopters.md': `https://github.com/package-url/www.packageurl.org/blob/main/website/docs/${docPath}`,
+                            'purl/purl-spec-folder-page.md': `https://github.com/package-url/www.packageurl.org/blob/main/website/docs/${docPath}`,
                             'purl/purl-spec-introduction.md': `https://github.com/package-url/purl-spec/blob/main/docs/standard/introduction.md`,
-                            'purl/purl-spec-purl-types.mdx': `https://github.com/package-url/packageurl.org/blob/main/website/docs/${docPath}`,
-                            'purl/purl-spec-schemas.md': `https://github.com/package-url/packageurl.org/blob/main/website/docs/${docPath}`,
+                            'purl/purl-spec-purl-types.mdx': `https://github.com/package-url/www.packageurl.org/blob/main/website/docs/${docPath}`,
+                            'purl/purl-spec-schemas.md': `https://github.com/package-url/www.packageurl.org/blob/main/website/docs/${docPath}`,
                             'purl/specification.md': `https://github.com/package-url/purl-spec/blob/main/docs/standard/specification.md`,
                             'purl/tests.md': `https://github.com/package-url/purl-spec/blob/main/docs/tests.md`,
 
                             // VERS Specification
-                            'vers-spec/vers-spec-overview.md': `https://github.com/package-url/packageurl.org/blob/main/website/docs/${docPath}`,
+                            'vers-spec/vers-spec-overview.md': `https://github.com/package-url/www.packageurl.org/blob/main/website/docs/${docPath}`,
                             'vers-spec/vers-spec-documentation.md': `https://github.com/package-url/vers-spec/blob/main/VERSION-RANGE-SPEC.md`,
-                            'vers-spec/vers-spec-schemas.md': `https://github.com/package-url/packageurl.org/blob/main/website/docs/${docPath}`,
+                            'vers-spec/vers-spec-schemas.md': `https://github.com/package-url/www.packageurl.org/blob/main/website/docs/${docPath}`,
                             'vers-spec/vers-spec-adopters.md': `https://github.com/package-url/vers-spec/blob/main/ADOPTERS.md`,
 
                             // Rename About back to Particpate
-                            'participate/participate-contribute.md': `https://github.com/package-url/packageurl.org/blob/main/website/docs/${docPath}`,
-                            'participate/participate-meetings.md': `https://github.com/package-url/packageurl.org/blob/main/website/docs/${docPath}`,
-                            'participate/participate-events.md': `https://github.com/package-url/packageurl.org/blob/main/website/docs/${docPath}`,
+                            'participate/participate-contribute.md': `https://github.com/package-url/www.packageurl.org/blob/main/website/docs/${docPath}`,
+                            'participate/participate-meetings.md': `https://github.com/package-url/www.packageurl.org/blob/main/website/docs/${docPath}`,
+                            'participate/participate-events.md': `https://github.com/package-url/www.packageurl.org/blob/main/website/docs/${docPath}`,
                         };
 
                         // Return the mapped URL if it exists
@@ -95,11 +95,11 @@ const config = {
                             return editUrlMap[docPath];
                         }
 
-                        // For files that live in packageurl.org repo (about/, participate/, etc.)
-                        // return `https://github.com/package-url/packageurl.org/edit/main/docs/${docPath}`;
+                        // For files that live in www.packageurl.org repo (about/, participate/, etc.)
+                        // return `https://github.com/package-url/www.packageurl.org/edit/main/docs/${docPath}`;
 
                         // Otherwise, provide a default (so “Edit this page” still works)
-                        return `https://github.com/package-url/packageurl.org/blob/main/website/docs/${docPath}`;
+                        return `https://github.com/package-url/www.packageurl.org/blob/main/website/docs/${docPath}`;
                     },
                 },
                 theme: {
