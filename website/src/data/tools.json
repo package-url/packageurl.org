@@ -36,6 +36,24 @@
         "logo": "img/darkskytech_logo.jpg"
     },
     {
+        "name": "csaf-rs/vers-rs",
+        "publisher": "csaf-rs",
+        "description": "A Rust library (with WASM support) for parsing, validating, and checking version range specifiers.",
+        "homepage": "https://github.com/csaf-rs/vers-rs",
+        "source_download": "https://github.com/csaf-rs/vers-rs/releases",
+        "package_download": "n/a",
+        "language": "Rust",
+        "software_license": "Apache-2.0",
+        "data_license": "n/a",
+        "service_license": "n/a",
+        "type": "Library",
+        "functions": "n/a",
+        "platform": "n/a",
+        "standards": "VERS",
+        "notes": "n/a",
+        "logo": "img/csaf-rs_vers-rs.png"
+    },
+    {
         "name": "Dependency-Track",
         "publisher": "OWASP",
         "description": "Open source component analysis platform.",
